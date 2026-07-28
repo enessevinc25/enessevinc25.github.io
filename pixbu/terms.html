@@ -17,10 +17,30 @@
   a { color: var(--mint); }
   hr { border: none; border-top: 1px solid #2A2E3A; margin: 48px 0; }
   ul { padding-left: 20px; }
+  .langbar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+  .langbar button { background:var(--card); color:var(--muted); border:1px solid #2A2E3A;
+    border-radius:999px; padding:6px 14px; font-size:.85rem; cursor:pointer; font-family:inherit; }
+  .langbar button.active { color:#0E1016; background:var(--mint); border-color:var(--mint); font-weight:600; }
+  /* JS yokken tüm diller görünür kalır (erişilebilirlik); JS gelince tekine iner. */
+  body.js section.lang { display:none; }
+  body.js section.lang.active { display:block; }
+  body.js hr.langsep { display:none; }
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<nav class="langbar" id="langbar" hidden>
+  <button data-lang="tr">Türkçe</button>
+  <button data-lang="en">English</button>
+  <button data-lang="es">Español</button>
+  <button data-lang="pt">Português</button>
+  <button data-lang="de">Deutsch</button>
+  <button data-lang="fr">Français</button>
+</nav>
+
+<!-- ================= TR ================= -->
+<section class="lang" data-lang="tr" data-title="Pixbu — Kullanım Şartları">
 
 <h1>Pixbu — Kullanım Şartları</h1>
 <p class="muted">Son güncelleme: 26 Temmuz 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
@@ -79,7 +99,7 @@ Uygulama içinde <em>senin</em> girdiğin içerik (dost adı, görevler, notlar)
 <h2>8. Veri ve yedekleme</h2>
 <p>Verilerin cihazında tutulur. Cihazını kaybetmen, uygulamayı silmen veya cihaz yedeğinin bulunmaması durumunda
 ilerlemen kurtarılamayabilir. Ayarlar bölümündeki "Yedeği dışa aktar" özelliğini kullanman önerilir.
-Kişisel verilerin nasıl işlendiğini <a href="privacy.html">Gizlilik Politikası</a> sayfasında bulabilirsin.</p>
+Kişisel verilerin nasıl işlendiğini <a href="privacy.html?lang=tr">Gizlilik Politikası</a> sayfasında bulabilirsin.</p>
 
 <h2>9. Hizmetin sürekliliği</h2>
 <p>Uygulamayı geliştirmeye, özellik eklemeye veya kaldırmaya devam edeceğiz. Hizmeti bütünüyle durdurmamız gerekirse,
@@ -97,7 +117,11 @@ ve gerekiyorsa uygulama içinde bilgilendirme yapılır. Değişiklikten sonra u
 <p>Bu şartlar Türkiye Cumhuriyeti hukukuna tabidir. Sorularını, talepleri veya şikâyetlerini
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a> adresine iletebilirsin.</p>
 
-<hr>
+</section>
+<hr class="langsep">
+
+<!-- ================= EN ================= -->
+<section class="lang" data-lang="en" data-title="Pixbu — Terms of Use">
 
 <h1>Pixbu — Terms of Use</h1>
 <p class="muted">Last updated: 26 July 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
@@ -154,7 +178,7 @@ Content <em>you</em> enter (buddy name, tasks, notes) belongs to you and is stor
 <h2>8. Data and backups</h2>
 <p>Your data lives on your device. If you lose your device, uninstall the app, or have no device backup, your progress may not
 be recoverable. We recommend using "Export backup" in Settings.
-See our <a href="privacy.html">Privacy Policy</a> for how personal data is handled.</p>
+See our <a href="privacy.html?lang=en">Privacy Policy</a> for how personal data is handled.</p>
 
 <h2>9. Availability</h2>
 <p>We will keep improving the app and may add or remove features. If we ever need to discontinue the service entirely,
@@ -171,6 +195,375 @@ where appropriate, we will notify you in the app. Continuing to use the app afte
 <h2>12. Governing law and contact</h2>
 <p>These terms are governed by the laws of the Republic of Türkiye. For questions, requests or complaints, write to
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= ES ================= -->
+<section class="lang" data-lang="es" data-title="Pixbu — Términos de Uso">
+
+<h1>Pixbu — Términos de Uso</h1>
+<p class="muted">Última actualización: 26 de julio de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
+<p class="muted"><em>Esta traducción se ofrece a título informativo; en caso de discrepancia prevalece la versión en inglés.</em></p>
+
+<div class="card">
+<p><strong>En resumen:</strong> Pixbu te ayuda a construir hábitos de autocuidado con un amigo de píxeles.
+Al descargar y usar la app aceptas estos términos. La <strong>suscripción Amigo+</strong> opcional
+se renueva automáticamente y puede cancelarse en cualquier momento a través de Google Play.
+Pixbu no es una app de salud; no ofrece diagnóstico, tratamiento ni consejo médico.</p>
+</div>
+
+<h2>1. Qué es el servicio</h2>
+<p>Pixbu es una app móvil gamificada que te ayuda a construir hábitos de autocuidado mediante pequeñas tareas diarias, rutinas,
+sesiones de concentración y ejercicios de respiración. Tu actividad hace crecer a tu amigo virtual. La app funciona sin conexión y
+tu progreso se guarda en tu dispositivo.</p>
+
+<h2>2. Quién puede usarla</h2>
+<p>Pixbu está destinada a usuarios de 13 años o más. Si eres menor de 18, deberías tener permiso de tu padre, madre o tutor
+antes de usar la app, especialmente sus funciones de pago. Al realizar una compra confirmas que estás autorizado para hacerla.</p>
+
+<h2>3. Suscripción Amigo+ y compras</h2>
+<ul>
+<li><strong>Planes:</strong> Amigo+ se ofrece en modalidad mensual, anual y de pago único (de por vida).
+Los precios actuales se muestran en la pantalla de compra y en Google Play, en tu moneda local.</li>
+<li><strong>Renovación automática:</strong> Las suscripciones mensuales y anuales se renuevan y se cobran automáticamente al final de
+cada período, salvo que se cancelen al menos 24 horas antes de que termine. La compra de por vida es única y no se renueva.</li>
+<li><strong>Cancelación:</strong> Puedes cancelar en cualquier momento desde tu cuenta de Google Play
+(<a href="https://play.google.com/store/account/subscriptions">Play Store → Suscripciones</a>).
+La cancelación surte efecto al final del período en curso; conservas las funciones de Amigo+ hasta entonces.</li>
+<li><strong>Pago y reembolsos:</strong> Todos los pagos los procesa Google Play; nunca vemos ni guardamos tus datos de pago.
+Los reembolsos siguen la política de reembolsos de Google Play. Contacta primero con Google Play; si eso no lo resuelve, también puedes escribirnos.</li>
+<li><strong>Uso gratuito:</strong> Las funciones principales de Pixbu son gratuitas. Amigo+ añade contenido visual extra y comodidades;
+si tu suscripción termina, tu progreso, tu amigo y tus datos no se eliminan.</li>
+</ul>
+
+<h2>4. Precios y cambios</h2>
+<p>Podemos cambiar los precios. Si cambia el precio de una suscripción existente, Google Play exige que se te notifique con
+antelación y puedes cancelar. Un precio nuevo nunca se aplica a tu suscripción existente sin tu consentimiento.</p>
+
+<h2>5. Aviso de salud</h2>
+<p>Pixbu <strong>no es un dispositivo médico ni un servicio sanitario</strong>. Las tareas, rutinas, sesiones de concentración y ejercicios de respiración
+tienen fines de bienestar general y no sustituyen un diagnóstico, un tratamiento ni el consejo profesional.
+Si tienes dudas sobre tu salud, consulta a un profesional cualificado. En caso de emergencia, contacta con tus servicios de emergencia locales.</p>
+
+<h2>6. Uso aceptable</h2>
+<p>No puedes usar la app de forma ilícita, aplicar ingeniería inversa, intentar acceder a su código fuente, desbloquear funciones de pago por
+medios no autorizados, ni copiar y distribuir la app sin permiso.</p>
+
+<h2>7. Contenido y derechos</h2>
+<p>El nombre Pixbu, el logotipo, los personajes de píxeles, las ilustraciones, los textos y el software pertenecen al desarrollador y están protegidos por derechos de autor.
+Se te concede un derecho limitado e intransferible a usar la app con fines personales y no comerciales.
+El contenido que <em>tú</em> introduces (nombre del amigo, tareas, notas) te pertenece y se guarda solo en tu dispositivo.</p>
+
+<h2>8. Datos y copias de seguridad</h2>
+<p>Tus datos viven en tu dispositivo. Si pierdes el dispositivo, desinstalas la app o no tienes copia de seguridad, tu progreso podría no
+ser recuperable. Te recomendamos usar "Exportar copia de seguridad" en Ajustes.
+Consulta nuestra <a href="privacy.html?lang=es">Política de Privacidad</a> para saber cómo se tratan los datos personales.</p>
+
+<h2>9. Disponibilidad</h2>
+<p>Seguiremos mejorando la app y podremos añadir o retirar funciones. Si alguna vez tuviéramos que descontinuar el servicio por completo,
+lo avisaríamos con antelación razonable en la app o en la página de la tienda.</p>
+
+<h2>10. Limitación de responsabilidad</h2>
+<p>Pixbu se ofrece "tal cual". En la medida en que lo permita la ley aplicable, no somos responsables de daños indirectos derivados
+del uso de la app. Tus derechos legales como consumidor no se ven afectados.</p>
+
+<h2>11. Cambios en estos términos</h2>
+<p>Estos términos pueden actualizarse ocasionalmente. Ante cambios significativos, la fecha de "última actualización" cambiará y,
+cuando proceda, te lo notificaremos en la app. Continuar usando la app tras un cambio implica que lo aceptas.</p>
+
+<h2>12. Ley aplicable y contacto</h2>
+<p>Estos términos se rigen por las leyes de la República de Türkiye. Para preguntas, solicitudes o reclamaciones, escribe a
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= PT ================= -->
+<section class="lang" data-lang="pt" data-title="Pixbu — Termos de Uso">
+
+<h1>Pixbu — Termos de Uso</h1>
+<p class="muted">Última atualização: 26 de julho de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
+<p class="muted"><em>Esta tradução é fornecida a título informativo; em caso de divergência, prevalece a versão em inglês.</em></p>
+
+<div class="card">
+<p><strong>Resumo:</strong> O Pixbu ajuda você a construir hábitos de autocuidado com um amigo de pixels.
+Ao baixar e usar o app, você concorda com estes termos. A <strong>assinatura Amigo+</strong> opcional
+é renovada automaticamente e pode ser cancelada a qualquer momento pelo Google Play.
+O Pixbu não é um app de saúde; não oferece diagnóstico, tratamento nem aconselhamento médico.</p>
+</div>
+
+<h2>1. O que é o serviço</h2>
+<p>O Pixbu é um app móvel gamificado que ajuda você a construir hábitos de autocuidado por meio de pequenas tarefas diárias, rotinas,
+sessões de foco e exercícios de respiração. Sua atividade faz seu amigo virtual crescer. O app funciona offline e
+seu progresso fica armazenado no seu dispositivo.</p>
+
+<h2>2. Quem pode usar</h2>
+<p>O Pixbu é destinado a usuários com 13 anos ou mais. Se você tem menos de 18, deve ter permissão de um responsável
+antes de usar o app, especialmente os recursos pagos. Ao fazer uma compra, você confirma que está autorizado a fazê-la.</p>
+
+<h2>3. Assinatura Amigo+ e compras</h2>
+<ul>
+<li><strong>Planos:</strong> O Amigo+ é oferecido nas opções mensal, anual e de pagamento único (vitalício).
+Os preços atuais são mostrados na tela de compra e no Google Play, na sua moeda local.</li>
+<li><strong>Renovação automática:</strong> As assinaturas mensais e anuais são renovadas e cobradas automaticamente ao final de
+cada período, a menos que sejam canceladas pelo menos 24 horas antes do término. A compra vitalícia é única e não se renova.</li>
+<li><strong>Cancelamento:</strong> Você pode cancelar a qualquer momento na sua conta do Google Play
+(<a href="https://play.google.com/store/account/subscriptions">Play Store → Assinaturas</a>).
+O cancelamento entra em vigor ao final do período atual; você mantém os recursos do Amigo+ até lá.</li>
+<li><strong>Pagamento e reembolsos:</strong> Todos os pagamentos são processados pelo Google Play; nunca vemos nem armazenamos seus dados de pagamento.
+Os reembolsos seguem a política de reembolso do Google Play. Contate primeiro o Google Play; se isso não resolver, você também pode nos escrever.</li>
+<li><strong>Uso gratuito:</strong> Os recursos principais do Pixbu são gratuitos. O Amigo+ adiciona conteúdo visual extra e conveniências;
+se a sua assinatura terminar, seu progresso, seu amigo e seus dados não são apagados.</li>
+</ul>
+
+<h2>4. Preços e alterações</h2>
+<p>Podemos alterar os preços. Se o preço de uma assinatura existente mudar, o Google Play exige que você seja notificado com
+antecedência e você pode cancelar. Um preço novo nunca é aplicado à sua assinatura existente sem o seu consentimento.</p>
+
+<h2>5. Aviso de saúde</h2>
+<p>O Pixbu <strong>não é um dispositivo médico nem um serviço de saúde</strong>. As tarefas, rotinas, sessões de foco e exercícios de respiração
+destinam-se ao bem-estar geral e não substituem diagnóstico, tratamento nem aconselhamento profissional.
+Se você tiver preocupações com sua saúde, consulte um profissional qualificado. Em uma emergência, contate os serviços de emergência locais.</p>
+
+<h2>6. Uso aceitável</h2>
+<p>Você não pode usar o app de forma ilegal, fazer engenharia reversa, tentar acessar seu código-fonte, desbloquear recursos pagos por
+meios não autorizados, nem copiar e distribuir o app sem permissão.</p>
+
+<h2>7. Conteúdo e direitos</h2>
+<p>O nome Pixbu, o logotipo, os personagens de pixel, as artes, os textos e o software pertencem ao desenvolvedor e são protegidos por direitos autorais.
+Você recebe um direito limitado e intransferível de usar o app para fins pessoais e não comerciais.
+O conteúdo que <em>você</em> insere (nome do amigo, tarefas, notas) pertence a você e fica armazenado apenas no seu dispositivo.</p>
+
+<h2>8. Dados e backups</h2>
+<p>Seus dados vivem no seu dispositivo. Se você perder o dispositivo, desinstalar o app ou não tiver backup, seu progresso pode não
+ser recuperável. Recomendamos usar "Exportar backup" nas Configurações.
+Veja nossa <a href="privacy.html?lang=pt">Política de Privacidade</a> para saber como os dados pessoais são tratados.</p>
+
+<h2>9. Disponibilidade</h2>
+<p>Continuaremos melhorando o app e poderemos adicionar ou remover recursos. Se algum dia precisarmos descontinuar o serviço por completo,
+daremos aviso com antecedência razoável no app ou na página da loja.</p>
+
+<h2>10. Limitação de responsabilidade</h2>
+<p>O Pixbu é fornecido "como está". Na medida permitida pela lei aplicável, não somos responsáveis por danos indiretos decorrentes
+do uso do app. Seus direitos legais como consumidor permanecem inalterados.</p>
+
+<h2>11. Alterações nestes termos</h2>
+<p>Estes termos podem ser atualizados de tempos em tempos. Em alterações significativas, a data de "última atualização" acima mudará e,
+quando apropriado, avisaremos você no app. Continuar usando o app após uma alteração significa que você a aceita.</p>
+
+<h2>12. Lei aplicável e contato</h2>
+<p>Estes termos são regidos pelas leis da República da Türkiye. Para perguntas, solicitações ou reclamações, escreva para
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= DE ================= -->
+<section class="lang" data-lang="de" data-title="Pixbu — Nutzungsbedingungen">
+
+<h1>Pixbu — Nutzungsbedingungen</h1>
+<p class="muted">Zuletzt aktualisiert: 26. Juli 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted"><em>Diese Übersetzung dient nur zur Information; bei Abweichungen gilt die englische Fassung.</em></p>
+
+<div class="card">
+<p><strong>Kurz gesagt:</strong> Pixbu hilft dir, Selbstfürsorge-Gewohnheiten mit einem Pixel-Freund aufzubauen.
+Mit dem Herunterladen und Nutzen der App akzeptierst du diese Bedingungen. Das optionale <strong>Freund+</strong>-Abo
+verlängert sich automatisch und kann jederzeit über Google Play gekündigt werden.
+Pixbu ist keine Gesundheits-App; sie bietet keine medizinische Diagnose, Behandlung oder Beratung.</p>
+</div>
+
+<h2>1. Was der Dienst ist</h2>
+<p>Pixbu ist eine spielerische Mobil-App, die dir hilft, mit kleinen täglichen Aufgaben, Routinen,
+Fokus-Sitzungen und Atemübungen Selbstfürsorge-Gewohnheiten aufzubauen. Deine Aktivität lässt deinen virtuellen Freund wachsen.
+Die App funktioniert offline; dein Fortschritt wird auf deinem Gerät gespeichert.</p>
+
+<h2>2. Wer sie nutzen darf</h2>
+<p>Pixbu ist für Nutzer ab 13 Jahren gedacht. Wenn du unter 18 bist, solltest du vor der Nutzung der App — insbesondere der
+kostenpflichtigen Funktionen — die Erlaubnis eines Erziehungsberechtigten haben. Mit einem Kauf bestätigst du, dazu berechtigt zu sein.</p>
+
+<h2>3. Freund+-Abo und Käufe</h2>
+<ul>
+<li><strong>Tarife:</strong> Freund+ gibt es monatlich, jährlich und als Einmalkauf (Lifetime).
+Aktuelle Preise werden auf der Kaufseite und bei Google Play in deiner Landeswährung angezeigt.</li>
+<li><strong>Automatische Verlängerung:</strong> Monats- und Jahresabos verlängern sich automatisch und werden am Ende
+jeder Laufzeit abgerechnet, sofern sie nicht mindestens 24 Stunden vor Ablauf gekündigt werden. Der Lifetime-Kauf ist einmalig und verlängert sich nicht.</li>
+<li><strong>Kündigung:</strong> Du kannst jederzeit in deinem Google-Play-Konto kündigen
+(<a href="https://play.google.com/store/account/subscriptions">Play Store → Abos</a>).
+Die Kündigung wird zum Ende der laufenden Periode wirksam; bis dahin behältst du die Freund+-Funktionen.</li>
+<li><strong>Zahlung und Erstattung:</strong> Alle Zahlungen wickelt Google Play ab; wir sehen und speichern deine Zahlungsdaten nie.
+Erstattungen folgen der Erstattungsrichtlinie von Google Play. Wende dich bitte zuerst an Google Play; falls das nicht hilft, kannst du auch uns schreiben.</li>
+<li><strong>Kostenlose Nutzung:</strong> Die Kernfunktionen von Pixbu sind kostenlos. Freund+ ergänzt zusätzliche visuelle Inhalte und
+Komfortfunktionen; endet dein Abo, werden dein Fortschritt, dein Freund und deine Daten nicht gelöscht.</li>
+</ul>
+
+<h2>4. Preise und Änderungen</h2>
+<p>Wir können Preise ändern. Ändert sich der Preis eines bestehenden Abos, verlangt Google Play, dass du vorab benachrichtigt
+wirst, und du kannst kündigen. Ein neuer Preis wird nie ohne deine Zustimmung auf dein bestehendes Abo angewendet.</p>
+
+<h2>5. Gesundheitshinweis</h2>
+<p>Pixbu ist <strong>kein Medizinprodukt und kein Gesundheitsdienst</strong>. Aufgaben, Routinen, Fokus- und Atemübungen
+dienen dem allgemeinen Wohlbefinden und ersetzen keine Diagnose, Behandlung oder professionelle Beratung.
+Bei gesundheitlichen Bedenken wende dich bitte an qualifiziertes Fachpersonal. In einem Notfall kontaktiere den örtlichen Notruf.</p>
+
+<h2>6. Zulässige Nutzung</h2>
+<p>Du darfst die App nicht rechtswidrig nutzen, kein Reverse Engineering betreiben, nicht versuchen, auf den Quellcode zuzugreifen,
+kostenpflichtige Funktionen nicht auf unbefugtem Weg freischalten und die App nicht ohne Erlaubnis kopieren oder verbreiten.</p>
+
+<h2>7. Inhalte und Rechte</h2>
+<p>Name, Logo, Pixel-Charaktere, Grafiken, Texte und Software von Pixbu gehören dem Entwickler und sind urheberrechtlich geschützt.
+Dir wird ein beschränktes, nicht übertragbares Recht eingeräumt, die App für persönliche, nicht kommerzielle Zwecke zu nutzen.
+Inhalte, die <em>du</em> eingibst (Freundname, Aufgaben, Notizen), gehören dir und werden nur auf deinem Gerät gespeichert.</p>
+
+<h2>8. Daten und Backups</h2>
+<p>Deine Daten liegen auf deinem Gerät. Wenn du dein Gerät verlierst, die App deinstallierst oder kein Backup hast, ist dein
+Fortschritt möglicherweise nicht wiederherstellbar. Wir empfehlen "Backup exportieren" in den Einstellungen.
+Wie personenbezogene Daten behandelt werden, steht in unserer <a href="privacy.html?lang=de">Datenschutzerklärung</a>.</p>
+
+<h2>9. Verfügbarkeit</h2>
+<p>Wir entwickeln die App weiter und können Funktionen hinzufügen oder entfernen. Sollten wir den Dienst je vollständig einstellen müssen,
+kündigen wir das mit angemessenem Vorlauf in der App oder auf der Store-Seite an.</p>
+
+<h2>10. Haftungsbeschränkung</h2>
+<p>Pixbu wird "wie besehen" bereitgestellt. Soweit gesetzlich zulässig, haften wir nicht für mittelbare Schäden aus
+der Nutzung der App. Deine gesetzlichen Verbraucherrechte bleiben unberührt.</p>
+
+<h2>11. Änderungen dieser Bedingungen</h2>
+<p>Diese Bedingungen können von Zeit zu Zeit aktualisiert werden. Bei wesentlichen Änderungen ändert sich das Datum "zuletzt aktualisiert" oben,
+und wo angebracht informieren wir dich in der App. Wenn du die App nach einer Änderung weiter nutzt, akzeptierst du sie.</p>
+
+<h2>12. Anwendbares Recht und Kontakt</h2>
+<p>Diese Bedingungen unterliegen dem Recht der Republik Türkiye. Fragen, Anliegen oder Beschwerden richte bitte an
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= FR ================= -->
+<section class="lang" data-lang="fr" data-title="Pixbu — Conditions d'Utilisation">
+
+<h1>Pixbu — Conditions d'Utilisation</h1>
+<p class="muted">Dernière mise à jour : 26 juillet 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
+<p class="muted"><em>Cette traduction est fournie à titre informatif ; en cas de divergence, la version anglaise prévaut.</em></p>
+
+<div class="card">
+<p><strong>En bref :</strong> Pixbu t'aide à construire des habitudes de bien-être avec un copain en pixels.
+En téléchargeant et en utilisant l'app, tu acceptes ces conditions. L'<strong>abonnement Copain+</strong> facultatif
+se renouvelle automatiquement et peut être annulé à tout moment via Google Play.
+Pixbu n'est pas une app de santé ; elle ne fournit ni diagnostic, ni traitement, ni conseil médical.</p>
+</div>
+
+<h2>1. Qu'est-ce que le service</h2>
+<p>Pixbu est une app mobile ludifiée qui t'aide à construire des habitudes de bien-être grâce à de petites tâches quotidiennes, des routines,
+des sessions de concentration et des exercices de respiration. Ton activité fait grandir ton copain virtuel. L'app fonctionne hors ligne et
+ta progression est stockée sur ton appareil.</p>
+
+<h2>2. Qui peut l'utiliser</h2>
+<p>Pixbu est destinée aux utilisateurs de 13 ans et plus. Si tu as moins de 18 ans, tu dois avoir l'autorisation d'un parent ou
+tuteur avant d'utiliser l'app, en particulier ses fonctions payantes. En effectuant un achat, tu confirmes y être autorisé.</p>
+
+<h2>3. Abonnement Copain+ et achats</h2>
+<ul>
+<li><strong>Formules :</strong> Copain+ est proposé en formule mensuelle, annuelle et en achat unique (à vie).
+Les prix actuels sont affichés sur l'écran d'achat et sur Google Play, dans ta devise locale.</li>
+<li><strong>Renouvellement automatique :</strong> Les abonnements mensuels et annuels se renouvellent et sont facturés automatiquement à la fin de
+chaque période, sauf annulation au moins 24 heures avant son terme. L'achat à vie est unique et ne se renouvelle pas.</li>
+<li><strong>Annulation :</strong> Tu peux annuler à tout moment depuis ton compte Google Play
+(<a href="https://play.google.com/store/account/subscriptions">Play Store → Abonnements</a>).
+L'annulation prend effet à la fin de la période en cours ; tu conserves les fonctions Copain+ jusque-là.</li>
+<li><strong>Paiement et remboursements :</strong> Tous les paiements sont traités par Google Play ; nous ne voyons ni ne stockons jamais tes données de paiement.
+Les remboursements suivent la politique de remboursement de Google Play. Contacte d'abord Google Play ; si cela ne résout pas le problème, tu peux aussi nous écrire.</li>
+<li><strong>Utilisation gratuite :</strong> Les fonctions principales de Pixbu sont gratuites. Copain+ ajoute du contenu visuel supplémentaire et des
+commodités ; si ton abonnement prend fin, ta progression, ton copain et tes données ne sont pas supprimés.</li>
+</ul>
+
+<h2>4. Prix et modifications</h2>
+<p>Nous pouvons modifier les prix. Si le prix d'un abonnement existant change, Google Play exige que tu en sois informé à
+l'avance et tu peux annuler. Un nouveau prix n'est jamais appliqué à ton abonnement existant sans ton consentement.</p>
+
+<h2>5. Avertissement santé</h2>
+<p>Pixbu n'est <strong>ni un dispositif médical ni un service de santé</strong>. Les tâches, routines, sessions de concentration et exercices de respiration
+visent le bien-être général et ne remplacent ni diagnostic, ni traitement, ni conseil professionnel.
+Si tu as des inquiétudes concernant ta santé, consulte un professionnel qualifié. En cas d'urgence, contacte les services d'urgence locaux.</p>
+
+<h2>6. Utilisation acceptable</h2>
+<p>Tu ne peux pas utiliser l'app de manière illégale, faire de l'ingénierie inverse, tenter d'accéder à son code source, débloquer des fonctions payantes par
+des moyens non autorisés, ni copier et distribuer l'app sans permission.</p>
+
+<h2>7. Contenu et droits</h2>
+<p>Le nom Pixbu, le logo, les personnages en pixels, les illustrations, les textes et le logiciel appartiennent au développeur et sont protégés par le droit d'auteur.
+Il t'est accordé un droit limité et non transférable d'utiliser l'app à des fins personnelles et non commerciales.
+Le contenu que <em>tu</em> saisis (nom du copain, tâches, notes) t'appartient et n'est stocké que sur ton appareil.</p>
+
+<h2>8. Données et sauvegardes</h2>
+<p>Tes données vivent sur ton appareil. Si tu perds ton appareil, désinstalles l'app ou n'as pas de sauvegarde, ta progression pourrait ne pas
+être récupérable. Nous te recommandons d'utiliser « Exporter la sauvegarde » dans les Paramètres.
+Consulte notre <a href="privacy.html?lang=fr">Politique de Confidentialité</a> pour savoir comment les données personnelles sont traitées.</p>
+
+<h2>9. Disponibilité</h2>
+<p>Nous continuerons d'améliorer l'app et pourrons ajouter ou retirer des fonctions. Si nous devions un jour arrêter complètement le service,
+nous te préviendrions dans un délai raisonnable dans l'app ou sur la page du store.</p>
+
+<h2>10. Limitation de responsabilité</h2>
+<p>Pixbu est fournie « en l'état ». Dans la mesure permise par la loi applicable, nous ne sommes pas responsables des dommages indirects résultant
+de l'utilisation de l'app. Tes droits légaux de consommateur restent inchangés.</p>
+
+<h2>11. Modifications de ces conditions</h2>
+<p>Ces conditions peuvent être mises à jour de temps à autre. En cas de changement important, la date de « dernière mise à jour » ci-dessus changera et,
+le cas échéant, nous te préviendrons dans l'app. Continuer à utiliser l'app après un changement vaut acceptation.</p>
+
+<h2>12. Droit applicable et contact</h2>
+<p>Ces conditions sont régies par les lois de la République de Türkiye. Pour toute question, demande ou réclamation, écris à
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+</section>
+
+<script>
+(function () {
+  var LANGS = ['tr', 'en', 'es', 'pt', 'de', 'fr'];
+  document.body.classList.add('js');
+  var bar = document.getElementById('langbar');
+  bar.hidden = false;
+
+  function pick() {
+    var q = new URLSearchParams(location.search).get('lang');
+    if (q) { q = q.slice(0, 2).toLowerCase(); if (LANGS.indexOf(q) !== -1) return q; }
+    var navs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < navs.length; i++) {
+      var c = String(navs[i]).slice(0, 2).toLowerCase();
+      if (LANGS.indexOf(c) !== -1) return c;
+    }
+    return 'en';
+  }
+
+  function show(lang, updateUrl) {
+    var sections = document.querySelectorAll('section.lang');
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      var on = s.getAttribute('data-lang') === lang;
+      s.classList.toggle('active', on);
+      if (on) document.title = s.getAttribute('data-title');
+    }
+    var btns = bar.querySelectorAll('button');
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.toggle('active', btns[j].getAttribute('data-lang') === lang);
+    }
+    document.documentElement.lang = lang;
+    if (updateUrl) {
+      var u = new URL(location.href);
+      u.searchParams.set('lang', lang);
+      history.replaceState(null, '', u);
+    }
+  }
+
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (b) show(b.getAttribute('data-lang'), true);
+  });
+
+  show(pick(), false);
+})();
+</script>
 
 </div>
 </body>

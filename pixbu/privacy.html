@@ -17,10 +17,30 @@
   a { color: var(--mint); }
   hr { border: none; border-top: 1px solid #2A2E3A; margin: 48px 0; }
   ul { padding-left: 20px; }
+  .langbar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+  .langbar button { background:var(--card); color:var(--muted); border:1px solid #2A2E3A;
+    border-radius:999px; padding:6px 14px; font-size:.85rem; cursor:pointer; font-family:inherit; }
+  .langbar button.active { color:#0E1016; background:var(--mint); border-color:var(--mint); font-weight:600; }
+  /* JS yokken tüm diller görünür kalır (erişilebilirlik); JS gelince tekine iner. */
+  body.js section.lang { display:none; }
+  body.js section.lang.active { display:block; }
+  body.js hr.langsep { display:none; }
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<nav class="langbar" id="langbar" hidden>
+  <button data-lang="tr">Türkçe</button>
+  <button data-lang="en">English</button>
+  <button data-lang="es">Español</button>
+  <button data-lang="pt">Português</button>
+  <button data-lang="de">Deutsch</button>
+  <button data-lang="fr">Français</button>
+</nav>
+
+<!-- ================= TR ================= -->
+<section class="lang" data-lang="tr" data-title="Pixbu — Gizlilik Politikası">
 
 <h1>Pixbu — Gizlilik Politikası</h1>
 <p class="muted">Son güncelleme: 23 Temmuz 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
@@ -86,7 +106,11 @@ süre saklandıktan sonra otomatik olarak silinir. Yine de bir talebin olursa
 <h2>10. İletişim</h2>
 <p>Sorular için: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
 
-<hr>
+</section>
+<hr class="langsep">
+
+<!-- ================= EN ================= -->
+<section class="lang" data-lang="en" data-title="Pixbu — Privacy Policy">
 
 <h1 id="en">Pixbu — Privacy Policy</h1>
 <p class="muted">Last updated: July 23, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
@@ -128,7 +152,7 @@ We ask in-app before requesting notification permission and never nag if you dec
 
 <h2>6. Ads and purchases</h2>
 <p>Pixbu contains <strong>no ads</strong>.</p>
-<p>The app offers an optional <strong>Dost+ subscription</strong> (monthly, yearly, or a one-time lifetime purchase).
+<p>The app offers an optional <strong>Buddy+ subscription</strong> (monthly, yearly, or a one-time lifetime purchase).
 Payment is handled entirely by Google Play Billing; your card and payment details never reach us.</p>
 <p>To verify whether your subscription is active, our service provider <a href="https://www.revenuecat.com">RevenueCat</a>
 processes the purchase record (which product, date, subscription status) against a randomly generated anonymous app
@@ -150,6 +174,335 @@ deleted automatically after a limited retention period. If you still have a requ
 
 <h2>10. Contact</h2>
 <p>Questions: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= ES ================= -->
+<section class="lang" data-lang="es" data-title="Pixbu — Política de Privacidad">
+
+<h1>Pixbu — Política de Privacidad</h1>
+<p class="muted">Última actualización: 23 de julio de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
+<p class="muted"><em>Esta traducción se ofrece a título informativo; en caso de discrepancia prevalece la versión en inglés.</em></p>
+
+<div class="card">
+<p><strong>En resumen:</strong> Pixbu no tiene cuentas y no recopila datos personales.
+Todo tu progreso (tu amigo, tus tareas, tus rachas) se guarda únicamente en tu propio dispositivo y nunca nos llega.
+Lo único que se envía a nuestros servidores son <strong>informes de fallos anónimos y estadísticas de uso anónimas</strong> que no pueden vincularse con tu identidad (secciones 2 y 3).</p>
+</div>
+
+<h2>1. Datos que recopilamos</h2>
+<p>Pixbu no requiere cuenta, correo electrónico, número de teléfono ni ninguna otra información personal.
+Todo lo que introduces en la app (el nombre de tu amigo, tareas, rutinas, progreso) vive solo en una base de datos local en tu dispositivo y nunca nos llega.</p>
+
+<h2>2. Informes de fallos (Sentry)</h2>
+<p>Si la app se cierra inesperadamente, se envía un informe de fallo anónimo a <a href="https://sentry.io">Sentry</a> para que podamos corregir el problema.
+Contiene los detalles del error, el modelo del dispositivo, la versión del sistema operativo y la versión de la app. No contiene nada que pueda identificarte
+(ni nombre, ni correo, ni ubicación, ni ID de publicidad), no se vincula con tu identidad y se usa solo para depuración.
+Los datos se procesan en la región de Alemania (UE) de Sentry.</p>
+
+<h2>3. Estadísticas de uso anónimas (PostHog)</h2>
+<p>Para entender cómo mejorar la app, recopilamos registros de eventos anónimos. Los procesa en nuestro nombre
+<a href="https://posthog.com">PostHog</a> (alojado en la región de la Unión Europea).</p>
+<p>Los únicos eventos recopilados son: apertura/paso a segundo plano de la app, finalización del flujo de configuración inicial,
+contadores de tareas/rutinas/sesiones de concentración completadas y visualizaciones de la pantalla de suscripción.</p>
+<p><strong>Nunca se envía:</strong> el texto de tus tareas, el nombre de tu amigo, tus notas, tus recordatorios, tu nombre,
+tu correo, tu ubicación ni ningún dato de salud. Estos registros no se vinculan con una cuenta ni con tu identidad real.</p>
+
+<h2>4. Copias de seguridad</h2>
+<ul>
+<li><strong>Copia de seguridad automática de Android:</strong> Tu dispositivo puede hacer una copia cifrada de los datos de la app en tu cuenta de Google.
+Es una función del sistema Android; nosotros no podemos acceder a esos datos.</li>
+<li><strong>Exportación manual:</strong> "Exportar copia de seguridad" te da una copia de tus datos como archivo. Ese archivo está totalmente bajo tu control.</li>
+</ul>
+
+<h2>5. Notificaciones</h2>
+<p>Los recordatorios se programan y se muestran íntegramente en tu dispositivo; no interviene ningún servidor.
+Antes de solicitar el permiso de notificaciones lo preguntamos dentro de la app, y si lo rechazas no insistimos.</p>
+
+<h2>6. Anuncios y compras</h2>
+<p>Pixbu <strong>no contiene anuncios</strong>.</p>
+<p>La app ofrece una <strong>suscripción Amigo+</strong> opcional (mensual, anual o una compra única de por vida).
+El pago lo gestiona íntegramente Google Play Billing; los datos de tu tarjeta y de pago nunca nos llegan.</p>
+<p>Para verificar si tu suscripción está activa, nuestro proveedor de servicios <a href="https://www.revenuecat.com">RevenueCat</a>
+procesa el registro de compra (qué producto, fecha, estado de la suscripción) con un identificador de app anónimo generado aleatoriamente.
+Este registro no se vincula con tu nombre, tu correo ni tus datos de pago.</p>
+<p>Puedes gestionar o cancelar tu suscripción en cualquier momento desde Google Play &gt; Suscripciones
+(la app tiene un atajo en Ajustes &gt; Gestionar suscripción).</p>
+
+<h2>7. Privacidad de los menores</h2>
+<p>Como Pixbu no recopila datos personales, tampoco recopila datos personales de menores. La app está diseñada para usuarios de 13 años o más.</p>
+
+<h2>8. Eliminar tus datos</h2>
+<p>Como todos tus datos de tareas y de tu amigo viven en tu dispositivo, desinstalar la app (y borrar su copia de seguridad de Android) los elimina de forma permanente.</p>
+<p>Los registros anónimos de fallos y de uso no pueden vincularse con tu identidad, por lo que no pueden recuperarse individualmente;
+se eliminan automáticamente tras un período de retención limitado. Si aun así tienes una solicitud, escríbenos a
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+<h2>9. Cambios</h2>
+<p>Si esta política cambia, esta página se actualizará y se renovará la fecha de "última actualización".</p>
+
+<h2>10. Contacto</h2>
+<p>Para preguntas: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= PT ================= -->
+<section class="lang" data-lang="pt" data-title="Pixbu — Política de Privacidade">
+
+<h1>Pixbu — Política de Privacidade</h1>
+<p class="muted">Última atualização: 23 de julho de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
+<p class="muted"><em>Esta tradução é fornecida a título informativo; em caso de divergência, prevalece a versão em inglês.</em></p>
+
+<div class="card">
+<p><strong>Resumo:</strong> O Pixbu não tem contas e não coleta dados pessoais.
+Todo o seu progresso (seu amigo, tarefas, sequências) fica armazenado apenas no seu próprio dispositivo e nunca chega até nós.
+As únicas coisas enviadas aos nossos servidores são <strong>relatórios de falhas anônimos e estatísticas de uso anônimas</strong> que não podem ser vinculados à sua identidade (seções 2 e 3).</p>
+</div>
+
+<h2>1. Dados que coletamos</h2>
+<p>O Pixbu não exige conta, e-mail, número de telefone nem qualquer outra informação pessoal.
+Tudo o que você insere no app (o nome do seu amigo, tarefas, rotinas, progresso) vive apenas em um banco de dados local no seu dispositivo e nunca chega até nós.</p>
+
+<h2>2. Relatórios de falhas (Sentry)</h2>
+<p>Se o app fechar inesperadamente, um relatório de falha anônimo é enviado ao <a href="https://sentry.io">Sentry</a> para que possamos corrigir o problema.
+Ele contém os detalhes do erro, o modelo do dispositivo, a versão do sistema operacional e a versão do app. Não contém nada que possa identificar você
+(nem nome, nem e-mail, nem localização, nem ID de publicidade), não é vinculado à sua identidade e é usado apenas para depuração.
+Os dados são processados na região da Alemanha (UE) do Sentry.</p>
+
+<h2>3. Estatísticas de uso anônimas (PostHog)</h2>
+<p>Para entender como melhorar o app, coletamos registros de eventos anônimos. Eles são processados em nosso nome pelo
+<a href="https://posthog.com">PostHog</a> (hospedado na região da União Europeia).</p>
+<p>Os únicos eventos coletados são: abertura/envio do app para segundo plano, conclusão do fluxo de configuração inicial,
+contadores de tarefas/rotinas/sessões de foco concluídas e visualizações da tela de assinatura.</p>
+<p><strong>Nunca são enviados:</strong> o texto das suas tarefas, o nome do seu amigo, suas notas, seus lembretes, seu nome,
+seu e-mail, sua localização ou qualquer dado de saúde. Esses registros não são vinculados a uma conta nem à sua identidade real.</p>
+
+<h2>4. Backups</h2>
+<ul>
+<li><strong>Backup automático do Android:</strong> Seu dispositivo pode fazer backup criptografado dos dados do app na sua conta Google.
+É um recurso do sistema Android; nós não podemos acessar esses dados.</li>
+<li><strong>Exportação manual:</strong> "Exportar backup" entrega uma cópia dos seus dados como arquivo. Esse arquivo fica totalmente sob seu controle.</li>
+</ul>
+
+<h2>5. Notificações</h2>
+<p>Os lembretes são agendados e exibidos inteiramente no seu dispositivo; nenhum servidor está envolvido.
+Perguntamos dentro do app antes de solicitar a permissão de notificações e não insistimos se você recusar.</p>
+
+<h2>6. Anúncios e compras</h2>
+<p>O Pixbu <strong>não contém anúncios</strong>.</p>
+<p>O app oferece uma <strong>assinatura Amigo+</strong> opcional (mensal, anual ou uma compra única vitalícia).
+O pagamento é processado inteiramente pelo Google Play Billing; os dados do seu cartão e de pagamento nunca chegam até nós.</p>
+<p>Para verificar se a sua assinatura está ativa, nosso provedor de serviços <a href="https://www.revenuecat.com">RevenueCat</a>
+processa o registro da compra (qual produto, data, status da assinatura) com um identificador de app anônimo gerado aleatoriamente.
+Esse registro não é vinculado ao seu nome, ao seu e-mail nem aos seus dados de pagamento.</p>
+<p>Você pode gerenciar ou cancelar sua assinatura a qualquer momento em Google Play &gt; Assinaturas
+(o app tem um atalho em Configurações &gt; Gerenciar assinatura).</p>
+
+<h2>7. Privacidade das crianças</h2>
+<p>Como o Pixbu não coleta dados pessoais, também não coleta dados pessoais de crianças. O app foi projetado para usuários com 13 anos ou mais.</p>
+
+<h2>8. Excluir seus dados</h2>
+<p>Como todos os seus dados de tarefas e do seu amigo vivem no seu dispositivo, desinstalar o app (e excluir o backup do Android) os apaga permanentemente.</p>
+<p>Os registros anônimos de falhas e de uso não podem ser vinculados à sua identidade, portanto não podem ser recuperados individualmente;
+eles são excluídos automaticamente após um período limitado de retenção. Se ainda assim você tiver uma solicitação, escreva para
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+<h2>9. Alterações</h2>
+<p>Se esta política mudar, esta página será atualizada e a data de "última atualização" será renovada.</p>
+
+<h2>10. Contato</h2>
+<p>Dúvidas: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= DE ================= -->
+<section class="lang" data-lang="de" data-title="Pixbu — Datenschutzerklärung">
+
+<h1>Pixbu — Datenschutzerklärung</h1>
+<p class="muted">Zuletzt aktualisiert: 23. Juli 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted"><em>Diese Übersetzung dient nur zur Information; bei Abweichungen gilt die englische Fassung.</em></p>
+
+<div class="card">
+<p><strong>Kurz gesagt:</strong> Pixbu hat keine Konten und sammelt keine personenbezogenen Daten.
+Dein gesamter Fortschritt (dein Freund, deine Aufgaben, deine Serien) wird nur auf deinem eigenen Gerät gespeichert und erreicht uns nie.
+Das Einzige, was an unsere Server geht, sind <strong>anonyme Absturzberichte und anonyme Nutzungsstatistiken</strong>, die nicht mit deiner Identität verknüpft werden können (Abschnitte 2 und 3).</p>
+</div>
+
+<h2>1. Welche Daten wir erheben</h2>
+<p>Pixbu erfordert kein Konto, keine E-Mail, keine Telefonnummer und keine anderen persönlichen Angaben.
+Alles, was du in der App eingibst (der Name deines Freundes, Aufgaben, Routinen, Fortschritt), liegt nur in einer lokalen Datenbank auf deinem Gerät und erreicht uns nie.</p>
+
+<h2>2. Absturzberichte (Sentry)</h2>
+<p>Wenn die App unerwartet beendet wird, wird ein anonymer Absturzbericht an <a href="https://sentry.io">Sentry</a> gesendet, damit wir das Problem beheben können.
+Er enthält die Fehlerdetails, das Gerätemodell, die Betriebssystemversion und die App-Version. Er enthält nichts, was dich identifizieren könnte
+(keinen Namen, keine E-Mail, keinen Standort, keine Werbe-ID), wird nicht mit deiner Identität verknüpft und dient nur der Fehlerbehebung.
+Die Daten werden in Sentrys Region Deutschland (EU) verarbeitet.</p>
+
+<h2>3. Anonyme Nutzungsstatistiken (PostHog)</h2>
+<p>Um zu verstehen, wie wir die App verbessern können, erfassen wir anonyme Ereignisdaten. Diese verarbeitet in unserem Auftrag
+<a href="https://posthog.com">PostHog</a> (gehostet in der Region Europäische Union).</p>
+<p>Die einzigen erfassten Ereignisse sind: App öffnen/in den Hintergrund wechseln, Abschluss der Ersteinrichtung,
+Zähler für abgeschlossene Aufgaben/Routinen/Fokus-Sitzungen und Aufrufe der Abo-Seite.</p>
+<p><strong>Niemals gesendet werden:</strong> der Text deiner Aufgaben, der Name deines Freundes, deine Notizen, deine Erinnerungen, dein Name,
+deine E-Mail, dein Standort oder irgendwelche Gesundheitsdaten. Diese Daten werden weder mit einem Konto noch mit deiner echten Identität verknüpft.</p>
+
+<h2>4. Sicherung (Backup)</h2>
+<ul>
+<li><strong>Android Auto-Backup:</strong> Dein Gerät kann App-Daten verschlüsselt in deinem Google-Konto sichern.
+Das ist eine Systemfunktion von Android; wir können auf diese Daten nicht zugreifen.</li>
+<li><strong>Manueller Export:</strong> "Backup exportieren" gibt dir eine Kopie deiner Daten als Datei. Diese Datei liegt vollständig in deiner Hand.</li>
+</ul>
+
+<h2>5. Benachrichtigungen</h2>
+<p>Erinnerungen werden vollständig auf deinem Gerät geplant und angezeigt; kein Server ist beteiligt.
+Bevor wir die Benachrichtigungsberechtigung anfragen, fragen wir in der App nach — und wenn du ablehnst, nerven wir nicht weiter.</p>
+
+<h2>6. Werbung und Käufe</h2>
+<p>Pixbu enthält <strong>keine Werbung</strong>.</p>
+<p>Die App bietet ein optionales <strong>Freund+-Abo</strong> (monatlich, jährlich oder ein einmaliger Lifetime-Kauf).
+Die Zahlung wird vollständig über Google Play Billing abgewickelt; deine Karten- und Zahlungsdaten erreichen uns nie.</p>
+<p>Um zu prüfen, ob dein Abo aktiv ist, verarbeitet unser Dienstleister <a href="https://www.revenuecat.com">RevenueCat</a>
+den Kaufdatensatz (welches Produkt, Datum, Abo-Status) mit einer zufällig erzeugten anonymen App-Kennung.
+Dieser Datensatz wird nicht mit deinem Namen, deiner E-Mail oder deinen Zahlungsdaten verknüpft.</p>
+<p>Du kannst dein Abo jederzeit unter Google Play &gt; Abos verwalten oder kündigen
+(die App hat eine Verknüpfung unter Einstellungen &gt; Abo verwalten).</p>
+
+<h2>7. Privatsphäre von Kindern</h2>
+<p>Da Pixbu keine personenbezogenen Daten sammelt, sammelt es auch keine personenbezogenen Daten von Kindern. Die App ist für Nutzer ab 13 Jahren konzipiert.</p>
+
+<h2>8. Deine Daten löschen</h2>
+<p>Da alle deine Aufgaben- und Freund-Daten auf deinem Gerät liegen, löscht das Deinstallieren der App (und das Löschen des Android-Backups) sie dauerhaft.</p>
+<p>Anonyme Absturz- und Nutzungsdaten können nicht mit deiner Identität verknüpft werden und lassen sich daher nicht einzeln abrufen;
+sie werden nach einer begrenzten Aufbewahrungsfrist automatisch gelöscht. Wenn du dennoch ein Anliegen hast, schreib uns an
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+<h2>9. Änderungen</h2>
+<p>Wenn sich diese Erklärung ändert, wird diese Seite aktualisiert und das Datum "zuletzt aktualisiert" erneuert.</p>
+
+<h2>10. Kontakt</h2>
+<p>Fragen an: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+<hr class="langsep">
+
+<!-- ================= FR ================= -->
+<section class="lang" data-lang="fr" data-title="Pixbu — Politique de Confidentialité">
+
+<h1>Pixbu — Politique de Confidentialité</h1>
+<p class="muted">Dernière mise à jour : 23 juillet 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
+<p class="muted"><em>Cette traduction est fournie à titre informatif ; en cas de divergence, la version anglaise prévaut.</em></p>
+
+<div class="card">
+<p><strong>En bref :</strong> Pixbu n'a pas de comptes et ne collecte aucune donnée personnelle.
+Toute ta progression (ton copain, tes tâches, tes séries) est stockée uniquement sur ton propre appareil et ne nous parvient jamais.
+Les seules choses envoyées à nos serveurs sont des <strong>rapports de plantage anonymes et des statistiques d'utilisation anonymes</strong> qui ne peuvent pas être reliés à ton identité (sections 2 et 3).</p>
+</div>
+
+<h2>1. Données que nous collectons</h2>
+<p>Pixbu ne nécessite ni compte, ni e-mail, ni numéro de téléphone, ni aucune autre information personnelle.
+Tout ce que tu saisis dans l'app (le nom de ton copain, tes tâches, tes routines, ta progression) vit uniquement dans une base de données locale sur ton appareil et ne nous parvient jamais.</p>
+
+<h2>2. Rapports de plantage (Sentry)</h2>
+<p>Si l'app se ferme de façon inattendue, un rapport de plantage anonyme est envoyé à <a href="https://sentry.io">Sentry</a> pour que nous puissions corriger le problème.
+Il contient les détails de l'erreur, le modèle de l'appareil, la version du système et la version de l'app. Il ne contient rien qui puisse t'identifier
+(ni nom, ni e-mail, ni position, ni identifiant publicitaire), n'est pas relié à ton identité et sert uniquement au débogage.
+Les données sont traitées dans la région Allemagne (UE) de Sentry.</p>
+
+<h2>3. Statistiques d'utilisation anonymes (PostHog)</h2>
+<p>Pour comprendre comment améliorer l'app, nous collectons des événements anonymes. Ils sont traités pour notre compte par
+<a href="https://posthog.com">PostHog</a> (hébergé dans la région de l'Union européenne).</p>
+<p>Les seuls événements collectés sont : ouverture/mise en arrière-plan de l'app, fin du parcours de configuration initiale,
+compteurs de tâches/routines/sessions de concentration terminées et affichages de l'écran d'abonnement.</p>
+<p><strong>Jamais envoyés :</strong> le texte de tes tâches, le nom de ton copain, tes notes, tes rappels, ton nom,
+ton e-mail, ta position ou toute donnée de santé. Ces enregistrements ne sont reliés ni à un compte ni à ton identité réelle.</p>
+
+<h2>4. Sauvegardes</h2>
+<ul>
+<li><strong>Sauvegarde automatique Android :</strong> Ton appareil peut sauvegarder les données de l'app, chiffrées, sur ton compte Google.
+C'est une fonction du système Android ; nous ne pouvons pas accéder à ces données.</li>
+<li><strong>Export manuel :</strong> « Exporter la sauvegarde » te donne une copie de tes données sous forme de fichier. Ce fichier est entièrement sous ton contrôle.</li>
+</ul>
+
+<h2>5. Notifications</h2>
+<p>Les rappels sont planifiés et affichés entièrement sur ton appareil ; aucun serveur n'intervient.
+Nous demandons dans l'app avant de solliciter l'autorisation de notifications, et si tu refuses, nous n'insistons pas.</p>
+
+<h2>6. Publicités et achats</h2>
+<p>Pixbu ne contient <strong>aucune publicité</strong>.</p>
+<p>L'app propose un <strong>abonnement Copain+</strong> facultatif (mensuel, annuel ou un achat unique à vie).
+Le paiement est entièrement géré par Google Play Billing ; tes données de carte et de paiement ne nous parviennent jamais.</p>
+<p>Pour vérifier si ton abonnement est actif, notre prestataire <a href="https://www.revenuecat.com">RevenueCat</a>
+traite l'enregistrement d'achat (quel produit, date, statut de l'abonnement) avec un identifiant d'app anonyme généré aléatoirement.
+Cet enregistrement n'est relié ni à ton nom, ni à ton e-mail, ni à tes données de paiement.</p>
+<p>Tu peux gérer ou annuler ton abonnement à tout moment depuis Google Play &gt; Abonnements
+(l'app propose un raccourci dans Paramètres &gt; Gérer l'abonnement).</p>
+
+<h2>7. Confidentialité des enfants</h2>
+<p>Comme Pixbu ne collecte aucune donnée personnelle, il ne collecte pas non plus de données personnelles d'enfants. L'app est conçue pour les utilisateurs de 13 ans et plus.</p>
+
+<h2>8. Supprimer tes données</h2>
+<p>Comme toutes tes données de tâches et de copain vivent sur ton appareil, désinstaller l'app (et supprimer sa sauvegarde Android) les supprime définitivement.</p>
+<p>Les enregistrements anonymes de plantage et d'utilisation ne peuvent pas être reliés à ton identité et ne peuvent donc pas être récupérés individuellement ;
+ils sont supprimés automatiquement après une période de conservation limitée. Si tu as malgré tout une demande, écris-nous à
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+<h2>9. Modifications</h2>
+<p>Si cette politique change, cette page sera mise à jour et la date de « dernière mise à jour » sera renouvelée.</p>
+
+<h2>10. Contact</h2>
+<p>Questions : <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+
+<script>
+(function () {
+  var LANGS = ['tr', 'en', 'es', 'pt', 'de', 'fr'];
+  document.body.classList.add('js');
+  var bar = document.getElementById('langbar');
+  bar.hidden = false;
+
+  function pick() {
+    var q = new URLSearchParams(location.search).get('lang');
+    if (q) { q = q.slice(0, 2).toLowerCase(); if (LANGS.indexOf(q) !== -1) return q; }
+    var navs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < navs.length; i++) {
+      var c = String(navs[i]).slice(0, 2).toLowerCase();
+      if (LANGS.indexOf(c) !== -1) return c;
+    }
+    return 'en';
+  }
+
+  function show(lang, updateUrl) {
+    var sections = document.querySelectorAll('section.lang');
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      var on = s.getAttribute('data-lang') === lang;
+      s.classList.toggle('active', on);
+      if (on) document.title = s.getAttribute('data-title');
+    }
+    var btns = bar.querySelectorAll('button');
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.toggle('active', btns[j].getAttribute('data-lang') === lang);
+    }
+    document.documentElement.lang = lang;
+    if (updateUrl) {
+      var u = new URL(location.href);
+      u.searchParams.set('lang', lang);
+      history.replaceState(null, '', u);
+    }
+  }
+
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (b) show(b.getAttribute('data-lang'), true);
+  });
+
+  show(pick(), false);
+})();
+</script>
 
 </div>
 </body>
