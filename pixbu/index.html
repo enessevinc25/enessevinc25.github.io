@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixbu — Kendine baktıkça büyüyen piksel dostun</title>
+<meta name="description" content="Alışkanlık takibi, rutinler ve odak modu. Küçük görevleri yaptıkça piksel dostun büyüyüp evrimleşiyor. Reklamsız, hesapsız, ücretsiz.">
+<link rel="icon" href="img/favicon.png">
+<meta property="og:title" content="Pixbu — Kendine baktıkça büyüyen piksel dostun">
+<meta property="og:description" content="Alışkanlık takibi, rutinler ve odak modu. Küçük görevleri yaptıkça piksel dostun büyüyüp evrimleşiyor. Reklamsız, hesapsız, ücretsiz.">
+<meta property="og:image" content="img/icon.webp">
+<meta name="twitter:card" content="summary">
+<style>
+:root{--bg:#0E1016;--card:#171A22;--line:#2A2E3A;--text:#E8EAF0;--muted:#9AA0AE;
+--mint:#6FE7A8;--warm:#FFC978}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI",Roboto,-apple-system,sans-serif;background:var(--bg);
+color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+a{color:var(--mint)}
+.langbar{position:sticky;top:0;z-index:10;background:rgba(14,16,22,.92);
+backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.langbar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-top:12px;padding-bottom:12px}
+.langbar button{background:var(--card);color:var(--muted);border:1px solid var(--line);
+border-radius:999px;padding:6px 14px;font-size:.85rem;cursor:pointer;font-family:inherit}
+.langbar button.active{color:#0E1016;background:var(--mint);border-color:var(--mint);font-weight:600}
+.hero{text-align:center;padding:56px 0 40px}
+.hero img.icon{width:96px;height:96px;border-radius:24px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.hero h1{font-size:2rem;margin:20px 0 6px;text-wrap:balance;line-height:1.25}
+.hero .brand{color:var(--mint);font-weight:700;letter-spacing:.5px}
+.hero p{color:var(--muted);max-width:56ch;margin:12px auto 0;text-wrap:pretty}
+.cta{margin-top:28px}
+.badge{display:inline-block;background:var(--card);border:1px solid var(--mint);
+color:var(--mint);border-radius:999px;padding:12px 26px;font-weight:600}
+.badge.sub{display:block;background:none;border:none;color:var(--muted);font-weight:400;
+font-size:.85rem;margin-top:10px;padding:0}
+.playbtn{display:inline-block;background:var(--mint);color:#0E1016;font-weight:700;
+border-radius:999px;padding:14px 30px;text-decoration:none}
+h2{font-size:1.05rem;color:var(--muted);font-weight:600;letter-spacing:1.5px;
+text-transform:uppercase;margin:0 0 18px}
+section.block{padding:36px 0}
+.shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+/* height:auto SART — width/height nitelikleri dogal olcu (480x987) oldugu icin
+   yalniz genislik verilirse tarayici oranı korur. Sabit yukseklik yazmak
+   goruntuyu dikey EZIYORDU (ilk surumde 170x432 cikti, dogrusu 170x350). */
+.shots img{width:210px;height:auto;flex:0 0 auto;border-radius:14px;
+border:1px solid var(--line);scroll-snap-align:start;background:var(--card)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.cardbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.cardbox .em{font-size:1.4rem;line-height:1}
+.cardbox h3{margin:10px 0 6px;font-size:1.02rem}
+.cardbox p{margin:0;color:var(--muted);font-size:.93rem}
+.strip{background:var(--card);border:1px solid var(--mint);border-radius:16px;padding:22px 24px}
+.strip h3{margin:0 0 6px;color:var(--mint);font-size:1.05rem}
+.strip p{margin:0;color:var(--muted)}
+.strip + .strip{margin-top:14px;border-color:var(--line)}
+.strip + .strip h3{color:var(--warm)}
+footer{border-top:1px solid var(--line);margin-top:32px;padding:28px 0 56px;
+color:var(--muted);font-size:.9rem}
+footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+body.js section.lang{display:none}
+body.js section.lang.active{display:block}
+body.js hr.langsep{display:none}
+hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
+@media (max-width:520px){.hero h1{font-size:1.6rem}.shots img{width:170px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="langbar" id="langbar" hidden><div class="wrap">
+<button data-lang="tr">Türkçe</button>
+<button data-lang="en">English</button>
+<button data-lang="es">Español</button>
+<button data-lang="pt">Português</button>
+<button data-lang="de">Deutsch</button>
+<button data-lang="fr">Français</button>
+</div></nav>
+<section class="lang" data-lang="tr" data-htmllang="tr" data-title="Pixbu — Kendine baktıkça büyüyen piksel dostun" data-meta="Alışkanlık takibi, rutinler ve odak modu. Küçük görevleri yaptıkça piksel dostun büyüyüp evrimleşiyor. Reklamsız, hesapsız, ücretsiz.">
+<div class="hero"><div class="wrap">
+<img class="icon" src="img/icon.webp" width="96" height="96" alt="Pixbu">
+<h1><span class="brand">Pixbu</span><br>Kendine baktıkça büyüyen piksel dostun</h1>
+<p>Su içmek, kısa bir yürüyüş, iki satır günlük… Kendin için yaptığın her küçük şey onu büyütür ve evrimleştirir. Ceza yok, suçlama yok.</p>
+<div class="cta">
+<span class="badge">Çok yakında Google Play'de</span>
+<span class="badge sub">Şu an kapalı testte — yayın tarihi yaklaşıyor.</span>
+</div></div></div>
+<section class="block"><div class="wrap"><h2>Uygulamadan</h2><div class="shots">
+<img data-src="img/tr-1.webp" width="480" height="987" loading="lazy" alt="Bugünün görevleri">
+<img data-src="img/tr-2.webp" width="480" height="987" loading="lazy" alt="Rutinler">
+<img data-src="img/tr-3.webp" width="480" height="987" loading="lazy" alt="Rutin adımı">
+<img data-src="img/tr-4.webp" width="480" height="987" loading="lazy" alt="Odak modu">
+<img data-src="img/tr-5.webp" width="480" height="987" loading="lazy" alt="Dostun">
+<img data-src="img/tr-6.webp" width="480" height="987" loading="lazy" alt="Nefes egzersizi">
+</div></div></section>
+<section class="block"><div class="wrap"><h2>Neler var</h2><div class="cards">
+<div class="cardbox"><div class="em">🐾</div><h3>Dostun seninle büyür</h3><p>Yumurtadan çıkar, 6 aşamada evrimleşir. Sarıl, konuş, birlikte nefes al.</p></div>
+<div class="cardbox"><div class="em">✅</div><h3>Küçük adımlar, gerçek ilerleme</h3><p>Tek dokunuşla tamamla, anında geri al. Günün ilk adımı çift sayılır.</p></div>
+<div class="cardbox"><div class="em">🧭</div><h3>Adım adım rutinler</h3><p>Sabah ve akşam rutinleri tek ekranda, tek adım. Bunalma yok.</p></div>
+<div class="cardbox"><div class="em">⏱️</div><h3>Odak modu</h3><p>Görsel zamanlayıcı. Dostun yanında oturur, sen bitirene kadar bekler.</p></div>
+<div class="cardbox"><div class="em">🔥</div><h3>Affedici seri</h3><p>Hayat araya girer. Otomatik dondurma ve nazik telafi var. Ceza yok.</p></div>
+<div class="cardbox"><div class="em">🏠</div><h3>Ana ekran widget'ı</h3><p>Dostun, serin ve sıradaki görevin ana ekranında. Oradan tamamla.</p></div>
+</div></div></section>
+<section class="block"><div class="wrap">
+<div class="strip"><h3>Gizlilik önce</h3><p>Hesap yok. E-posta yok. Reklam yok. Görevlerin, dostun ve tüm ilerlemen yalnızca senin cihazında kalır.</p></div>
+<div class="strip"><h3>6 dilde</h3><p>Türkçe, İngilizce, İspanyolca, Portekizce, Almanca ve Fransızca.</p></div>
+</div></section>
+<footer><div class="wrap"><div class="links">
+<a href="privacy.html?lang=tr">Gizlilik Politikası</a>
+<a href="terms.html?lang=tr">Kullanım Şartları</a>
+</div><div>Türkiye'de tek kişilik bir stüdyoda yapıldı.</div></div></footer>
+</section>
+<hr class="langsep">
+<section class="lang" data-lang="en" data-htmllang="en" data-title="Pixbu — A pixel pet that grows as you care for yourself" data-meta="Habit tracking, routines and focus mode. Do small things for yourself and your pixel pet grows and evolves. No ads, no account, free.">
+<div class="hero"><div class="wrap">
+<img class="icon" src="img/icon.webp" width="96" height="96" alt="Pixbu">
+<h1><span class="brand">Pixbu</span><br>A pixel pet that grows as you care for yourself</h1>
+<p>A glass of water, a short walk, one line in your journal… every small thing you do for yourself helps them grow and evolve. No penalties, no blame.</p>
+<div class="cta">
+<span class="badge">Coming soon to Google Play</span>
+<span class="badge sub">Currently in closed testing — launch is close.</span>
+</div></div></div>
+<section class="block"><div class="wrap"><h2>From the app</h2><div class="shots">
+<img data-src="img/en-1.webp" width="480" height="987" loading="lazy" alt="Today's tasks">
+<img data-src="img/en-2.webp" width="480" height="987" loading="lazy" alt="Routines">
+<img data-src="img/en-3.webp" width="480" height="987" loading="lazy" alt="Routine step">
+<img data-src="img/en-4.webp" width="480" height="987" loading="lazy" alt="Focus mode">
+<img data-src="img/en-5.webp" width="480" height="987" loading="lazy" alt="Your buddy">
+<img data-src="img/en-6.webp" width="480" height="987" loading="lazy" alt="Breathing exercise">
+</div></div></section>
+<section class="block"><div class="wrap"><h2>What's inside</h2><div class="cards">
+<div class="cardbox"><div class="em">🐾</div><h3>Your buddy grows with you</h3><p>Hatches from an egg and evolves through 6 stages. Hug, talk, breathe together.</p></div>
+<div class="cardbox"><div class="em">✅</div><h3>Small steps, real progress</h3><p>One tap to complete, instant undo. Your first step of the day counts double.</p></div>
+<div class="cardbox"><div class="em">🧭</div><h3>Step-by-step routines</h3><p>Morning and evening routines, one step at a time. Zero overwhelm.</p></div>
+<div class="cardbox"><div class="em">⏱️</div><h3>Focus mode</h3><p>A visual timer. Your buddy sits with you and waits until you're done.</p></div>
+<div class="cardbox"><div class="em">🔥</div><h3>A forgiving streak</h3><p>Life happens. Automatic freezes and a gentle repair. No penalties.</p></div>
+<div class="cardbox"><div class="em">🏠</div><h3>Home screen widget</h3><p>Your buddy, your streak and your next task on the home screen.</p></div>
+</div></div></section>
+<section class="block"><div class="wrap">
+<div class="strip"><h3>Privacy first</h3><p>No account. No email. No ads. Your tasks, your buddy and all your progress stay on your device.</p></div>
+<div class="strip"><h3>In 6 languages</h3><p>Turkish, English, Spanish, Portuguese, German and French.</p></div>
+</div></section>
+<footer><div class="wrap"><div class="links">
+<a href="privacy.html?lang=en">Privacy Policy</a>
+<a href="terms.html?lang=en">Terms of Use</a>
+</div><div>Made by a one-person studio in Türkiye.</div></div></footer>
+</section>
+<hr class="langsep">
+<section class="lang" data-lang="es" data-htmllang="es" data-title="Pixbu — Una mascota píxel que crece cuando te cuidas" data-meta="Hábitos, rutinas y modo enfoque. Haz cosas pequeñas por ti y tu mascota píxel crece y evoluciona. Sin anuncios, sin cuenta, gratis.">
+<div class="hero"><div class="wrap">
+<img class="icon" src="img/icon.webp" width="96" height="96" alt="Pixbu">
+<h1><span class="brand">Pixbu</span><br>Una mascota píxel que crece cuando te cuidas</h1>
+<p>Un vaso de agua, un paseo corto, una línea en tu diario… cada pequeña cosa que haces por ti le ayuda a crecer y evolucionar. Sin castigos.</p>
+<div class="cta">
+<span class="badge">Muy pronto en Google Play</span>
+<span class="badge sub">Ahora en pruebas cerradas: el lanzamiento está cerca.</span>
+</div></div></div>
+<section class="block"><div class="wrap"><h2>De la app</h2><div class="shots">
+<img data-src="img/es-1.webp" width="480" height="987" loading="lazy" alt="Tareas de hoy">
+<img data-src="img/es-2.webp" width="480" height="987" loading="lazy" alt="Rutinas">
+<img data-src="img/es-3.webp" width="480" height="987" loading="lazy" alt="Paso de rutina">
+<img data-src="img/es-4.webp" width="480" height="987" loading="lazy" alt="Modo enfoque">
+<img data-src="img/es-5.webp" width="480" height="987" loading="lazy" alt="Tu mascota">
+<img data-src="img/es-6.webp" width="480" height="987" loading="lazy" alt="Ejercicio de respiración">
+</div></div></section>
+<section class="block"><div class="wrap"><h2>Qué incluye</h2><div class="cards">
+<div class="cardbox"><div class="em">🐾</div><h3>Tu amigo crece contigo</h3><p>Nace de un huevo y evoluciona en 6 etapas. Abrázalo, háblale, respira con él.</p></div>
+<div class="cardbox"><div class="em">✅</div><h3>Pasos pequeños, progreso real</h3><p>Completa con un toque y deshaz al instante. Tu primer paso del día cuenta doble.</p></div>
+<div class="cardbox"><div class="em">🧭</div><h3>Rutinas paso a paso</h3><p>Rutinas de mañana y noche, paso a paso. Sin agobios.</p></div>
+<div class="cardbox"><div class="em">⏱️</div><h3>Modo enfoque</h3><p>Un temporizador visual. Tu mascota se sienta contigo y espera a que termines.</p></div>
+<div class="cardbox"><div class="em">🔥</div><h3>Una racha que perdona</h3><p>La vida pasa. Hay congelaciones automáticas y una reparación amable.</p></div>
+<div class="cardbox"><div class="em">🏠</div><h3>Widget de pantalla de inicio</h3><p>Tu mascota, tu racha y tu próxima tarea en la pantalla de inicio.</p></div>
+</div></div></section>
+<section class="block"><div class="wrap">
+<div class="strip"><h3>Privacidad primero</h3><p>Sin cuenta. Sin correo. Sin anuncios. Tus tareas, tu mascota y todo tu progreso se quedan en tu dispositivo.</p></div>
+<div class="strip"><h3>En 6 idiomas</h3><p>Turco, inglés, español, portugués, alemán y francés.</p></div>
+</div></section>
+<footer><div class="wrap"><div class="links">
+<a href="privacy.html?lang=es">Política de Privacidad</a>
+<a href="terms.html?lang=es">Términos de Uso</a>
+</div><div>Hecho por un estudio de una sola persona en Türkiye.</div></div></footer>
+</section>
+<hr class="langsep">
+<section class="lang" data-lang="pt" data-htmllang="pt" data-title="Pixbu — Um bichinho pixel que cresce com seus cuidados" data-meta="Hábitos, rotinas e modo foco. Faça coisas pequenas por você e seu bichinho pixel cresce e evolui. Sem anúncios, sem conta, grátis.">
+<div class="hero"><div class="wrap">
+<img class="icon" src="img/icon.webp" width="96" height="96" alt="Pixbu">
+<h1><span class="brand">Pixbu</span><br>Um bichinho pixel que cresce com seus cuidados</h1>
+<p>Um copo d'água, uma caminhada curta, uma linha no diário… cada pequena coisa que você faz por si ajuda seu amigo a crescer e evoluir. Sem punição.</p>
+<div class="cta">
+<span class="badge">Em breve no Google Play</span>
+<span class="badge sub">Em teste fechado agora — o lançamento está próximo.</span>
+</div></div></div>
+<section class="block"><div class="wrap"><h2>Do app</h2><div class="shots">
+<img data-src="img/pt-1.webp" width="480" height="987" loading="lazy" alt="Tarefas de hoje">
+<img data-src="img/pt-2.webp" width="480" height="987" loading="lazy" alt="Rotinas">
+<img data-src="img/pt-3.webp" width="480" height="987" loading="lazy" alt="Passo da rotina">
+<img data-src="img/pt-4.webp" width="480" height="987" loading="lazy" alt="Modo foco">
+<img data-src="img/pt-5.webp" width="480" height="987" loading="lazy" alt="Seu bichinho">
+<img data-src="img/pt-6.webp" width="480" height="987" loading="lazy" alt="Exercício de respiração">
+</div></div></section>
+<section class="block"><div class="wrap"><h2>O que tem dentro</h2><div class="cards">
+<div class="cardbox"><div class="em">🐾</div><h3>Seu amigo cresce com você</h3><p>Nasce de um ovo e evolui em 6 estágios. Abrace, converse, respire junto.</p></div>
+<div class="cardbox"><div class="em">✅</div><h3>Passos pequenos, progresso real</h3><p>Complete com um toque e desfaça na hora. Seu primeiro passo do dia conta em dobro.</p></div>
+<div class="cardbox"><div class="em">🧭</div><h3>Rotinas passo a passo</h3><p>Rotinas de manhã e noite, um passo por vez. Sem sobrecarga.</p></div>
+<div class="cardbox"><div class="em">⏱️</div><h3>Modo foco</h3><p>Um cronômetro visual. Seu bichinho senta com você e espera você terminar.</p></div>
+<div class="cardbox"><div class="em">🔥</div><h3>Uma sequência que perdoa</h3><p>A vida acontece. Há congelamentos automáticos e uma reparação gentil.</p></div>
+<div class="cardbox"><div class="em">🏠</div><h3>Widget na tela inicial</h3><p>Seu bichinho, sua sequência e sua próxima tarefa na tela inicial.</p></div>
+</div></div></section>
+<section class="block"><div class="wrap">
+<div class="strip"><h3>Privacidade em primeiro lugar</h3><p>Sem conta. Sem e-mail. Sem anúncios. Suas tarefas, seu bichinho e todo o progresso ficam no seu aparelho.</p></div>
+<div class="strip"><h3>Em 6 idiomas</h3><p>Turco, inglês, espanhol, português, alemão e francês.</p></div>
+</div></section>
+<footer><div class="wrap"><div class="links">
+<a href="privacy.html?lang=pt">Política de Privacidade</a>
+<a href="terms.html?lang=pt">Termos de Uso</a>
+</div><div>Feito por um estúdio de uma pessoa só na Türkiye.</div></div></footer>
+</section>
+<hr class="langsep">
+<section class="lang" data-lang="de" data-htmllang="de" data-title="Pixbu — Ein Pixel-Tier, das wächst, wenn du auf dich achtest" data-meta="Gewohnheiten, Routinen und Fokus-Modus. Tu kleine Dinge für dich und dein Pixel-Tier wächst und entwickelt sich. Ohne Werbung, ohne Konto.">
+<div class="hero"><div class="wrap">
+<img class="icon" src="img/icon.webp" width="96" height="96" alt="Pixbu">
+<h1><span class="brand">Pixbu</span><br>Ein Pixel-Tier, das wächst, wenn du auf dich achtest</h1>
+<p>Ein Glas Wasser, ein kurzer Spaziergang, eine Zeile im Tagebuch… jede kleine Sache, die du für dich tust, lässt es wachsen. Keine Strafen.</p>
+<div class="cta">
+<span class="badge">Bald bei Google Play</span>
+<span class="badge sub">Derzeit im geschlossenen Test — der Start ist nah.</span>
+</div></div></div>
+<section class="block"><div class="wrap"><h2>Aus der App</h2><div class="shots">
+<img data-src="img/de-1.webp" width="480" height="987" loading="lazy" alt="Heutige Aufgaben">
+<img data-src="img/de-2.webp" width="480" height="987" loading="lazy" alt="Routinen">
+<img data-src="img/de-3.webp" width="480" height="987" loading="lazy" alt="Routineschritt">
+<img data-src="img/de-4.webp" width="480" height="987" loading="lazy" alt="Fokus-Modus">
+<img data-src="img/de-5.webp" width="480" height="987" loading="lazy" alt="Dein Tier">
+<img data-src="img/de-6.webp" width="480" height="987" loading="lazy" alt="Atemübung">
+</div></div></section>
+<section class="block"><div class="wrap"><h2>Was drin ist</h2><div class="cards">
+<div class="cardbox"><div class="em">🐾</div><h3>Dein Freund wächst mit dir</h3><p>Schlüpft aus einem Ei und entwickelt sich über 6 Stufen. Umarmen, reden, atmen.</p></div>
+<div class="cardbox"><div class="em">✅</div><h3>Kleine Schritte, echter Fortschritt</h3><p>Mit einem Tippen erledigt, sofort rückgängig. Dein erster Schritt zählt doppelt.</p></div>
+<div class="cardbox"><div class="em">🧭</div><h3>Routinen Schritt für Schritt</h3><p>Morgen- und Abendroutinen, ein Schritt nach dem anderen. Kein Overwhelm.</p></div>
+<div class="cardbox"><div class="em">⏱️</div><h3>Fokus-Modus</h3><p>Ein sichtbarer Timer. Dein Tier sitzt bei dir und wartet, bis du fertig bist.</p></div>
+<div class="cardbox"><div class="em">🔥</div><h3>Eine verzeihende Serie</h3><p>Das Leben kommt dazwischen. Automatische Pausen und eine sanfte Reparatur.</p></div>
+<div class="cardbox"><div class="em">🏠</div><h3>Startbildschirm-Widget</h3><p>Dein Tier, deine Serie und deine nächste Aufgabe auf dem Startbildschirm.</p></div>
+</div></div></section>
+<section class="block"><div class="wrap">
+<div class="strip"><h3>Privatsphäre zuerst</h3><p>Kein Konto. Keine E-Mail. Keine Werbung. Deine Aufgaben, dein Tier und dein ganzer Fortschritt bleiben auf deinem Gerät.</p></div>
+<div class="strip"><h3>In 6 Sprachen</h3><p>Türkisch, Englisch, Spanisch, Portugiesisch, Deutsch und Französisch.</p></div>
+</div></section>
+<footer><div class="wrap"><div class="links">
+<a href="privacy.html?lang=de">Datenschutzerklärung</a>
+<a href="terms.html?lang=de">Nutzungsbedingungen</a>
+</div><div>Gemacht von einem Ein-Personen-Studio in der Türkei.</div></div></footer>
+</section>
+<hr class="langsep">
+<section class="lang" data-lang="fr" data-htmllang="fr" data-title="Pixbu — Un compagnon pixel qui grandit quand tu prends soin de toi" data-meta="Habitudes, routines et mode concentration. Fais de petites choses pour toi et ton compagnon pixel grandit et évolue. Sans pub, sans compte.">
+<div class="hero"><div class="wrap">
+<img class="icon" src="img/icon.webp" width="96" height="96" alt="Pixbu">
+<h1><span class="brand">Pixbu</span><br>Un compagnon pixel qui grandit quand tu prends soin de toi</h1>
+<p>Un verre d'eau, une petite marche, une ligne dans ton journal… chaque petite chose que tu fais pour toi le fait grandir et évoluer. Aucune punition.</p>
+<div class="cta">
+<span class="badge">Bientôt sur Google Play</span>
+<span class="badge sub">En test fermé pour l'instant — le lancement approche.</span>
+</div></div></div>
+<section class="block"><div class="wrap"><h2>Dans l'app</h2><div class="shots">
+<img data-src="img/fr-1.webp" width="480" height="987" loading="lazy" alt="Tâches du jour">
+<img data-src="img/fr-2.webp" width="480" height="987" loading="lazy" alt="Routines">
+<img data-src="img/fr-3.webp" width="480" height="987" loading="lazy" alt="Étape de routine">
+<img data-src="img/fr-4.webp" width="480" height="987" loading="lazy" alt="Mode concentration">
+<img data-src="img/fr-5.webp" width="480" height="987" loading="lazy" alt="Ton compagnon">
+<img data-src="img/fr-6.webp" width="480" height="987" loading="lazy" alt="Exercice de respiration">
+</div></div></section>
+<section class="block"><div class="wrap"><h2>Ce qu'il y a dedans</h2><div class="cards">
+<div class="cardbox"><div class="em">🐾</div><h3>Ton copain grandit avec toi</h3><p>Éclôt d'un œuf et évolue en 6 étapes. Câline-le, parle-lui, respire avec lui.</p></div>
+<div class="cardbox"><div class="em">✅</div><h3>Petits pas, vrais progrès</h3><p>Termine d'un geste, annule aussitôt. Ton premier pas du jour compte double.</p></div>
+<div class="cardbox"><div class="em">🧭</div><h3>Routines pas à pas</h3><p>Routines du matin et du soir, une étape à la fois. Zéro surcharge.</p></div>
+<div class="cardbox"><div class="em">⏱️</div><h3>Mode concentration</h3><p>Un minuteur visuel. Ton compagnon s'assoit près de toi et attend que tu finisses.</p></div>
+<div class="cardbox"><div class="em">🔥</div><h3>Une série qui pardonne</h3><p>La vie s'en mêle. Gels automatiques et réparation douce. Aucune punition.</p></div>
+<div class="cardbox"><div class="em">🏠</div><h3>Widget d'écran d'accueil</h3><p>Ton compagnon, ta série et ta prochaine tâche sur l'écran d'accueil.</p></div>
+</div></div></section>
+<section class="block"><div class="wrap">
+<div class="strip"><h3>La vie privée d'abord</h3><p>Pas de compte. Pas d'e-mail. Pas de pub. Tes tâches, ton compagnon et tous tes progrès restent sur ton appareil.</p></div>
+<div class="strip"><h3>En 6 langues</h3><p>Turc, anglais, espagnol, portugais, allemand et français.</p></div>
+</div></section>
+<footer><div class="wrap"><div class="links">
+<a href="privacy.html?lang=fr">Politique de confidentialité</a>
+<a href="terms.html?lang=fr">Conditions d'utilisation</a>
+</div><div>Créé par un studio d'une seule personne en Türkiye.</div></div></footer>
+</section>
+<script>
+document.body.classList.add('js');
+var bar=document.getElementById('langbar');bar.hidden=false;
+var TITLES={};
+document.querySelectorAll('section.lang').forEach(function(s){
+  TITLES[s.dataset.lang]=[s.dataset.title,s.dataset.meta,s.dataset.htmllang];
+});
+function setLang(l){
+  document.querySelectorAll('section.lang').forEach(function(s){
+    s.classList.toggle('active',s.dataset.lang===l);
+    if(s.dataset.lang===l){
+      s.querySelectorAll('img[data-src]').forEach(function(im){
+        if(!im.src){im.src=im.dataset.src;}
+      });
+    }
+  });
+  bar.querySelectorAll('button').forEach(function(b){
+    b.classList.toggle('active',b.dataset.lang===l);
+  });
+  var t=TITLES[l];
+  if(t){
+    document.title=t[0];
+    document.documentElement.lang=t[2];
+    var m=document.querySelector('meta[name=description]');
+    if(m)m.content=t[1];
+  }
+  try{localStorage.setItem('pixbu_lang',l);}catch(e){}
+}
+bar.addEventListener('click',function(e){
+  var b=e.target.closest('button');if(b)setLang(b.dataset.lang);
+});
+var saved=null;try{saved=localStorage.getItem('pixbu_lang');}catch(e){}
+var url=new URLSearchParams(location.search).get('lang');
+var nav=(navigator.language||'en').slice(0,2);
+var av=Object.keys(TITLES);
+setLang([url,saved,nav].find(function(c){return c&&av.indexOf(c)>-1;})||'en');
+</script>
+</body></html>
