@@ -43,7 +43,7 @@
 <section class="lang" data-lang="tr" data-title="Pixbu — Gizlilik Politikası">
 
 <h1>Pixbu — Gizlilik Politikası</h1>
-<p class="muted">Son güncelleme: 23 Temmuz 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
+<p class="muted">Son güncelleme: 18 Ağustos 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Kısa özet:</strong> Pixbu hesap açmaz ve kişisel veri toplamaz.
@@ -54,18 +54,24 @@ Sunucularımıza giden tek şey, kimliğinle eşleştirilemeyen <strong>anonim �
 <h2>1. Topladığımız veriler</h2>
 <p>Pixbu'yu kullanmak için hesap, e-posta, telefon numarası ya da başka bir kişisel bilgi gerekmez ve istenmez.
 Uygulama içinde girdiğin her şey (dostunun adı, görevlerin, rutinlerin, ilerlemen) yalnızca cihazındaki yerel veritabanında tutulur ve bize hiçbir şekilde ulaşmaz.</p>
+<p>Uygulama isteğe bağlı bir <strong>adım sayar</strong> özelliği sunar (varsayılan kapalı). Açarsan, cihazının donanım
+adım sayacından (ve bunun için gereken izinden) okunan veriler de yalnızca cihazındaki yerel veritabanında tutulur;
+bize ya da başka bir sunucuya hiçbir şekilde gönderilmez.</p>
 
 <h2>2. Çökme kayıtları (Sentry)</h2>
 <p>Uygulama beklenmedik şekilde kapanırsa, sorunu düzeltebilmemiz için anonim bir çökme kaydı
 <a href="https://sentry.io">Sentry</a> hizmetine gönderilir. Bu kayıt; hata ayrıntısını, cihaz modelini,
 işletim sistemi sürümünü ve uygulama sürümünü içerir. Kimliğini belirleyebilecek bilgi (isim, e-posta, konum, reklam kimliği) içermez,
 kimliğinle ilişkilendirilmez ve yalnızca hata ayıklama için kullanılır. Veriler Sentry'nin Almanya (AB) bölgesinde işlenir.</p>
+<p>Ayrıca, çökme olmasa bile, uygulamanın açılış/akıcılık ölçümleri oturumların bir kısmında anonim olarak
+Sentry'ye örneklenir — bu da kimliğinle eşleştirilmez, yalnızca performansı iyileştirmek için kullanılır.</p>
 
 <h2>3. Anonim kullanım istatistikleri (PostHog)</h2>
 <p>Uygulamayı nasıl geliştireceğimizi anlamak için anonim olay kayıtları toplarız. Bunları bizim adımıza
 <a href="https://posthog.com">PostHog</a> işler (Avrupa Birliği bölgesinde barındırılır).</p>
-<p>Toplanan olaylar yalnızca şunlardır: uygulamanın açılması/arka plana alınması, ilk kurulum akışının tamamlanması,
-görev/rutin/odak seansı tamamlama sayaçları ve abonelik ekranının görüntülenmesi.</p>
+<p>Toplanan olay örnekleri: ekran açılışları/arka plana alınması, kurulum akışının tamamlanması,
+görev/rutin/odak seansı tamamlama sayaçları, satın alma akışı adımları ve kurulumda seçtiğin kişiselleştirme
+seçeneği (ör. öğrenci/çalışan/ev). <strong>Hiçbir olay serbest metin, isim veya not içermez.</strong></p>
 <p><strong>Gönderilmeyenler:</strong> görev metinlerin, dostunun adı, notların, hatırlatmaların, adın, e-postan,
 konumun veya herhangi bir sağlık verisi. Kayıtlar bir hesapla veya gerçek kimliğinle eşleştirilmez.</p>
 
@@ -92,7 +98,8 @@ Bu kayıt adın, e-postan veya ödeme bilgilerinle ilişkilendirilmez.</p>
 (uygulamada Ayarlar &gt; Aboneliği yönet kısayolu vardır).</p>
 
 <h2>7. Çocukların gizliliği</h2>
-<p>Pixbu kişisel veri toplamadığı için çocuklara ait kişisel veri de toplamaz. Uygulama 13 yaş ve üzeri kullanıcılar için tasarlanmıştır.</p>
+<p>Pixbu kişisel veri toplamadığı için çocuklara ait kişisel veri de toplamaz. Uygulama Google Play'de 13 yaş ve üzeri
+hedef kitleye, App Store'da ise mağazanın kendi yaş sınıflandırmasıyla 9 yaş ve üzeri kullanıcılara yöneliktir.</p>
 
 <h2>8. Verilerini silme</h2>
 <p>Tüm görev ve dost verilerin cihazında olduğu için uygulamayı kaldırmak (ve Android yedeğini silmek) bunları kalıcı olarak siler.</p>
@@ -113,7 +120,7 @@ süre saklandıktan sonra otomatik olarak silinir. Yine de bir talebin olursa
 <section class="lang" data-lang="en" data-title="Pixbu — Privacy Policy">
 
 <h1 id="en">Pixbu — Privacy Policy</h1>
-<p class="muted">Last updated: July 23, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
+<p class="muted">Last updated: August 18, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Short version:</strong> Pixbu has no accounts and collects no personal data.
@@ -124,18 +131,24 @@ The only things sent to our servers are <strong>anonymous crash reports and anon
 <h2>1. Data we collect</h2>
 <p>Pixbu requires no account, email, phone number, or any other personal information.
 Everything you enter in the app (your buddy's name, tasks, routines, progress) lives only in a local database on your device and never reaches us.</p>
+<p>The app offers an optional <strong>step counter</strong> feature (off by default). If you turn it on, data read from
+your device's hardware step counter (and the permission it requires) is also stored only in the local database on your
+device; it is never sent to us or to any other server.</p>
 
 <h2>2. Crash reports (Sentry)</h2>
 <p>If the app crashes, an anonymous crash report is sent to <a href="https://sentry.io">Sentry</a> so we can fix the problem.
 It contains the error details, device model, OS version, and app version. It contains nothing that could identify you
 (no name, email, location, or advertising ID), is not linked to your identity, and is used only for debugging.
 Data is processed in Sentry's Germany (EU) region.</p>
+<p>In addition, even without a crash, the app's startup/performance metrics are anonymously sampled to Sentry for a
+portion of sessions — this is likewise not linked to your identity and is used only to improve performance.</p>
 
 <h2>3. Anonymous usage statistics (PostHog)</h2>
 <p>To understand how to improve the app, we collect anonymous event records. These are processed on our behalf by
 <a href="https://posthog.com">PostHog</a> (hosted in the European Union region).</p>
-<p>The only events collected are: app open/background, completion of the initial setup flow,
-counters for completed tasks/routines/focus sessions, and views of the subscription screen.</p>
+<p>Examples of collected events: screen opens/backgrounding, completion of the setup flow, counters for completed
+tasks/routines/focus sessions, purchase-flow steps, and the personalization option you choose during setup (e.g.
+student/worker/home). <strong>No event ever contains free text, names, or notes.</strong></p>
 <p><strong>Never sent:</strong> the text of your tasks, your buddy's name, your notes, your reminders, your name,
 your email, your location, or any health data. These records are not linked to an account or to your real identity.</p>
 
@@ -161,7 +174,8 @@ identifier. This record is not linked to your name, your email, or your payment 
 (the app has a Settings &gt; Manage subscription shortcut).</p>
 
 <h2>7. Children's privacy</h2>
-<p>Since Pixbu collects no personal data, it collects no personal data from children either. The app is designed for users aged 13 and up.</p>
+<p>Since Pixbu collects no personal data, it collects no personal data from children either. On Google Play the app
+targets users aged 13 and up; on the App Store it is rated for ages 9 and up, per each store's own age classification.</p>
 
 <h2>8. Deleting your data</h2>
 <p>Because all of your task and buddy data lives on your device, uninstalling the app (and deleting its Android backup) permanently deletes it.</p>
@@ -182,7 +196,7 @@ deleted automatically after a limited retention period. If you still have a requ
 <section class="lang" data-lang="es" data-title="Pixbu — Política de Privacidad">
 
 <h1>Pixbu — Política de Privacidad</h1>
-<p class="muted">Última actualización: 23 de julio de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
+<p class="muted">Última actualización: 18 de agosto de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
 <p class="muted"><em>Esta traducción se ofrece a título informativo; en caso de discrepancia prevalece la versión en inglés.</em></p>
 
 <div class="card">
@@ -194,18 +208,25 @@ Lo único que se envía a nuestros servidores son <strong>informes de fallos an�
 <h2>1. Datos que recopilamos</h2>
 <p>Pixbu no requiere cuenta, correo electrónico, número de teléfono ni ninguna otra información personal.
 Todo lo que introduces en la app (el nombre de tu amigo, tareas, rutinas, progreso) vive solo en una base de datos local en tu dispositivo y nunca nos llega.</p>
+<p>La app ofrece una función opcional de <strong>podómetro</strong> (desactivada por defecto). Si la activas, los datos leídos
+del podómetro de hardware de tu dispositivo (y el permiso necesario) también se guardan solo en la base de datos local de
+tu dispositivo; nunca se envían a nosotros ni a ningún otro servidor.</p>
 
 <h2>2. Informes de fallos (Sentry)</h2>
 <p>Si la app se cierra inesperadamente, se envía un informe de fallo anónimo a <a href="https://sentry.io">Sentry</a> para que podamos corregir el problema.
 Contiene los detalles del error, el modelo del dispositivo, la versión del sistema operativo y la versión de la app. No contiene nada que pueda identificarte
 (ni nombre, ni correo, ni ubicación, ni ID de publicidad), no se vincula con tu identidad y se usa solo para depuración.
 Los datos se procesan en la región de Alemania (UE) de Sentry.</p>
+<p>Además, aunque no haya un fallo, las métricas de inicio/rendimiento de la app se muestrean de forma anónima a Sentry
+en una parte de las sesiones — esto tampoco se vincula con tu identidad y solo se usa para mejorar el rendimiento.</p>
 
 <h2>3. Estadísticas de uso anónimas (PostHog)</h2>
 <p>Para entender cómo mejorar la app, recopilamos registros de eventos anónimos. Los procesa en nuestro nombre
 <a href="https://posthog.com">PostHog</a> (alojado en la región de la Unión Europea).</p>
-<p>Los únicos eventos recopilados son: apertura/paso a segundo plano de la app, finalización del flujo de configuración inicial,
-contadores de tareas/rutinas/sesiones de concentración completadas y visualizaciones de la pantalla de suscripción.</p>
+<p>Ejemplos de eventos recopilados: apertura/paso a segundo plano, finalización del flujo de configuración,
+contadores de tareas/rutinas/sesiones de concentración completadas, pasos del flujo de compra y la opción de
+personalización que eliges durante la configuración (p. ej. estudiante/trabajador/hogar). <strong>Ningún evento contiene
+texto libre, nombres ni notas.</strong></p>
 <p><strong>Nunca se envía:</strong> el texto de tus tareas, el nombre de tu amigo, tus notas, tus recordatorios, tu nombre,
 tu correo, tu ubicación ni ningún dato de salud. Estos registros no se vinculan con una cuenta ni con tu identidad real.</p>
 
@@ -231,7 +252,9 @@ Este registro no se vincula con tu nombre, tu correo ni tus datos de pago.</p>
 (la app tiene un atajo en Ajustes &gt; Gestionar suscripción).</p>
 
 <h2>7. Privacidad de los menores</h2>
-<p>Como Pixbu no recopila datos personales, tampoco recopila datos personales de menores. La app está diseñada para usuarios de 13 años o más.</p>
+<p>Como Pixbu no recopila datos personales, tampoco recopila datos personales de menores. En Google Play la app está
+dirigida a usuarios de 13 años o más; en App Store tiene clasificación de 9 años o más, según la propia clasificación
+de edad de cada tienda.</p>
 
 <h2>8. Eliminar tus datos</h2>
 <p>Como todos tus datos de tareas y de tu amigo viven en tu dispositivo, desinstalar la app (y borrar su copia de seguridad de Android) los elimina de forma permanente.</p>
@@ -252,7 +275,7 @@ se eliminan automáticamente tras un período de retención limitado. Si aun as�
 <section class="lang" data-lang="pt" data-title="Pixbu — Política de Privacidade">
 
 <h1>Pixbu — Política de Privacidade</h1>
-<p class="muted">Última atualização: 23 de julho de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
+<p class="muted">Última atualização: 18 de agosto de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
 <p class="muted"><em>Esta tradução é fornecida a título informativo; em caso de divergência, prevalece a versão em inglês.</em></p>
 
 <div class="card">
@@ -264,18 +287,25 @@ As únicas coisas enviadas aos nossos servidores são <strong>relatórios de fal
 <h2>1. Dados que coletamos</h2>
 <p>O Pixbu não exige conta, e-mail, número de telefone nem qualquer outra informação pessoal.
 Tudo o que você insere no app (o nome do seu amigo, tarefas, rotinas, progresso) vive apenas em um banco de dados local no seu dispositivo e nunca chega até nós.</p>
+<p>O app oferece um recurso opcional de <strong>contador de passos</strong> (desativado por padrão). Se você ativá-lo,
+os dados lidos do contador de passos por hardware do seu dispositivo (e da permissão necessária) também ficam
+armazenados apenas no banco de dados local do seu dispositivo; nunca são enviados para nós ou para qualquer outro servidor.</p>
 
 <h2>2. Relatórios de falhas (Sentry)</h2>
 <p>Se o app fechar inesperadamente, um relatório de falha anônimo é enviado ao <a href="https://sentry.io">Sentry</a> para que possamos corrigir o problema.
 Ele contém os detalhes do erro, o modelo do dispositivo, a versão do sistema operacional e a versão do app. Não contém nada que possa identificar você
 (nem nome, nem e-mail, nem localização, nem ID de publicidade), não é vinculado à sua identidade e é usado apenas para depuração.
 Os dados são processados na região da Alemanha (UE) do Sentry.</p>
+<p>Além disso, mesmo sem uma falha, as métricas de abertura/desempenho do app são amostradas de forma anônima para o
+Sentry em parte das sessões — isso também não é vinculado à sua identidade e é usado apenas para melhorar o desempenho.</p>
 
 <h2>3. Estatísticas de uso anônimas (PostHog)</h2>
 <p>Para entender como melhorar o app, coletamos registros de eventos anônimos. Eles são processados em nosso nome pelo
 <a href="https://posthog.com">PostHog</a> (hospedado na região da União Europeia).</p>
-<p>Os únicos eventos coletados são: abertura/envio do app para segundo plano, conclusão do fluxo de configuração inicial,
-contadores de tarefas/rotinas/sessões de foco concluídas e visualizações da tela de assinatura.</p>
+<p>Exemplos de eventos coletados: aberturas de tela/envio para segundo plano, conclusão do fluxo de configuração,
+contadores de tarefas/rotinas/sessões de foco concluídas, etapas do fluxo de compra e a opção de personalização
+escolhida na configuração (ex.: estudante/trabalhador/casa). <strong>Nenhum evento contém texto livre, nomes ou
+notas.</strong></p>
 <p><strong>Nunca são enviados:</strong> o texto das suas tarefas, o nome do seu amigo, suas notas, seus lembretes, seu nome,
 seu e-mail, sua localização ou qualquer dado de saúde. Esses registros não são vinculados a uma conta nem à sua identidade real.</p>
 
@@ -301,7 +331,9 @@ Esse registro não é vinculado ao seu nome, ao seu e-mail nem aos seus dados de
 (o app tem um atalho em Configurações &gt; Gerenciar assinatura).</p>
 
 <h2>7. Privacidade das crianças</h2>
-<p>Como o Pixbu não coleta dados pessoais, também não coleta dados pessoais de crianças. O app foi projetado para usuários com 13 anos ou mais.</p>
+<p>Como o Pixbu não coleta dados pessoais, também não coleta dados pessoais de crianças. No Google Play o app é
+destinado a usuários com 13 anos ou mais; na App Store tem classificação para 9 anos ou mais, conforme a
+classificação etária de cada loja.</p>
 
 <h2>8. Excluir seus dados</h2>
 <p>Como todos os seus dados de tarefas e do seu amigo vivem no seu dispositivo, desinstalar o app (e excluir o backup do Android) os apaga permanentemente.</p>
@@ -322,7 +354,7 @@ eles são excluídos automaticamente após um período limitado de retenção. S
 <section class="lang" data-lang="de" data-title="Pixbu — Datenschutzerklärung">
 
 <h1>Pixbu — Datenschutzerklärung</h1>
-<p class="muted">Zuletzt aktualisiert: 23. Juli 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted">Zuletzt aktualisiert: 18. August 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
 <p class="muted"><em>Diese Übersetzung dient nur zur Information; bei Abweichungen gilt die englische Fassung.</em></p>
 
 <div class="card">
@@ -334,18 +366,26 @@ Das Einzige, was an unsere Server geht, sind <strong>anonyme Absturzberichte und
 <h2>1. Welche Daten wir erheben</h2>
 <p>Pixbu erfordert kein Konto, keine E-Mail, keine Telefonnummer und keine anderen persönlichen Angaben.
 Alles, was du in der App eingibst (der Name deines Freundes, Aufgaben, Routinen, Fortschritt), liegt nur in einer lokalen Datenbank auf deinem Gerät und erreicht uns nie.</p>
+<p>Die App bietet eine optionale <strong>Schrittzähler</strong>-Funktion (standardmäßig deaktiviert). Wenn du sie
+aktivierst, werden die vom Hardware-Schrittzähler deines Geräts gelesenen Daten (und die dafür nötige Berechtigung)
+ebenfalls nur in der lokalen Datenbank auf deinem Gerät gespeichert; sie werden niemals an uns oder einen anderen
+Server gesendet.</p>
 
 <h2>2. Absturzberichte (Sentry)</h2>
 <p>Wenn die App unerwartet beendet wird, wird ein anonymer Absturzbericht an <a href="https://sentry.io">Sentry</a> gesendet, damit wir das Problem beheben können.
 Er enthält die Fehlerdetails, das Gerätemodell, die Betriebssystemversion und die App-Version. Er enthält nichts, was dich identifizieren könnte
 (keinen Namen, keine E-Mail, keinen Standort, keine Werbe-ID), wird nicht mit deiner Identität verknüpft und dient nur der Fehlerbehebung.
 Die Daten werden in Sentrys Region Deutschland (EU) verarbeitet.</p>
+<p>Außerdem werden, auch ohne Absturz, Start-/Leistungsmesswerte der App für einen Teil der Sitzungen anonym an
+Sentry übermittelt — auch das wird nicht mit deiner Identität verknüpft und dient nur der Leistungsverbesserung.</p>
 
 <h2>3. Anonyme Nutzungsstatistiken (PostHog)</h2>
 <p>Um zu verstehen, wie wir die App verbessern können, erfassen wir anonyme Ereignisdaten. Diese verarbeitet in unserem Auftrag
 <a href="https://posthog.com">PostHog</a> (gehostet in der Region Europäische Union).</p>
-<p>Die einzigen erfassten Ereignisse sind: App öffnen/in den Hintergrund wechseln, Abschluss der Ersteinrichtung,
-Zähler für abgeschlossene Aufgaben/Routinen/Fokus-Sitzungen und Aufrufe der Abo-Seite.</p>
+<p>Beispiele für erfasste Ereignisse: App öffnen/in den Hintergrund wechseln, Abschluss der Ersteinrichtung,
+Zähler für abgeschlossene Aufgaben/Routinen/Fokus-Sitzungen, Schritte im Kaufvorgang und die bei der Einrichtung
+gewählte Personalisierungsoption (z. B. Schüler/in, Berufstätige/r, zu Hause). <strong>Kein Ereignis enthält
+Freitext, Namen oder Notizen.</strong></p>
 <p><strong>Niemals gesendet werden:</strong> der Text deiner Aufgaben, der Name deines Freundes, deine Notizen, deine Erinnerungen, dein Name,
 deine E-Mail, dein Standort oder irgendwelche Gesundheitsdaten. Diese Daten werden weder mit einem Konto noch mit deiner echten Identität verknüpft.</p>
 
@@ -371,7 +411,9 @@ Dieser Datensatz wird nicht mit deinem Namen, deiner E-Mail oder deinen Zahlungs
 (die App hat eine Verknüpfung unter Einstellungen &gt; Abo verwalten).</p>
 
 <h2>7. Privatsphäre von Kindern</h2>
-<p>Da Pixbu keine personenbezogenen Daten sammelt, sammelt es auch keine personenbezogenen Daten von Kindern. Die App ist für Nutzer ab 13 Jahren konzipiert.</p>
+<p>Da Pixbu keine personenbezogenen Daten sammelt, sammelt es auch keine personenbezogenen Daten von Kindern. Bei
+Google Play richtet sich die App an Nutzer ab 13 Jahren; im App Store ist sie gemäß der jeweiligen Alterseinstufung
+des Stores für Nutzer ab 9 Jahren eingestuft.</p>
 
 <h2>8. Deine Daten löschen</h2>
 <p>Da alle deine Aufgaben- und Freund-Daten auf deinem Gerät liegen, löscht das Deinstallieren der App (und das Löschen des Android-Backups) sie dauerhaft.</p>
@@ -392,7 +434,7 @@ sie werden nach einer begrenzten Aufbewahrungsfrist automatisch gelöscht. Wenn 
 <section class="lang" data-lang="fr" data-title="Pixbu — Politique de Confidentialité">
 
 <h1>Pixbu — Politique de Confidentialité</h1>
-<p class="muted">Dernière mise à jour : 23 juillet 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
+<p class="muted">Dernière mise à jour : 18 août 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
 <p class="muted"><em>Cette traduction est fournie à titre informatif ; en cas de divergence, la version anglaise prévaut.</em></p>
 
 <div class="card">
@@ -404,18 +446,26 @@ Les seules choses envoyées à nos serveurs sont des <strong>rapports de plantag
 <h2>1. Données que nous collectons</h2>
 <p>Pixbu ne nécessite ni compte, ni e-mail, ni numéro de téléphone, ni aucune autre information personnelle.
 Tout ce que tu saisis dans l'app (le nom de ton copain, tes tâches, tes routines, ta progression) vit uniquement dans une base de données locale sur ton appareil et ne nous parvient jamais.</p>
+<p>L'app propose une fonction facultative de <strong>podomètre</strong> (désactivée par défaut). Si tu l'actives, les
+données lues par le podomètre matériel de ton appareil (et l'autorisation nécessaire) sont elles aussi stockées
+uniquement dans la base de données locale de ton appareil ; elles ne nous sont jamais envoyées, ni à aucun autre serveur.</p>
 
 <h2>2. Rapports de plantage (Sentry)</h2>
 <p>Si l'app se ferme de façon inattendue, un rapport de plantage anonyme est envoyé à <a href="https://sentry.io">Sentry</a> pour que nous puissions corriger le problème.
 Il contient les détails de l'erreur, le modèle de l'appareil, la version du système et la version de l'app. Il ne contient rien qui puisse t'identifier
 (ni nom, ni e-mail, ni position, ni identifiant publicitaire), n'est pas relié à ton identité et sert uniquement au débogage.
 Les données sont traitées dans la région Allemagne (UE) de Sentry.</p>
+<p>De plus, même sans plantage, les métriques de démarrage/performance de l'app sont échantillonnées de façon anonyme
+vers Sentry pour une partie des sessions — cela n'est pas non plus relié à ton identité et sert uniquement à
+améliorer les performances.</p>
 
 <h2>3. Statistiques d'utilisation anonymes (PostHog)</h2>
 <p>Pour comprendre comment améliorer l'app, nous collectons des événements anonymes. Ils sont traités pour notre compte par
 <a href="https://posthog.com">PostHog</a> (hébergé dans la région de l'Union européenne).</p>
-<p>Les seuls événements collectés sont : ouverture/mise en arrière-plan de l'app, fin du parcours de configuration initiale,
-compteurs de tâches/routines/sessions de concentration terminées et affichages de l'écran d'abonnement.</p>
+<p>Exemples d'événements collectés : ouvertures d'écran/mise en arrière-plan, fin du parcours de configuration,
+compteurs de tâches/routines/sessions de concentration terminées, étapes du parcours d'achat et l'option de
+personnalisation choisie lors de la configuration (ex. étudiant/actif/maison). <strong>Aucun événement ne contient
+de texte libre, de noms ou de notes.</strong></p>
 <p><strong>Jamais envoyés :</strong> le texte de tes tâches, le nom de ton copain, tes notes, tes rappels, ton nom,
 ton e-mail, ta position ou toute donnée de santé. Ces enregistrements ne sont reliés ni à un compte ni à ton identité réelle.</p>
 
@@ -441,7 +491,9 @@ Cet enregistrement n'est relié ni à ton nom, ni à ton e-mail, ni à tes donn�
 (l'app propose un raccourci dans Paramètres &gt; Gérer l'abonnement).</p>
 
 <h2>7. Confidentialité des enfants</h2>
-<p>Comme Pixbu ne collecte aucune donnée personnelle, il ne collecte pas non plus de données personnelles d'enfants. L'app est conçue pour les utilisateurs de 13 ans et plus.</p>
+<p>Comme Pixbu ne collecte aucune donnée personnelle, il ne collecte pas non plus de données personnelles d'enfants.
+Sur Google Play, l'app cible les utilisateurs de 13 ans et plus ; sur l'App Store, elle est classée à partir de 9
+ans, selon la classification d'âge propre à chaque boutique.</p>
 
 <h2>8. Supprimer tes données</h2>
 <p>Comme toutes tes données de tâches et de copain vivent sur ton appareil, désinstaller l'app (et supprimer sa sauvegarde Android) les supprime définitivement.</p>
