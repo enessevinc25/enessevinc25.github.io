@@ -8,7 +8,9 @@
 <link rel="icon" href="img/favicon.png">
 <meta property="og:title" content="Pixbu — Kendine baktıkça büyüyen piksel dostun">
 <meta property="og:description" content="Alışkanlık takibi, rutinler ve odak modu. Küçük görevleri yaptıkça piksel dostun büyüyüp evrimleşiyor. Reklamsız, hesapsız, ücretsiz.">
-<meta property="og:image" content="img/icon.webp">
+<meta property="og:image" content="https://enessevinc25.github.io/pixbu/img/icon.webp">
+<meta property="og:url" content="https://enessevinc25.github.io/pixbu/">
+<meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <style>
 :root{--bg:#0E1016;--card:#171A22;--line:#2A2E3A;--text:#E8EAF0;--muted:#9AA0AE;
@@ -30,7 +32,11 @@ border-radius:999px;padding:6px 14px;font-size:.85rem;cursor:pointer;font-family
 .hero h1{font-size:2rem;margin:20px 0 6px;text-wrap:balance;line-height:1.25}
 .hero .brand{color:var(--mint);font-weight:700;letter-spacing:.5px}
 .hero p{color:var(--muted);max-width:56ch;margin:12px auto 0;text-wrap:pretty}
-.cta{margin-top:28px}
+.cta{margin-top:28px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.storerow{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.storebtn{display:inline-block;background:var(--mint);color:#0E1016;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:12px;border:1px solid var(--mint);transition:transform .12s ease}
+.storebtn:hover{transform:translateY(-2px)}
+.storebtn.alt{background:transparent;color:var(--mint)}
 .badge{display:inline-block;background:var(--card);border:1px solid var(--mint);
 color:var(--mint);border-radius:999px;padding:12px 26px;font-weight:600}
 .badge.sub{display:block;background:none;border:none;color:var(--muted);font-weight:400;
@@ -83,8 +89,11 @@ hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
 <h1><span class="brand">Pixbu</span><br>Kendine baktıkça büyüyen piksel dostun</h1>
 <p>Su içmek, kısa bir yürüyüş, iki satır günlük… Kendin için yaptığın her küçük şey onu büyütür ve evrimleştirir. Ceza yok, suçlama yok.</p>
 <div class="cta">
-<span class="badge">Çok yakında Google Play'de</span>
-<span class="badge sub">Şu an kapalı testte — yayın tarihi yaklaşıyor.</span>
+<div class="storerow">
+<a class="storebtn" href="https://apps.apple.com/app/id6796922533" rel="noopener">App Store'dan indir</a>
+<a class="storebtn alt" href="https://play.google.com/store/apps/details?id=com.pixbu.app" rel="noopener">Google Play'den indir</a>
+</div>
+<span class="badge sub">Ücretsiz · Reklam yok · Hesap yok</span>
 </div></div></div>
 <section class="block"><div class="wrap"><h2>Uygulamadan</h2><div class="shots">
 <img data-src="img/tr-1.webp" width="480" height="987" loading="lazy" alt="Bugünün görevleri">
@@ -121,8 +130,11 @@ hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
 <h1><span class="brand">Pixbu</span><br>A pixel pet that grows as you care for yourself</h1>
 <p>A glass of water, a short walk, one line in your journal… every small thing you do for yourself helps them grow and evolve. No penalties, no blame.</p>
 <div class="cta">
-<span class="badge">Coming soon to Google Play</span>
-<span class="badge sub">Currently in closed testing — launch is close.</span>
+<div class="storerow">
+<a class="storebtn" href="https://apps.apple.com/app/id6796922533" rel="noopener">Download on the App Store</a>
+<a class="storebtn alt" href="https://play.google.com/store/apps/details?id=com.pixbu.app" rel="noopener">Get it on Google Play</a>
+</div>
+<span class="badge sub">Free · No ads · No account</span>
 </div></div></div>
 <section class="block"><div class="wrap"><h2>From the app</h2><div class="shots">
 <img data-src="img/en-1.webp" width="480" height="987" loading="lazy" alt="Today's tasks">
@@ -159,8 +171,11 @@ hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
 <h1><span class="brand">Pixbu</span><br>Una mascota píxel que crece cuando te cuidas</h1>
 <p>Un vaso de agua, un paseo corto, una línea en tu diario… cada pequeña cosa que haces por ti le ayuda a crecer y evolucionar. Sin castigos.</p>
 <div class="cta">
-<span class="badge">Muy pronto en Google Play</span>
-<span class="badge sub">Ahora en pruebas cerradas: el lanzamiento está cerca.</span>
+<div class="storerow">
+<a class="storebtn" href="https://apps.apple.com/app/id6796922533" rel="noopener">Descargar en App Store</a>
+<a class="storebtn alt" href="https://play.google.com/store/apps/details?id=com.pixbu.app" rel="noopener">Disponible en Google Play</a>
+</div>
+<span class="badge sub">Gratis · Sin anuncios · Sin cuenta</span>
 </div></div></div>
 <section class="block"><div class="wrap"><h2>De la app</h2><div class="shots">
 <img data-src="img/es-1.webp" width="480" height="987" loading="lazy" alt="Tareas de hoy">
@@ -197,8 +212,11 @@ hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
 <h1><span class="brand">Pixbu</span><br>Um bichinho pixel que cresce com seus cuidados</h1>
 <p>Um copo d'água, uma caminhada curta, uma linha no diário… cada pequena coisa que você faz por si ajuda seu amigo a crescer e evoluir. Sem punição.</p>
 <div class="cta">
-<span class="badge">Em breve no Google Play</span>
-<span class="badge sub">Em teste fechado agora — o lançamento está próximo.</span>
+<div class="storerow">
+<a class="storebtn" href="https://apps.apple.com/app/id6796922533" rel="noopener">Baixar na App Store</a>
+<a class="storebtn alt" href="https://play.google.com/store/apps/details?id=com.pixbu.app" rel="noopener">Disponível no Google Play</a>
+</div>
+<span class="badge sub">Grátis · Sem anúncios · Sem conta</span>
 </div></div></div>
 <section class="block"><div class="wrap"><h2>Do app</h2><div class="shots">
 <img data-src="img/pt-1.webp" width="480" height="987" loading="lazy" alt="Tarefas de hoje">
@@ -235,8 +253,11 @@ hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
 <h1><span class="brand">Pixbu</span><br>Ein Pixel-Tier, das wächst, wenn du auf dich achtest</h1>
 <p>Ein Glas Wasser, ein kurzer Spaziergang, eine Zeile im Tagebuch… jede kleine Sache, die du für dich tust, lässt es wachsen. Keine Strafen.</p>
 <div class="cta">
-<span class="badge">Bald bei Google Play</span>
-<span class="badge sub">Derzeit im geschlossenen Test — der Start ist nah.</span>
+<div class="storerow">
+<a class="storebtn" href="https://apps.apple.com/app/id6796922533" rel="noopener">Laden im App Store</a>
+<a class="storebtn alt" href="https://play.google.com/store/apps/details?id=com.pixbu.app" rel="noopener">Jetzt bei Google Play</a>
+</div>
+<span class="badge sub">Kostenlos · Keine Werbung · Kein Konto</span>
 </div></div></div>
 <section class="block"><div class="wrap"><h2>Aus der App</h2><div class="shots">
 <img data-src="img/de-1.webp" width="480" height="987" loading="lazy" alt="Heutige Aufgaben">
@@ -273,8 +294,11 @@ hr.langsep{border:none;border-top:1px solid var(--line);margin:56px 0}
 <h1><span class="brand">Pixbu</span><br>Un compagnon pixel qui grandit quand tu prends soin de toi</h1>
 <p>Un verre d'eau, une petite marche, une ligne dans ton journal… chaque petite chose que tu fais pour toi le fait grandir et évoluer. Aucune punition.</p>
 <div class="cta">
-<span class="badge">Bientôt sur Google Play</span>
-<span class="badge sub">En test fermé pour l'instant — le lancement approche.</span>
+<div class="storerow">
+<a class="storebtn" href="https://apps.apple.com/app/id6796922533" rel="noopener">Télécharger dans l'App Store</a>
+<a class="storebtn alt" href="https://play.google.com/store/apps/details?id=com.pixbu.app" rel="noopener">Disponible sur Google Play</a>
+</div>
+<span class="badge sub">Gratuit · Sans pub · Sans compte</span>
 </div></div></div>
 <section class="block"><div class="wrap"><h2>Dans l'app</h2><div class="shots">
 <img data-src="img/fr-1.webp" width="480" height="987" loading="lazy" alt="Tâches du jour">
