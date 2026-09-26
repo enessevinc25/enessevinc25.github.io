@@ -1,0 +1,295 @@
+<!-- ⚠️ KAYNAK KOPYA — YAYINA GİTMEZ. Canlı site AYRI bir depodan
+     servis ediliyor (`enessevinc25/enessevinc25.github.io` → `pixbu/`)
+     ve o depo bu makinede YOK. Bu dosyayı buraya commit etmek
+     yayındaki sayfayı DEĞİŞTİRMEZ; iki depoya birden yazmak gerekir.
+     (CLAUDE.md: "Hukuki sayfalar İKİ DEPODA".)
+     İçerik uydurulmadı: her madde
+     P7-ERISILEBILIRLIK-ETIKETI-ON-DENETIM.md'de ölçülmüş bir
+     bulguya dayanıyor. 20 Eyl 2026. -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixbu — Erişilebilirlik / Accessibility</title>
+<style>
+  :root { --bg:#0E1016; --card:#171A22; --text:#E8EAF0; --muted:#9AA0AE; --mint:#6FE7A8; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Segoe UI", Roboto, -apple-system, sans-serif;
+         background: var(--bg); color: var(--text); line-height:1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { color: var(--mint); font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { color: var(--mint); font-size: 1.15rem; margin-top: 36px; }
+  .card { background: var(--card); border-radius: 16px; padding: 20px 24px; margin-top: 16px; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  a { color: var(--mint); }
+  hr { border: none; border-top: 1px solid #2A2E3A; margin: 48px 0; }
+  ul { padding-left: 20px; }
+  .langbar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+  .langbar button { background:var(--card); color:var(--muted); border:1px solid #2A2E3A;
+    border-radius:999px; padding:6px 14px; font-size:.85rem; cursor:pointer; font-family:inherit; }
+  .langbar button.active { color:#0E1016; background:var(--mint); border-color:var(--mint); font-weight:600; }
+  /* JS yokken tüm diller görünür kalır (erişilebilirlik); JS gelince tekine iner. */
+  body.js section.lang { display:none; }
+  body.js section.lang.active { display:block; }
+  body.js hr.langsep { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langbar" id="langbar" hidden>
+  <button data-lang="tr">Türkçe</button>
+  <button data-lang="en">English</button>
+  <button data-lang="es">Español</button>
+  <button data-lang="pt">Português</button>
+  <button data-lang="de">Deutsch</button>
+  <button data-lang="fr">Français</button>
+  <button data-lang="it">Italiano</button>
+  <button data-lang="ja">日本語</button>
+  <button data-lang="ko">한국어</button>
+</nav>
+
+<!-- ================= TR ================= -->
+<section class="lang" data-lang="tr" data-title="Pixbu — Erişilebilirlik">
+<h1>Erişilebilirlik</h1>
+<p class="muted">Son güncelleme: 20 Eylül 2026</p>
+<div class="card"><p>Pixbu'yu herkesin kullanabilmesini istiyoruz. Aşağıdakiler bir niyet beyanı değil, <strong>ölçülmüş</strong> durumdur — ve neyi henüz doğrulamadığımızı da aynı açıklıkla yazıyoruz.</p></div>
+<h2>Bugün destekliyoruz</h2>
+<div class="card"><ul>
+<li><strong>Koyu arayüz</strong> — uygulama koyu temayla açılır; açık tema seçenektir.</li>
+<li><strong>Büyük yazı</strong> — sistem yazı boyutu %200'e kadar büyütülebilir. On üç ekranın tamamı %130 ve %200 ölçekte, en uzun dilde ve dar ekranda taşma testinden geçiyor.</li>
+<li><strong>Hareketi azalt</strong> — sisteminizin "hareketi azalt" ayarına uyar; ayrıca uygulama içinde kendi <em>Sade görünüm</em> anahtarı vardır.</li>
+<li><strong>Yeterli kontrast</strong> — metin ve simge renkleri, hem koyu hem açık temada WCAG AA eşiğine karşı otomatik olarak sınanır.</li>
+<li><strong>Yalnız renge dayanmaz</strong> — seçim, tamamlanma ve kategori gibi bilgiler renk dışında simge, şekil ya da metinle de ayrışır.</li>
+</ul></div>
+<h2>Henüz beyan etmiyoruz</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver ve Voice Control</strong> — uygulama ekran okuyucu etiketleri taşıyor ve bunlar testlerle korunuyor, ama tam bir cihaz turu <em>henüz yapılmadı</em>. Bu yüzden bu iki özellik için bir destek beyanında bulunmuyoruz.</li>
+<li><strong>Altyazı ve sesli betimleme</strong> — uygulamada konuşma içeren video ya da ses içeriği yok, bu yüzden bu ikisi bizim için geçerli değil.</li>
+</ul></div>
+<div class="card"><p>Bir engelle karşılaşırsanız ya da bir şeyi kullanamadıysanız lütfen yazın: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+<hr class="langsep">
+
+<section class="lang" data-lang="en" data-title="Pixbu — Accessibility">
+<h1>Accessibility</h1>
+<p class="muted">Last updated: 20 September 2026</p>
+<div class="card"><p>We want Pixbu to be usable by everyone. What follows is not a statement of intent but a <strong>measured</strong> status — and we are equally clear about what we have not verified yet.</p></div>
+<h2>What we support today</h2>
+<div class="card"><ul>
+<li><strong>Dark interface</strong> — the app opens in a dark theme; light theme is an option.</li>
+<li><strong>Larger text</strong> — system text size can be raised to 200%. All thirteen screens are tested for overflow at 130% and 200%, in the longest language and on a narrow screen.</li>
+<li><strong>Reduced motion</strong> — respects your system's reduce-motion setting, and the app has its own <em>Simple view</em> switch.</li>
+<li><strong>Sufficient contrast</strong> — text and icon colors are checked automatically against the WCAG AA threshold, in both dark and light themes.</li>
+<li><strong>Not colour alone</strong> — selection, completion and category are distinguished by icon, shape or text as well as colour.</li>
+</ul></div>
+<h2>What we are not claiming yet</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver and Voice Control</strong> — the app carries screen-reader labels and tests protect them, but a full device pass has <em>not been done yet</em>. So we are not claiming support for these two.</li>
+<li><strong>Captions and audio descriptions</strong> — the app has no video or spoken audio content, so these do not apply to us.</li>
+</ul></div>
+<div class="card"><p>If you hit a barrier, or something you could not use, please write to us: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+<hr class="langsep">
+
+<section class="lang" data-lang="es" data-title="Pixbu — Accesibilidad">
+<h1>Accesibilidad</h1>
+<p class="muted">Última actualización: 20 de septiembre de 2026</p>
+<div class="card"><p>Queremos que Pixbu se pueda usar. Lo siguiente no es una declaración de intenciones sino un estado <strong>medido</strong>, y decimos con la misma claridad lo que aún no hemos verificado.</p></div>
+<h2>Lo que admitimos hoy</h2>
+<div class="card"><ul>
+<li><strong>Interfaz oscura</strong> — la app abre en tema oscuro; el tema claro es opcional.</li>
+<li><strong>Texto más grande</strong> — el tamaño del sistema puede subir al 200%. Las trece pantallas se prueban al 130% y al 200%, en el idioma más largo y en pantalla estrecha.</li>
+<li><strong>Reducir movimiento</strong> — respeta el ajuste del sistema y la app tiene su propio interruptor <em>Vista sencilla</em>.</li>
+<li><strong>Contraste suficiente</strong> — los colores de texto e iconos se comprueban automáticamente contra el umbral WCAG AA, en tema oscuro y claro.</li>
+<li><strong>No solo color</strong> — la selección, la finalización y la categoría se distinguen también por icono, forma o texto.</li>
+</ul></div>
+<h2>Lo que aún no declaramos</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver y Control por voz</strong> — la app tiene etiquetas de lector de pantalla protegidas por pruebas, pero <em>aún no</em> se ha hecho una revisión completa en dispositivo. Por eso no declaramos compatibilidad con estas dos.</li>
+<li><strong>Subtítulos y audiodescripción</strong> — la app no tiene vídeo ni audio hablado, así que no aplican.</li>
+</ul></div>
+<div class="card"><p>Si encuentras una barrera o algo que no pudiste usar, escríbenos: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+<hr class="langsep">
+
+<section class="lang" data-lang="pt" data-title="Pixbu — Acessibilidade">
+<h1>Acessibilidade</h1>
+<p class="muted">Última atualização: 20 de setembro de 2026</p>
+<div class="card"><p>Queremos que o Pixbu seja utilizável por todos. O que segue não é uma declaração de intenções, mas um estado <strong>medido</strong> — e dizemos com a mesma clareza o que ainda não verificámos.</p></div>
+<h2>O que suportamos hoje</h2>
+<div class="card"><ul>
+<li><strong>Interface escura</strong> — a app abre em tema escuro; o tema claro é opcional.</li>
+<li><strong>Texto maior</strong> — o tamanho do sistema pode subir até 200%. Os treze ecrãs são testados a 130% e 200%, no idioma mais longo e em ecrã estreito.</li>
+<li><strong>Reduzir movimento</strong> — respeita a definição do sistema e a app tem o seu próprio interruptor <em>Vista simples</em>.</li>
+<li><strong>Contraste suficiente</strong> — as cores de texto e ícones são verificadas automaticamente face ao limiar WCAG AA, em tema escuro e claro.</li>
+<li><strong>Não só a cor</strong> — seleção, conclusão e categoria distinguem-se também por ícone, forma ou texto.</li>
+</ul></div>
+<h2>O que ainda não declaramos</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver e Controlo por voz</strong> — a app tem etiquetas de leitor de ecrã protegidas por testes, mas <em>ainda não</em> foi feita uma passagem completa em dispositivo. Por isso não declaramos suporte para estas duas.</li>
+<li><strong>Legendas e audiodescrição</strong> — a app não tem vídeo nem áudio falado, por isso não se aplicam.</li>
+</ul></div>
+<div class="card"><p>Se encontrar uma barreira ou algo que não conseguiu usar, escreva-nos: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+<hr class="langsep">
+
+<section class="lang" data-lang="de" data-title="Pixbu — Barrierefreiheit">
+<h1>Barrierefreiheit</h1>
+<p class="muted">Zuletzt aktualisiert: 20. September 2026</p>
+<div class="card"><p>Wir möchten, dass Pixbu für alle nutzbar ist. Das Folgende ist keine Absichtserklärung, sondern ein <strong>gemessener</strong> Stand — und wir sagen ebenso deutlich, was wir noch nicht geprüft haben.</p></div>
+<h2>Was wir heute unterstützen</h2>
+<div class="card"><ul>
+<li><strong>Dunkle Oberfläche</strong> — die App startet im dunklen Design; das helle Design ist eine Option.</li>
+<li><strong>Größerer Text</strong> — die Systemschriftgröße kann auf 200% erhöht werden. Alle dreizehn Bildschirme werden bei 130% und 200% getestet, in der längsten Sprache und auf schmalem Display.</li>
+<li><strong>Bewegung reduzieren</strong> — folgt der Systemeinstellung; zusätzlich hat die App einen eigenen Schalter <em>Schlichte Ansicht</em>.</li>
+<li><strong>Ausreichender Kontrast</strong> — Text- und Symbolfarben werden automatisch gegen die WCAG-AA-Schwelle geprüft, in beiden Designs.</li>
+<li><strong>Nicht nur Farbe</strong> — Auswahl, Erledigung und Kategorie werden auch durch Symbol, Form oder Text unterschieden.</li>
+</ul></div>
+<h2>Was wir noch nicht erklären</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver und Sprachsteuerung</strong> — die App trägt Screenreader-Beschriftungen, die durch Tests geschützt sind, aber ein vollständiger Gerätedurchgang steht <em>noch aus</em>. Deshalb erklären wir für diese beiden keine Unterstützung.</li>
+<li><strong>Untertitel und Audiodeskription</strong> — die App hat keine Video- oder Sprachinhalte, daher nicht zutreffend.</li>
+</ul></div>
+<div class="card"><p>Wenn Sie auf eine Barriere stoßen oder etwas nicht nutzen konnten, schreiben Sie uns: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+<hr class="langsep">
+
+<section class="lang" data-lang="fr" data-title="Pixbu — Accessibilité">
+<h1>Accessibilité</h1>
+<p class="muted">Dernière mise à jour : 20 septembre 2026</p>
+<div class="card"><p>Nous voulons que Pixbu soit utilisable par tout le monde. Ce qui suit n'est pas une déclaration d'intention mais un état <strong>mesuré</strong> — et nous disons avec la même clarté ce que nous n'avons pas encore vérifié.</p></div>
+<h2>Ce que nous prenons en charge</h2>
+<div class="card"><ul>
+<li><strong>Interface sombre</strong> — l'app s'ouvre en thème sombre ; le thème clair est une option.</li>
+<li><strong>Texte plus grand</strong> — la taille système peut monter à 200%. Les treize écrans sont testés à 130% et 200%, dans la langue la plus longue et sur écran étroit.</li>
+<li><strong>Réduire les animations</strong> — respecte le réglage système ; l'app a aussi son propre interrupteur <em>Vue simple</em>.</li>
+<li><strong>Contraste suffisant</strong> — les couleurs de texte et d'icônes sont vérifiées automatiquement face au seuil WCAG AA, dans les deux thèmes.</li>
+<li><strong>Pas seulement la couleur</strong> — la sélection, l'achèvement et la catégorie se distinguent aussi par une icône, une forme ou du texte.</li>
+</ul></div>
+<h2>Ce que nous ne déclarons pas encore</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver et Contrôle vocal</strong> — l'app porte des étiquettes de lecteur d'écran protégées par des tests, mais un passage complet sur appareil <em>n'a pas encore été fait</em>. Nous ne déclarons donc pas de prise en charge pour ces deux-là.</li>
+<li><strong>Sous-titres et audiodescription</strong> — l'app n'a ni vidéo ni contenu audio parlé, donc sans objet.</li>
+</ul></div>
+<div class="card"><p>Si vous rencontrez un obstacle ou quelque chose que vous n'avez pas pu utiliser, écrivez-nous : <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+<hr class="langsep">
+
+<hr class="langsep">
+
+<section class="lang" data-lang="it" data-title="Pixbu — Accessibilità">
+<h1>Accessibilità</h1>
+<p class="muted">Ultimo aggiornamento: 20 settembre 2026</p>
+<div class="card"><p>Vogliamo che Pixbu sia utilizzabile da tutti. Quello che segue non è una dichiarazione di intenti ma uno stato <strong>misurato</strong> — e siamo altrettanto chiari su ciò che non abbiamo ancora verificato.</p></div>
+<h2>Cosa supportiamo oggi</h2>
+<div class="card"><ul>
+<li><strong>Interfaccia scura</strong> — l'app si apre con il tema scuro; il tema chiaro è un'opzione.</li>
+<li><strong>Testo più grande</strong> — la dimensione del testo di sistema può arrivare al 200%. Tutte e tredici le schermate sono testate contro il testo che deborda al 130% e al 200%, nella lingua più lunga e su uno schermo stretto.</li>
+<li><strong>Movimento ridotto</strong> — rispetta l'impostazione di sistema per ridurre il movimento, e l'app ha un proprio interruttore <em>Vista tranquilla</em>.</li>
+<li><strong>Contrasto sufficiente</strong> — i colori di testo e icone vengono verificati automaticamente rispetto alla soglia WCAG AA, sia nel tema scuro sia in quello chiaro.</li>
+<li><strong>Non solo il colore</strong> — selezione, completamento e categoria si distinguono anche con icona, forma o testo, oltre che con il colore.</li>
+</ul></div>
+<h2>Cosa non dichiariamo ancora</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver e Controllo vocale</strong> — l'app ha etichette per lettori di schermo e dei test le proteggono, ma un passaggio completo su dispositivo <em>non è ancora stato fatto</em>. Per questo non dichiariamo il supporto a queste due funzioni.</li>
+<li><strong>Sottotitoli e audiodescrizioni</strong> — l'app non ha contenuti video né audio parlato, quindi non si applicano a noi.</li>
+</ul></div>
+<div class="card"><p>Se incontri un ostacolo o qualcosa che non sei riuscito a usare, scrivici: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+
+<hr class="langsep">
+
+<section class="lang" data-lang="ja" data-title="Pixbu — アクセシビリティ">
+<h1>アクセシビリティ</h1>
+<p class="muted">最終更新日: 2026年9月20日</p>
+<div class="card"><p>Pixbuを誰もが使えるものにしたいと考えています。以下は意思表明ではなく<strong>実際に測定した</strong>現状です — そして、まだ確認できていないことも同じようにはっきりお伝えします。</p></div>
+<h2>現在対応していること</h2>
+<div class="card"><ul>
+<li><strong>ダークな画面</strong> — アプリはダークテーマで開きます。ライトテーマも選べます。</li>
+<li><strong>大きな文字</strong> — システムの文字サイズを200%まで大きくできます。13の画面すべてについて、130%と200%で文字があふれないかを、いちばん長い言語と幅の狭い画面でテストしています。</li>
+<li><strong>視差効果を減らす</strong> — システムの「視差効果を減らす」設定に従い、アプリ独自の<em>おだやか表示</em>スイッチもあります。</li>
+<li><strong>十分なコントラスト</strong> — 文字とアイコンの色は、ダーク・ライト両方のテーマでWCAG AAの基準に照らして自動的に確認しています。</li>
+<li><strong>色だけに頼らない</strong> — 選択、完了、カテゴリーは、色に加えてアイコン、形、文字でも区別できます。</li>
+</ul></div>
+<h2>まだ対応をうたっていないこと</h2>
+<div class="card"><ul>
+<li><strong>VoiceOverと音声コントロール</strong> — アプリにはスクリーンリーダー用のラベルがあり、テストで守られていますが、実機での完全な確認は<em>まだ行っていません</em>。そのため、この2つへの対応はうたっていません。</li>
+<li><strong>字幕と音声解説</strong> — アプリには動画や話し言葉の音声コンテンツがないため、該当しません。</li>
+</ul></div>
+<div class="card"><p>使いにくい点や、使えなかったことがあれば、ぜひお知らせください: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+
+<hr class="langsep">
+
+<section class="lang" data-lang="ko" data-title="Pixbu — 접근성">
+<h1>접근성</h1>
+<p class="muted">최종 업데이트: 2026년 9월 20일</p>
+<div class="card"><p>누구나 Pixbu를 쓸 수 있기를 바랍니다. 아래 내용은 의지 표명이 아니라 <strong>직접 측정한</strong> 현황이며, 아직 확인하지 못한 부분도 똑같이 분명하게 밝힙니다.</p></div>
+<h2>현재 지원하는 것</h2>
+<div class="card"><ul>
+<li><strong>어두운 화면</strong> — 앱은 다크 테마로 열리며, 라이트 테마도 선택할 수 있어요.</li>
+<li><strong>큰 글자</strong> — 시스템 글자 크기를 200%까지 키울 수 있어요. 13개 화면 모두 가장 긴 언어와 좁은 화면에서 130%와 200% 크기로 글자가 넘치지 않는지 테스트해요.</li>
+<li><strong>동작 줄이기</strong> — 시스템의 동작 줄이기 설정을 따르며, 앱 자체의 <em>차분한 화면</em> 스위치도 있어요.</li>
+<li><strong>충분한 대비</strong> — 글자와 아이콘 색상은 다크·라이트 테마 모두에서 WCAG AA 기준에 맞는지 자동으로 확인해요.</li>
+<li><strong>색에만 의존하지 않음</strong> — 선택, 완료, 카테고리는 색뿐 아니라 아이콘, 모양, 글자로도 구분돼요.</li>
+</ul></div>
+<h2>아직 지원한다고 말하지 않는 것</h2>
+<div class="card"><ul>
+<li><strong>VoiceOver와 음성 제어</strong> — 앱에는 스크린 리더용 레이블이 있고 테스트로 보호되지만, 실제 기기에서의 전체 점검은 <em>아직 하지 않았어요</em>. 그래서 이 두 가지는 지원한다고 말하지 않아요.</li>
+<li><strong>자막과 음성 해설</strong> — 앱에는 동영상이나 말소리 오디오 콘텐츠가 없어서 해당되지 않아요.</li>
+</ul></div>
+<div class="card"><p>불편한 점이나 사용할 수 없었던 부분이 있다면 알려 주세요: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p></div>
+</section>
+
+<script>
+(function () {
+  var LANGS = ['tr', 'en', 'es', 'pt', 'de', 'fr', 'it', 'ja', 'ko'];
+  document.body.classList.add('js');
+  var bar = document.getElementById('langbar');
+  bar.hidden = false;
+
+  function pick() {
+    var q = new URLSearchParams(location.search).get('lang');
+    if (q) { q = q.slice(0, 2).toLowerCase(); if (LANGS.indexOf(q) !== -1) return q; }
+    var navs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < navs.length; i++) {
+      var c = String(navs[i]).slice(0, 2).toLowerCase();
+      if (LANGS.indexOf(c) !== -1) return c;
+    }
+    return 'en';
+  }
+
+  function show(lang, updateUrl) {
+    var sections = document.querySelectorAll('section.lang');
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      var on = s.getAttribute('data-lang') === lang;
+      s.classList.toggle('active', on);
+      if (on) document.title = s.getAttribute('data-title');
+    }
+    var btns = bar.querySelectorAll('button');
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.toggle('active', btns[j].getAttribute('data-lang') === lang);
+    }
+    document.documentElement.lang = lang;
+    if (updateUrl) {
+      var u = new URL(location.href);
+      u.searchParams.set('lang', lang);
+      history.replaceState(null, '', u);
+    }
+  }
+
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (b) show(b.getAttribute('data-lang'), true);
+  });
+
+  show(pick(), false);
+})();
+</script>
+
+</div>
+</body>
+</html>

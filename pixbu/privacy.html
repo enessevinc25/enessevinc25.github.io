@@ -38,6 +38,9 @@
   <button data-lang="pt">Português</button>
   <button data-lang="de">Deutsch</button>
   <button data-lang="fr">Français</button>
+  <button data-lang="it">Italiano</button>
+  <button data-lang="ja">日本語</button>
+  <button data-lang="ko">한국어</button>
 </nav>
 
 <!-- ================= TR ================= -->
@@ -314,7 +317,7 @@ seu e-mail, sua localização ou qualquer dado de saúde. Esses registros não s
 <ul>
 <li><strong>Backup automático do Android:</strong> Seu dispositivo pode fazer backup criptografado dos dados do app na sua conta Google.
 É um recurso do sistema Android; nós não podemos acessar esses dados.</li>
-<li><strong>Exportação manual:</strong> "Exportar backup" entrega uma cópia dos seus dados como arquivo. Esse arquivo fica totalmente sob seu controle.</li>
+<li><strong>Exportação manual:</strong> "Exportar backup" (em Portugal: "Exportar cópia de segurança") entrega uma cópia dos seus dados como arquivo. Esse arquivo fica totalmente sob seu controle.</li>
 </ul>
 
 <h2>5. Notificações</h2>
@@ -329,7 +332,7 @@ O pagamento é processado inteiramente pelo sistema de faturamento da sua loja (
 processa o registro da compra (qual produto, data, status da assinatura) com um identificador de app anônimo gerado aleatoriamente.
 Esse registro não é vinculado ao seu nome, ao seu e-mail nem aos seus dados de pagamento.</p>
 <p>Você pode gerenciar ou cancelar sua assinatura a qualquer momento em Google Play &gt; Assinaturas ou App Store &gt; Assinaturas
-(o app tem um atalho em Configurações &gt; Gerenciar assinatura).</p>
+(o app tem um atalho em Configurações &gt; Gerenciar assinatura; em Portugal: Definições &gt; Gerir subscrição).</p>
 
 <h2>7. Privacidade das crianças</h2>
 <p>Como o Pixbu não coleta dados pessoais, também não coleta dados pessoais de crianças. No Google Play o app é
@@ -337,7 +340,7 @@ destinado a usuários com 13 anos ou mais; na App Store tem classificação para
 classificação etária de cada loja.</p>
 
 <h2>8. Excluir seus dados</h2>
-<p>Você pode apagar todos os seus dados permanentemente dentro do app: <strong>Configurações &rarr; Começar de novo</strong>. Como todos os seus dados de tarefas e do seu amigo vivem no seu dispositivo, desinstalar o app (e excluir o backup do Android) os apaga permanentemente.</p>
+<p>Você pode apagar todos os seus dados permanentemente dentro do app: <strong>Configurações &rarr; Começar de novo</strong> (em Portugal: <strong>Definições &rarr; Começar de novo</strong>). Como todos os seus dados de tarefas e do seu amigo vivem no seu dispositivo, desinstalar o app (e excluir o backup do Android) os apaga permanentemente.</p>
 <p>Os registros anônimos de falhas e de uso não podem ser vinculados à sua identidade, portanto não podem ser recuperados individualmente;
 eles são excluídos automaticamente após um período limitado de retenção. Se ainda assim você tiver uma solicitação, escreva para
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
@@ -510,9 +513,216 @@ ils sont supprimés automatiquement après une période de conservation limitée
 
 </section>
 
+<hr class="langsep">
+
+<!-- ================= IT ================= -->
+<section class="lang" data-lang="it" data-title="Pixbu — Informativa sulla privacy">
+
+<h1 id="it">Pixbu — Informativa sulla privacy</h1>
+<p class="muted">Ultimo aggiornamento: 26 agosto 2026 · Sviluppatore: Enes Sevinç · Contatto: enessevinc25@gmail.com</p>
+
+<div class="card">
+<p><strong>In breve:</strong> Pixbu non ha account e non raccoglie dati personali.
+Tutti i tuoi progressi (il tuo amico, le attività, le serie) sono salvati solo sul tuo dispositivo e non ci arrivano mai.
+Ai nostri server vengono inviati solo <strong>rapporti anonimi sugli arresti anomali e statistiche di utilizzo anonime</strong> che non possono essere collegati alla tua identità (punti 2 e 3).</p>
+</div>
+
+<h2>1. Dati che raccogliamo</h2>
+<p>Pixbu non richiede account, email, numero di telefono né altre informazioni personali.
+Tutto ciò che inserisci nell'app (il nome del tuo amico, attività, routine, progressi) resta solo in un database locale sul tuo dispositivo e non ci arriva mai.</p>
+<p>L'app offre una funzione facoltativa di <strong>contapassi</strong> (disattivata per impostazione predefinita). Se la attivi, i dati letti
+dal contapassi hardware del tuo dispositivo (e l'autorizzazione necessaria) vengono anch'essi salvati solo nel database locale del tuo
+dispositivo; non vengono mai inviati a noi né a nessun altro server.</p>
+
+<h2>2. Rapporti sugli arresti anomali (Sentry)</h2>
+<p>Se l'app si arresta in modo anomalo, un rapporto anonimo viene inviato a <a href="https://sentry.io">Sentry</a> per permetterci di risolvere il problema.
+Contiene i dettagli dell'errore, il modello del dispositivo, la versione del sistema operativo e la versione dell'app. Non contiene nulla che possa identificarti
+(nessun nome, email, posizione o ID pubblicitario), non è collegato alla tua identità e viene usato solo per il debug.
+I dati sono trattati nella regione tedesca (UE) di Sentry.</p>
+<p>Inoltre, anche senza arresti anomali, le metriche di avvio/prestazioni dell'app vengono campionate in forma anonima su Sentry per una
+parte delle sessioni — anche queste non sono collegate alla tua identità e servono solo a migliorare le prestazioni.</p>
+
+<h2>3. Statistiche di utilizzo anonime (PostHog)</h2>
+<p>Per capire come migliorare l'app, raccogliamo registrazioni anonime di eventi. Sono trattate per nostro conto da
+<a href="https://posthog.com">PostHog</a> (ospitato nella regione dell'Unione Europea).</p>
+<p>Esempi di eventi raccolti: apertura/chiusura in background delle schermate, completamento della configurazione iniziale, contatori di
+attività/routine/sessioni di focus completate, passaggi del processo di acquisto e l'opzione di personalizzazione che scegli durante la configurazione (es.
+studente/lavoratore/a casa). <strong>Nessun evento contiene mai testo libero, nomi o note.</strong></p>
+<p><strong>Mai inviati:</strong> il testo delle tue attività, il nome del tuo amico, le tue note, i tuoi promemoria, il tuo nome,
+la tua email, la tua posizione o dati sanitari. Queste registrazioni non sono collegate a un account né alla tua identità reale.</p>
+
+<h2>4. Backup</h2>
+<ul>
+<li><strong>Backup automatico di Android:</strong> il tuo dispositivo può eseguire il backup crittografato dei dati dell'app sul tuo account Google.
+È una funzione del sistema Android; noi non possiamo accedere a quei dati.</li>
+<li><strong>Esportazione manuale:</strong> "Esporta backup" ti dà una copia dei tuoi dati in un file. Quel file è interamente sotto il tuo controllo.</li>
+</ul>
+
+<h2>5. Notifiche</h2>
+<p>I promemoria vengono programmati e mostrati interamente sul tuo dispositivo; nessun server è coinvolto.
+Prima di richiedere l'autorizzazione alle notifiche te lo chiediamo nell'app, e se rifiuti non insistiamo.</p>
+
+<h2>6. Pubblicità e acquisti</h2>
+<p>Pixbu <strong>non contiene pubblicità</strong>.</p>
+<p>L'app offre un <strong>abbonamento Amico+</strong> facoltativo (mensile, annuale o acquisto unico a vita).
+Il pagamento è gestito interamente dal sistema di fatturazione del tuo store (Google Play Billing o App Store); i dati della tua carta e di pagamento non ci arrivano mai.</p>
+<p>Per verificare se il tuo abbonamento è attivo, il nostro fornitore di servizi <a href="https://www.revenuecat.com">RevenueCat</a>
+tratta la registrazione dell'acquisto (quale prodotto, data, stato dell'abbonamento) associata a un identificatore anonimo dell'app generato
+casualmente. Questa registrazione non è collegata al tuo nome, alla tua email né ai tuoi dati di pagamento.</p>
+<p>Puoi gestire o annullare l'abbonamento in qualsiasi momento da Google Play &gt; Abbonamenti o da App Store &gt; Abbonamenti
+(nell'app c'è la scorciatoia Impostazioni &gt; Gestisci abbonamento).</p>
+
+<h2>7. Privacy dei minori</h2>
+<p>Poiché Pixbu non raccoglie dati personali, non raccoglie dati personali nemmeno dai minori. Su Google Play l'app
+si rivolge a utenti dai 13 anni in su; sull'App Store è classificata per età dai 9 anni in su, secondo la classificazione di ciascuno store.</p>
+
+<h2>8. Eliminazione dei dati</h2>
+<p>Puoi eliminare definitivamente tutti i tuoi dati dall'interno dell'app: <strong>Impostazioni &rarr; Ricomincia da capo</strong>. Poiché tutti i dati delle attività e del tuo amico si trovano sul tuo dispositivo, disinstallare l'app (ed eliminare il suo backup Android) li elimina definitivamente.</p>
+<p>Le registrazioni anonime di arresti anomali e utilizzo non possono essere collegate alla tua identità, quindi non possono essere recuperate singolarmente;
+vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se hai comunque una richiesta, puoi scriverci a
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+<h2>9. Modifiche</h2>
+<p>Se questa informativa cambia, questa pagina verrà aggiornata e la data di "ultimo aggiornamento" verrà rinnovata.</p>
+
+<h2>10. Contatti</h2>
+<p>Domande: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+
+<hr class="langsep">
+
+<!-- ================= JA ================= -->
+<section class="lang" data-lang="ja" data-title="Pixbu — プライバシーポリシー">
+
+<h1 id="ja">Pixbu — プライバシーポリシー</h1>
+<p class="muted">最終更新日: 2026年8月26日 · 開発者: Enes Sevinç · 連絡先: enessevinc25@gmail.com</p>
+
+<div class="card">
+<p><strong>要約:</strong> Pixbuにはアカウントがなく、個人データを収集しません。
+あなたの進み具合（ともだち、タスク、連続記録）はすべてあなたの端末の中だけに保存され、私たちに届くことはありません。
+私たちのサーバーに送られるのは、あなたの身元と結びつけることのできない<strong>匿名のクラッシュレポートと匿名の利用統計</strong>だけです（第2項・第3項）。</p>
+</div>
+
+<h2>1. 収集するデータ</h2>
+<p>Pixbuの利用にアカウント、メールアドレス、電話番号、その他の個人情報は必要ありません。
+アプリに入力したもの（ともだちの名前、タスク、ルーティン、進み具合）はすべて端末内のローカルデータベースにのみ保存され、私たちに届くことはありません。</p>
+<p>アプリには任意の<strong>歩数計</strong>機能があります（初期設定ではオフ）。オンにすると、端末のハードウェア歩数計から読み取ったデータ（およびそのために必要な許可）も端末内のローカルデータベースにのみ保存され、私たちや他のサーバーに送信されることはありません。</p>
+
+<h2>2. クラッシュレポート（Sentry）</h2>
+<p>アプリがクラッシュした場合、問題を修正するために匿名のクラッシュレポートが<a href="https://sentry.io">Sentry</a>に送信されます。
+内容はエラーの詳細、端末の機種、OSのバージョン、アプリのバージョンです。あなたを特定できる情報（名前、メールアドレス、位置情報、広告ID）は含まれず、あなたの身元とは結びつけられず、不具合の修正にのみ使用されます。
+データはSentryのドイツ（EU）リージョンで処理されます。</p>
+<p>また、クラッシュがなくても、一部のセッションではアプリの起動・パフォーマンスの指標が匿名でSentryにサンプリングされます。これもあなたの身元とは結びつけられず、パフォーマンス改善のためだけに使用されます。</p>
+
+<h2>3. 匿名の利用統計（PostHog）</h2>
+<p>アプリの改善方法を知るために、匿名のイベント記録を収集しています。これらは私たちに代わって<a href="https://posthog.com">PostHog</a>（欧州連合リージョンでホスト）が処理します。</p>
+<p>収集するイベントの例: 画面の表示・バックグラウンド移行、初期設定の完了、完了したタスク・ルーティン・集中セッションの回数、購入手続きの各段階、初期設定で選んだパーソナライズの選択肢（例: 学生・働いている・家で）。<strong>どのイベントにも自由記述の文章、名前、メモが含まれることはありません。</strong></p>
+<p><strong>送信されないもの:</strong> タスクの文章、ともだちの名前、メモ、リマインダー、あなたの名前、メールアドレス、位置情報、健康データ。これらの記録はアカウントにもあなたの実際の身元にも結びつけられません。</p>
+
+<h2>4. バックアップ</h2>
+<ul>
+<li><strong>Androidの自動バックアップ:</strong> 端末がアプリのデータを暗号化してGoogleアカウントにバックアップすることがあります。
+これはAndroidシステムの機能であり、私たちはそのデータにアクセスできません。</li>
+<li><strong>手動の書き出し:</strong> 「バックアップを書き出す」で、データのコピーをファイルとして受け取れます。そのファイルは完全にあなたの管理下にあります。</li>
+</ul>
+
+<h2>5. 通知</h2>
+<p>リマインダーはすべて端末上でスケジュール・表示され、サーバーは一切関与しません。
+通知の許可を求める前にアプリ内で確認し、断られた場合にしつこく求めることはありません。</p>
+
+<h2>6. 広告と購入</h2>
+<p>Pixbuには<strong>広告がありません</strong>。</p>
+<p>アプリには任意の<strong>ともだち+サブスクリプション</strong>（月額、年額、または1回限りの買い切り）があります。
+お支払いはすべてご利用のストアの課金システム（Google Play BillingまたはApp Store）が処理し、カードやお支払いの情報が私たちに届くことはありません。</p>
+<p>サブスクリプションが有効かどうかを確認するため、サービス提供者の<a href="https://www.revenuecat.com">RevenueCat</a>が、ランダムに生成された匿名のアプリ識別子に対して購入記録（どの商品か、日付、サブスクリプションの状態）を処理します。この記録はあなたの名前、メールアドレス、お支払い情報とは結びつけられません。</p>
+<p>サブスクリプションはいつでもGoogle Play &gt; 定期購入、またはApp Store &gt; サブスクリプションから管理・解約できます
+（アプリには 設定 &gt; サブスクリプションを管理 のショートカットがあります）。</p>
+
+<h2>7. 子どものプライバシー</h2>
+<p>Pixbuは個人データを収集しないため、子どもからも個人データを収集しません。Google Playでは13歳以上の利用者を対象とし、App Storeでは各ストアの年齢区分に基づき9歳以上と評価されています。</p>
+
+<h2>8. データの削除</h2>
+<p>アプリ内から、すべてのデータを完全に削除できます: <strong>設定 &rarr; 最初からやり直す</strong>。タスクとともだちのデータはすべて端末上にあるため、アプリをアンインストール（およびAndroidのバックアップを削除）すると完全に削除されます。</p>
+<p>匿名のクラッシュ記録と利用記録はあなたの身元と結びつけられないため、個別に取り出すことはできません。一定の保存期間の後に自動的に削除されます。それでもご要望がある場合は
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>までご連絡ください。</p>
+
+<h2>9. 変更</h2>
+<p>本ポリシーが変更された場合、このページを更新し「最終更新日」を新しくします。</p>
+
+<h2>10. お問い合わせ</h2>
+<p>ご質問: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+
+<hr class="langsep">
+
+<!-- ================= KO ================= -->
+<section class="lang" data-lang="ko" data-title="Pixbu — 개인정보 처리방침">
+
+<h1 id="ko">Pixbu — 개인정보 처리방침</h1>
+<p class="muted">최종 업데이트: 2026년 8월 26일 · 개발자: Enes Sevinç · 연락처: enessevinc25@gmail.com</p>
+
+<div class="card">
+<p><strong>요약:</strong> Pixbu에는 계정이 없으며 개인 데이터를 수집하지 않습니다.
+모든 진행 기록(친구, 할 일, 연속 기록)은 오직 당신의 기기에만 저장되며 저희에게 전달되지 않습니다.
+저희 서버로 전송되는 것은 당신의 신원과 연결할 수 없는 <strong>익명의 오류 보고서와 익명의 사용 통계</strong>뿐입니다(제2항, 제3항).</p>
+</div>
+
+<h2>1. 수집하는 데이터</h2>
+<p>Pixbu를 사용하는 데 계정, 이메일, 전화번호 또는 기타 개인정보가 필요하지 않습니다.
+앱에 입력하는 모든 것(친구 이름, 할 일, 루틴, 진행 기록)은 기기의 로컬 데이터베이스에만 저장되며 저희에게 전달되지 않습니다.</p>
+<p>앱에는 선택 사항인 <strong>만보기</strong> 기능이 있습니다(기본값은 꺼짐). 켜면 기기의 하드웨어 만보기에서 읽은 데이터(및 이에 필요한 권한)도 기기의 로컬 데이터베이스에만 저장되며, 저희나 다른 어떤 서버로도 전송되지 않습니다.</p>
+
+<h2>2. 오류 보고서(Sentry)</h2>
+<p>앱이 비정상 종료되면 문제를 해결할 수 있도록 익명의 오류 보고서가 <a href="https://sentry.io">Sentry</a>로 전송됩니다.
+여기에는 오류 세부 정보, 기기 모델, 운영체제 버전, 앱 버전이 포함됩니다. 당신을 식별할 수 있는 정보(이름, 이메일, 위치, 광고 ID)는 포함되지 않으며, 당신의 신원과 연결되지 않고, 오류 수정에만 사용됩니다.
+데이터는 Sentry의 독일(EU) 리전에서 처리됩니다.</p>
+<p>또한 오류가 없더라도 일부 세션에서는 앱의 시작·성능 지표가 익명으로 Sentry에 샘플링됩니다. 이 역시 당신의 신원과 연결되지 않으며 성능 개선에만 사용됩니다.</p>
+
+<h2>3. 익명 사용 통계(PostHog)</h2>
+<p>앱을 어떻게 개선할지 이해하기 위해 익명의 이벤트 기록을 수집합니다. 이는 저희를 대신하여 <a href="https://posthog.com">PostHog</a>(유럽연합 리전에서 호스팅)가 처리합니다.</p>
+<p>수집되는 이벤트의 예: 화면 열기·백그라운드 전환, 초기 설정 완료, 완료한 할 일·루틴·집중 세션 수, 구매 과정의 단계, 초기 설정 때 선택한 맞춤 옵션(예: 학생·직장인·집). <strong>어떤 이벤트에도 자유 텍스트, 이름, 메모는 포함되지 않습니다.</strong></p>
+<p><strong>절대 전송되지 않는 것:</strong> 할 일의 내용, 친구의 이름, 메모, 알림, 당신의 이름, 이메일, 위치, 건강 데이터. 이러한 기록은 계정이나 당신의 실제 신원과 연결되지 않습니다.</p>
+
+<h2>4. 백업</h2>
+<ul>
+<li><strong>Android 자동 백업:</strong> 기기가 앱 데이터를 암호화하여 Google 계정에 백업할 수 있습니다.
+이는 Android 시스템 기능이며, 저희는 해당 데이터에 접근할 수 없습니다.</li>
+<li><strong>수동 내보내기:</strong> "백업 내보내기"로 데이터의 사본을 파일로 받을 수 있습니다. 그 파일은 전적으로 당신이 관리합니다.</li>
+</ul>
+
+<h2>5. 알림</h2>
+<p>알림은 전적으로 기기에서 예약되고 표시되며, 어떤 서버도 관여하지 않습니다.
+알림 권한을 요청하기 전에 앱에서 먼저 물어보며, 거절해도 계속 요청하지 않습니다.</p>
+
+<h2>6. 광고 및 구매</h2>
+<p>Pixbu에는 <strong>광고가 없습니다</strong>.</p>
+<p>앱에는 선택 사항인 <strong>친구+ 구독</strong>(월간, 연간 또는 1회 평생 구매)이 있습니다.
+결제는 전적으로 이용 중인 스토어의 결제 시스템(Google Play 결제 또는 App Store)이 처리하며, 카드 및 결제 정보는 저희에게 전달되지 않습니다.</p>
+<p>구독이 활성 상태인지 확인하기 위해 서비스 제공업체인 <a href="https://www.revenuecat.com">RevenueCat</a>이 무작위로 생성된 익명의 앱 식별자에 대해 구매 기록(상품, 날짜, 구독 상태)을 처리합니다. 이 기록은 당신의 이름, 이메일 또는 결제 정보와 연결되지 않습니다.</p>
+<p>구독은 언제든지 Google Play &gt; 정기 결제 또는 App Store &gt; 구독에서 관리하거나 해지할 수 있습니다
+(앱에 설정 &gt; 구독 관리 바로가기가 있습니다).</p>
+
+<h2>7. 아동의 개인정보</h2>
+<p>Pixbu는 개인 데이터를 수집하지 않으므로 아동의 개인 데이터도 수집하지 않습니다. Google Play에서는 13세 이상 사용자를 대상으로 하며, App Store에서는 각 스토어의 연령 등급에 따라 9세 이상으로 분류됩니다.</p>
+
+<h2>8. 데이터 삭제</h2>
+<p>앱 안에서 모든 데이터를 영구적으로 삭제할 수 있습니다: <strong>설정 &rarr; 처음부터 다시 시작</strong>. 할 일과 친구 데이터는 모두 기기에 있으므로, 앱을 삭제하면(그리고 Android 백업을 삭제하면) 영구적으로 삭제됩니다.</p>
+<p>익명의 오류 및 사용 기록은 당신의 신원과 연결할 수 없으므로 개별적으로 조회할 수 없으며, 제한된 보관 기간이 지나면 자동으로 삭제됩니다. 그래도 요청 사항이 있다면
+<a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>으로 연락해 주세요.</p>
+
+<h2>9. 변경</h2>
+<p>이 방침이 변경되면 이 페이지를 업데이트하고 "최종 업데이트" 날짜를 새로 고칩니다.</p>
+
+<h2>10. 문의</h2>
+<p>문의: <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a></p>
+
+</section>
+
 <script>
 (function () {
-  var LANGS = ['tr', 'en', 'es', 'pt', 'de', 'fr'];
+  var LANGS = ['tr', 'en', 'es', 'pt', 'de', 'fr', 'it', 'ja', 'ko'];
   document.body.classList.add('js');
   var bar = document.getElementById('langbar');
   bar.hidden = false;
