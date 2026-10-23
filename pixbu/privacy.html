@@ -50,12 +50,13 @@
 <section class="lang" data-lang="tr" data-title="Pixbu — Gizlilik Politikası">
 
 <h1>Pixbu — Gizlilik Politikası</h1>
-<p class="muted">Son güncelleme: 26 Ağustos 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
+<p class="muted">Son güncelleme: 23 Ekim 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Kısa özet:</strong> Pixbu hesap açmaz ve kişisel veri toplamaz.
 Tüm ilerlemen (dostun, görevlerin, serilerin) yalnızca kendi cihazında saklanır ve bize ulaşmaz.
 Sunucularımıza giden tek şey, kimliğinle eşleştirilemeyen <strong>anonim çökme kayıtları ve anonim kullanım istatistikleridir</strong> (madde 2 ve 3).</p>
+<p><strong>İsteğe bağlı arkadaş özelliği:</strong> yalnızca sen açarsan, dostunun küçük bir kartı sunucumuza gider ve yalnızca bağlandığın kişi görür (madde 3b).</p>
 </div>
 
 <h2>1. Topladığımız veriler</h2>
@@ -81,6 +82,16 @@ görev/rutin/odak seansı tamamlama sayaçları, satın alma akışı adımları
 seçeneği (ör. öğrenci/çalışan/ev). <strong>Hiçbir olay serbest metin, isim veya not içermez.</strong></p>
 <p><strong>Gönderilmeyenler:</strong> görev metinlerin, dostunun adı, notların, hatırlatmaların, adın, e-postan,
 konumun veya herhangi bir sağlık verisi. Kayıtlar bir hesapla veya gerçek kimliğinle eşleştirilmez.</p>
+
+<h2>3b. Arkadaş özelliği (isteğe bağlı)</h2>
+<p><strong>Dost</strong> sekmesindeki <strong>Arkadaşının dostu</strong> özelliği varsayılan olarak <strong>kapalıdır</strong>. Açarsan (uygulama önce neyin paylaşılacağını gösterip onayını ister) yalnızca şunlar sunucumuza gönderilir ve yalnızca davet koduyla bağlandığın kişiler görür:</p>
+<ul>
+<li>dostunun adı, türü ve evresi;</li>
+<li>o gün bir şey yapıp yapmadığın (yalnızca evet/hayır);</li>
+<li>gönderdiğin sarılmalar (kimden, ne zaman).</li>
+</ul>
+<p>Hesap, e-posta, telefon numarası ya da konum istenmez. Uygulama rastgele bir cihaz kimliği ve gizli bir anahtar üretir; sunucuda anahtarın yalnızca tek yönlü özeti (SHA-256) saklanır. Görevlerin, rutinlerin, hedeflerin ve notların cihazında kalır.</p>
+<p>Bu veriler <a href="https://supabase.com">Supabase</a> tarafından Almanya (AB, Frankfurt) bölgesinde işlenir. Davet kodları 48 saat sonra, teslim edilen sarılmalar hemen, teslim edilmeyenler 7 gün sonra silinir. Dostunun kartı ve bağların, özelliği kapatana kadar saklanır. Her bağ için, ikinizin de aynı gün bir şey yaptığı günlerden hesaplanan ortak seri sayısı ve son ortak gün de bağla birlikte saklanır ve onunla silinir. Günde bir sarılma sınırı için her bağda iki yönün son sarılma zamanı da saklanır ve bağla birlikte silinir. Arkadaş kimliğin dışa aktarılan yedek dosyasına yazılmaz.</p>
 
 <h2>4. Yedekleme</h2>
 <ul>
@@ -114,6 +125,8 @@ hedef kitleye, App Store'da ise mağazanın kendi yaş sınıflandırmasıyla 9 
 süre saklandıktan sonra otomatik olarak silinir. Yine de bir talebin olursa
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a> adresinden bize yazabilirsin.</p>
 
+<p>Arkadaş özelliğini açtıysan, <strong>Dost</strong> sekmesindeki <strong>Kapat ve verimi sil</strong> sunucudaki bütün arkadaş verini hemen siler; <strong>Baştan başla</strong> da önce bunu yapar.</p>
+
 <h2>9. Değişiklikler</h2>
 <p>Bu politika değişirse bu sayfada güncellenir ve "son güncelleme" tarihi yenilenir.</p>
 
@@ -127,12 +140,13 @@ süre saklandıktan sonra otomatik olarak silinir. Yine de bir talebin olursa
 <section class="lang" data-lang="en" data-title="Pixbu — Privacy Policy">
 
 <h1 id="en">Pixbu — Privacy Policy</h1>
-<p class="muted">Last updated: August 26, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
+<p class="muted">Last updated: October 23, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Short version:</strong> Pixbu has no accounts and collects no personal data.
 All your progress (your buddy, tasks, streaks) is stored only on your own device and never reaches us.
 The only things sent to our servers are <strong>anonymous crash reports and anonymous usage statistics</strong> that cannot be linked to your identity (sections 2 and 3).</p>
+<p><strong>Optional friends feature:</strong> only if you turn it on, a small card of your buddy goes to our server, and only the people you link with can see it (section 3b).</p>
 </div>
 
 <h2>1. Data we collect</h2>
@@ -158,6 +172,16 @@ tasks/routines/focus sessions, purchase-flow steps, and the personalization opti
 student/worker/home). <strong>No event ever contains free text, names, or notes.</strong></p>
 <p><strong>Never sent:</strong> the text of your tasks, your buddy's name, your notes, your reminders, your name,
 your email, your location, or any health data. These records are not linked to an account or to your real identity.</p>
+
+<h2>3b. Friends feature (optional)</h2>
+<p>The <strong>Your friend's buddy</strong> feature in the <strong>Buddy</strong> tab is <strong>off</strong> by default. If you turn it on (the app first shows what will be shared and asks for your consent), only the following is sent to our server, and only the people you link with through an invite code can see it:</p>
+<ul>
+<li>your buddy's name, species and stage;</li>
+<li>whether you did something that day (yes/no only);</li>
+<li>the hugs you send (from whom, when).</li>
+</ul>
+<p>No account, email, phone number or location is requested. The app generates a random device ID and a secret key; the server stores only a one-way hash (SHA-256) of the key. Your tasks, routines, goals and notes stay on your device.</p>
+<p>This data is processed by <a href="https://supabase.com">Supabase</a> in Germany (EU, Frankfurt). Invite codes are deleted after 48 hours, delivered hugs immediately and undelivered ones after 7 days. Your buddy's card and your links are kept until you turn the feature off. For each link, a shared streak count and the last shared day (calculated from the days you both did something) are kept with the link and deleted with it. For the one-hug-a-day limit, the time of the last hug in each direction is also kept with the link and deleted with it. Your identity for this feature is not written to the exported backup file.</p>
 
 <h2>4. Backups</h2>
 <ul>
@@ -190,6 +214,8 @@ targets users aged 13 and up; on the App Store it is rated for ages 9 and up, pe
 deleted automatically after a limited retention period. If you still have a request, you can write to us at
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>If you turned on the friends feature, <strong>Turn off and delete my data</strong> in the <strong>Buddy</strong> tab immediately deletes all your friends data from the server; <strong>Start over</strong> does this first as well.</p>
+
 <h2>9. Changes</h2>
 <p>If this policy changes, this page will be updated and the "last updated" date refreshed.</p>
 
@@ -203,13 +229,14 @@ deleted automatically after a limited retention period. If you still have a requ
 <section class="lang" data-lang="es" data-title="Pixbu — Política de Privacidad">
 
 <h1>Pixbu — Política de Privacidad</h1>
-<p class="muted">Última actualización: 26 de agosto de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
+<p class="muted">Última actualización: 23 de octubre de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
 <p class="muted"><em>Esta traducción se ofrece a título informativo; en caso de discrepancia prevalece la versión en inglés.</em></p>
 
 <div class="card">
 <p><strong>En resumen:</strong> Pixbu no tiene cuentas y no recopila datos personales.
 Todo tu progreso (tu amigo, tus tareas, tus rachas) se guarda únicamente en tu propio dispositivo y nunca nos llega.
 Lo único que se envía a nuestros servidores son <strong>informes de fallos anónimos y estadísticas de uso anónimas</strong> que no pueden vincularse con tu identidad (secciones 2 y 3).</p>
+<p><strong>Función opcional para conectar con alguien:</strong> solo si la activas, una pequeña tarjeta de tu amigo llega a nuestro servidor y solo la ven las personas con las que te conectas (apartado 3b).</p>
 </div>
 
 <h2>1. Datos que recopilamos</h2>
@@ -236,6 +263,16 @@ personalización que eliges durante la configuración (p. ej. estudiante/trabaja
 texto libre, nombres ni notas.</strong></p>
 <p><strong>Nunca se envía:</strong> el texto de tus tareas, el nombre de tu amigo, tus notas, tus recordatorios, tu nombre,
 tu correo, tu ubicación ni ningún dato de salud. Estos registros no se vinculan con una cuenta ni con tu identidad real.</p>
+
+<h2>3b. Función «De a dos» (opcional)</h2>
+<p>La función <strong>De a dos</strong> de la pestaña <strong>Amigo</strong> está <strong>desactivada</strong> por defecto. Si la activas (la app primero muestra qué se compartirá y te pide consentimiento), solo se envía lo siguiente a nuestro servidor, y solo lo ven las personas con las que te conectas mediante un código de invitación:</p>
+<ul>
+<li>el nombre, la especie y la etapa de tu amigo;</li>
+<li>si hiciste algo ese día (solo sí/no);</li>
+<li>los abrazos que envías (de quién y cuándo).</li>
+</ul>
+<p>No se pide cuenta, correo, número de teléfono ni ubicación. La app genera un identificador aleatorio del dispositivo y una clave secreta; el servidor solo guarda un hash unidireccional (SHA-256) de la clave. Tus tareas, rutinas, metas y notas se quedan en tu dispositivo.</p>
+<p>Estos datos los trata <a href="https://supabase.com">Supabase</a> en Alemania (UE, Fráncfort). Los códigos de invitación se borran a las 48 horas, los abrazos entregados al instante y los no entregados a los 7 días. La tarjeta de tu amigo y tus conexiones se guardan hasta que desactives la función. Para cada conexión se guarda también un contador de racha compartida y el último día compartido (calculados a partir de los días en que ambos hicieron algo), que se borran junto con la conexión. Para el límite de un abrazo al día, también se guarda la hora del último abrazo en cada sentido, que se borra junto con la conexión. Tu identidad de esta función no se escribe en el archivo de copia de seguridad exportado.</p>
 
 <h2>4. Copias de seguridad</h2>
 <ul>
@@ -269,6 +306,8 @@ de edad de cada tienda.</p>
 se eliminan automáticamente tras un período de retención limitado. Si aun así tienes una solicitud, escríbenos a
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Si activaste la función De a dos, <strong>Desactivar y borrar mis datos</strong> en la pestaña <strong>Amigo</strong> borra al instante todos tus datos de esa función del servidor; <strong>Empezar de nuevo</strong> también lo hace primero.</p>
+
 <h2>9. Cambios</h2>
 <p>Si esta política cambia, esta página se actualizará y se renovará la fecha de "última actualización".</p>
 
@@ -282,13 +321,14 @@ se eliminan automáticamente tras un período de retención limitado. Si aun as�
 <section class="lang" data-lang="pt" data-title="Pixbu — Política de Privacidade">
 
 <h1>Pixbu — Política de Privacidade</h1>
-<p class="muted">Última atualização: 26 de agosto de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
+<p class="muted">Última atualização: 23 de outubro de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
 <p class="muted"><em>Esta tradução é fornecida a título informativo; em caso de divergência, prevalece a versão em inglês.</em></p>
 
 <div class="card">
 <p><strong>Resumo:</strong> O Pixbu não tem contas e não coleta dados pessoais.
 Todo o seu progresso (seu amigo, tarefas, sequências) fica armazenado apenas no seu próprio dispositivo e nunca chega até nós.
 As únicas coisas enviadas aos nossos servidores são <strong>relatórios de falhas anônimos e estatísticas de uso anônimas</strong> que não podem ser vinculados à sua identidade (seções 2 e 3).</p>
+<p><strong>Recurso opcional para se conectar com alguém:</strong> só se você ativar, um pequeno cartão do seu amigo vai para o nosso servidor, e só as pessoas conectadas a você o veem (seção 3b).</p>
 </div>
 
 <h2>1. Dados que coletamos</h2>
@@ -315,6 +355,16 @@ escolhida na configuração (ex.: estudante/trabalhador/casa). <strong>Nenhum ev
 notas.</strong></p>
 <p><strong>Nunca são enviados:</strong> o texto das suas tarefas, o nome do seu amigo, suas notas, seus lembretes, seu nome,
 seu e-mail, sua localização ou qualquer dado de saúde. Esses registros não são vinculados a uma conta nem à sua identidade real.</p>
+
+<h2>3b. Recurso «A dois» (opcional)</h2>
+<p>O recurso <strong>A dois</strong> da aba <strong>Amigo</strong> vem <strong>desativado</strong>. Se você ativar (o app primeiro mostra o que será compartilhado e pede seu consentimento), só o seguinte é enviado ao nosso servidor, e só as pessoas conectadas a você por um código de convite podem ver:</p>
+<ul>
+<li>o nome, a espécie e a fase do seu amigo;</li>
+<li>se você fez algo naquele dia (apenas sim/não);</li>
+<li>os abraços que você envia (de quem e quando).</li>
+</ul>
+<p>Não pedimos conta, e-mail, número de telefone nem localização. O app gera um identificador aleatório do aparelho e uma chave secreta; o servidor guarda apenas um hash unidirecional (SHA-256) da chave. Suas tarefas, rotinas, metas e notas ficam no seu aparelho.</p>
+<p>Esses dados são tratados pela <a href="https://supabase.com">Supabase</a> na Alemanha (UE, Frankfurt). Códigos de convite são apagados após 48 horas, abraços entregues na hora e os não entregues após 7 dias. O cartão do seu amigo e suas conexões ficam guardados até você desativar o recurso. Para cada conexão, também ficam guardados um contador de sequência compartilhada e o último dia em comum (calculados a partir dos dias em que vocês dois fizeram algo), apagados junto com a conexão. Para o limite de um abraço por dia, também fica guardado o horário do último abraço em cada sentido, apagado junto com a conexão. Sua identidade neste recurso não é gravada no arquivo de backup exportado.</p>
 
 <h2>4. Backups</h2>
 <ul>
@@ -348,6 +398,8 @@ classificação etária de cada loja.</p>
 eles são excluídos automaticamente após um período limitado de retenção. Se ainda assim você tiver uma solicitação, escreva para
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Se você ativou o recurso A dois, <strong>Desativar e apagar meus dados</strong> na aba <strong>Amigo</strong> apaga na hora todos os seus dados desse recurso do servidor; <strong>Começar de novo</strong> também faz isso primeiro.</p>
+
 <h2>9. Alterações</h2>
 <p>Se esta política mudar, esta página será atualizada e a data de "última atualização" será renovada.</p>
 
@@ -361,13 +413,14 @@ eles são excluídos automaticamente após um período limitado de retenção. S
 <section class="lang" data-lang="de" data-title="Pixbu — Datenschutzerklärung">
 
 <h1>Pixbu — Datenschutzerklärung</h1>
-<p class="muted">Zuletzt aktualisiert: 26. August 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted">Zuletzt aktualisiert: 23. Oktober 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
 <p class="muted"><em>Diese Übersetzung dient nur zur Information; bei Abweichungen gilt die englische Fassung.</em></p>
 
 <div class="card">
 <p><strong>Kurz gesagt:</strong> Pixbu hat keine Konten und sammelt keine personenbezogenen Daten.
 Dein gesamter Fortschritt (dein Freund, deine Aufgaben, deine Serien) wird nur auf deinem eigenen Gerät gespeichert und erreicht uns nie.
 Das Einzige, was an unsere Server geht, sind <strong>anonyme Absturzberichte und anonyme Nutzungsstatistiken</strong>, die nicht mit deiner Identität verknüpft werden können (Abschnitte 2 und 3).</p>
+<p><strong>Optionale Funktion „Zu zweit“:</strong> Nur wenn du sie einschaltest, geht eine kleine Karte deines Freundes an unseren Server, und nur die verbundenen Personen sehen sie (Abschnitt 3b).</p>
 </div>
 
 <h2>1. Welche Daten wir erheben</h2>
@@ -395,6 +448,16 @@ gewählte Personalisierungsoption (z. B. Schüler/in, Berufstätige/r, zu Hause)
 Freitext, Namen oder Notizen.</strong></p>
 <p><strong>Niemals gesendet werden:</strong> der Text deiner Aufgaben, der Name deines Freundes, deine Notizen, deine Erinnerungen, dein Name,
 deine E-Mail, dein Standort oder irgendwelche Gesundheitsdaten. Diese Daten werden weder mit einem Konto noch mit deiner echten Identität verknüpft.</p>
+
+<h2>3b. Funktion „Zu zweit“ (optional)</h2>
+<p>Die Funktion <strong>Zu zweit</strong> im Tab <strong>Freund</strong> ist standardmäßig <strong>ausgeschaltet</strong>. Wenn du sie einschaltest (die App zeigt vorher, was geteilt wird, und bittet um deine Zustimmung), wird nur Folgendes an unseren Server gesendet, und nur die Personen, mit denen du dich per Einladungscode verbindest, sehen es:</p>
+<ul>
+<li>Name, Art und Stufe deines Freundes;</li>
+<li>ob du an dem Tag etwas geschafft hast (nur ja/nein);</li>
+<li>die Umarmungen, die du schickst (von wem, wann).</li>
+</ul>
+<p>Es werden weder Konto noch E-Mail, Telefonnummer oder Standort abgefragt. Die App erzeugt eine zufällige Geräte-ID und einen geheimen Schlüssel; der Server speichert nur einen Einweg-Hash (SHA-256) des Schlüssels. Deine Aufgaben, Routinen, Ziele und Notizen bleiben auf deinem Gerät.</p>
+<p>Diese Daten werden von <a href="https://supabase.com">Supabase</a> in Deutschland (EU, Frankfurt) verarbeitet. Einladungscodes werden nach 48 Stunden gelöscht, zugestellte Umarmungen sofort und nicht zugestellte nach 7 Tagen. Die Karte deines Freundes und deine Verbindungen bleiben gespeichert, bis du die Funktion ausschaltest. Zu jeder Verbindung werden außerdem ein gemeinsamer Serienzähler und der letzte gemeinsame Tag gespeichert (berechnet aus den Tagen, an denen ihr beide etwas geschafft habt) und mit der Verbindung gelöscht. Für die Grenze von einer Umarmung pro Tag wird außerdem der Zeitpunkt der letzten Umarmung in jede Richtung gespeichert und mit der Verbindung gelöscht. Deine Kennung für diese Funktion wird nicht in die exportierte Sicherungsdatei geschrieben.</p>
 
 <h2>4. Sicherung (Backup)</h2>
 <ul>
@@ -428,6 +491,8 @@ des Stores für Nutzer ab 9 Jahren eingestuft.</p>
 sie werden nach einer begrenzten Aufbewahrungsfrist automatisch gelöscht. Wenn du dennoch ein Anliegen hast, schreib uns an
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Wenn du „Zu zweit“ eingeschaltet hast, löscht <strong>Ausschalten und meine Daten löschen</strong> im Tab <strong>Freund</strong> sofort alle Daten dieser Funktion vom Server; <strong>Neu anfangen</strong> tut das ebenfalls zuerst.</p>
+
 <h2>9. Änderungen</h2>
 <p>Wenn sich diese Erklärung ändert, wird diese Seite aktualisiert und das Datum "zuletzt aktualisiert" erneuert.</p>
 
@@ -441,13 +506,14 @@ sie werden nach einer begrenzten Aufbewahrungsfrist automatisch gelöscht. Wenn 
 <section class="lang" data-lang="fr" data-title="Pixbu — Politique de Confidentialité">
 
 <h1>Pixbu — Politique de Confidentialité</h1>
-<p class="muted">Dernière mise à jour : 26 août 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
+<p class="muted">Dernière mise à jour : 23 octobre 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
 <p class="muted"><em>Cette traduction est fournie à titre informatif ; en cas de divergence, la version anglaise prévaut.</em></p>
 
 <div class="card">
 <p><strong>En bref :</strong> Pixbu n'a pas de comptes et ne collecte aucune donnée personnelle.
 Toute ta progression (ton copain, tes tâches, tes séries) est stockée uniquement sur ton propre appareil et ne nous parvient jamais.
 Les seules choses envoyées à nos serveurs sont des <strong>rapports de plantage anonymes et des statistiques d'utilisation anonymes</strong> qui ne peuvent pas être reliés à ton identité (sections 2 et 3).</p>
+<p><strong>Fonction facultative « À deux » :</strong> seulement si tu l'actives, une petite carte de ton copain va sur notre serveur, et seules les personnes reliées à toi la voient (section 3b).</p>
 </div>
 
 <h2>1. Données que nous collectons</h2>
@@ -475,6 +541,16 @@ personnalisation choisie lors de la configuration (ex. étudiant/actif/maison). 
 de texte libre, de noms ou de notes.</strong></p>
 <p><strong>Jamais envoyés :</strong> le texte de tes tâches, le nom de ton copain, tes notes, tes rappels, ton nom,
 ton e-mail, ta position ou toute donnée de santé. Ces enregistrements ne sont reliés ni à un compte ni à ton identité réelle.</p>
+
+<h2>3b. Fonction « À deux » (facultative)</h2>
+<p>La fonction <strong>À deux</strong> de l'onglet <strong>Copain</strong> est <strong>désactivée</strong> par défaut. Si tu l'actives (l'app montre d'abord ce qui sera partagé et demande ton consentement), seules les informations suivantes sont envoyées à notre serveur, et seules les personnes reliées à toi par un code d'invitation peuvent les voir :</p>
+<ul>
+<li>le nom, l'espèce et le stade de ton copain ;</li>
+<li>si tu as fait quelque chose ce jour-là (oui/non uniquement) ;</li>
+<li>les câlins que tu envoies (de qui, quand).</li>
+</ul>
+<p>Aucun compte, e-mail, numéro de téléphone ni localisation n'est demandé. L'app génère un identifiant d'appareil aléatoire et une clé secrète ; le serveur ne conserve qu'une empreinte à sens unique (SHA-256) de la clé. Tes tâches, routines, objectifs et notes restent sur ton appareil.</p>
+<p>Ces données sont traitées par <a href="https://supabase.com">Supabase</a> en Allemagne (UE, Francfort). Les codes d'invitation sont supprimés après 48 heures, les câlins remis immédiatement et ceux non remis après 7 jours. La carte de ton copain et tes liens sont conservés jusqu'à ce que tu désactives la fonction. Pour chaque lien, un compteur de série commune et le dernier jour commun (calculés à partir des jours où vous avez tous les deux fait quelque chose) sont aussi conservés et supprimés avec le lien. Pour la limite d'un câlin par jour, l'heure du dernier câlin dans chaque sens est aussi conservée et supprimée avec le lien. Ton identifiant pour cette fonction n'est pas écrit dans le fichier de sauvegarde exporté.</p>
 
 <h2>4. Sauvegardes</h2>
 <ul>
@@ -508,6 +584,8 @@ ans, selon la classification d'âge propre à chaque boutique.</p>
 ils sont supprimés automatiquement après une période de conservation limitée. Si tu as malgré tout une demande, écris-nous à
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Si tu as activé la fonction À deux, <strong>Désactiver et supprimer mes données</strong> dans l'onglet <strong>Copain</strong> supprime immédiatement toutes les données de cette fonction du serveur ; <strong>Tout recommencer</strong> le fait aussi en premier.</p>
+
 <h2>9. Modifications</h2>
 <p>Si cette politique change, cette page sera mise à jour et la date de « dernière mise à jour » sera renouvelée.</p>
 
@@ -522,12 +600,13 @@ ils sont supprimés automatiquement après une période de conservation limitée
 <section class="lang" data-lang="it" data-title="Pixbu — Informativa sulla privacy">
 
 <h1 id="it">Pixbu — Informativa sulla privacy</h1>
-<p class="muted">Ultimo aggiornamento: 26 agosto 2026 · Sviluppatore: Enes Sevinç · Contatto: enessevinc25@gmail.com</p>
+<p class="muted">Ultimo aggiornamento: 23 ottobre 2026 · Sviluppatore: Enes Sevinç · Contatto: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>In breve:</strong> Pixbu non ha account e non raccoglie dati personali.
 Tutti i tuoi progressi (il tuo amico, le attività, le serie) sono salvati solo sul tuo dispositivo e non ci arrivano mai.
 Ai nostri server vengono inviati solo <strong>rapporti anonimi sugli arresti anomali e statistiche di utilizzo anonime</strong> che non possono essere collegati alla tua identità (punti 2 e 3).</p>
+<p><strong>Funzione facoltativa «In due»:</strong> solo se la attivi, una piccola scheda del tuo amico arriva al nostro server e la vedono solo le persone collegate a te (sezione 3b).</p>
 </div>
 
 <h2>1. Dati che raccogliamo</h2>
@@ -553,6 +632,16 @@ attività/routine/sessioni di focus completate, passaggi del processo di acquist
 studente/lavoratore/a casa). <strong>Nessun evento contiene mai testo libero, nomi o note.</strong></p>
 <p><strong>Mai inviati:</strong> il testo delle tue attività, il nome del tuo amico, le tue note, i tuoi promemoria, il tuo nome,
 la tua email, la tua posizione o dati sanitari. Queste registrazioni non sono collegate a un account né alla tua identità reale.</p>
+
+<h2>3b. Funzione «In due» (facoltativa)</h2>
+<p>La funzione <strong>In due</strong> nella scheda <strong>Amico</strong> è <strong>disattivata</strong> per impostazione predefinita. Se la attivi (l'app mostra prima cosa verrà condiviso e chiede il tuo consenso), al nostro server viene inviato solo quanto segue, visibile solo alle persone con cui ti colleghi tramite un codice invito:</p>
+<ul>
+<li>nome, specie e stadio del tuo amico;</li>
+<li>se quel giorno hai fatto qualcosa (solo sì/no);</li>
+<li>gli abbracci che mandi (da chi, quando).</li>
+</ul>
+<p>Non vengono richiesti account, email, numero di telefono né posizione. L'app genera un identificativo casuale del dispositivo e una chiave segreta; il server conserva solo un hash unidirezionale (SHA-256) della chiave. Attività, routine, obiettivi e note restano sul tuo dispositivo.</p>
+<p>Questi dati sono trattati da <a href="https://supabase.com">Supabase</a> in Germania (UE, Francoforte). I codici invito vengono cancellati dopo 48 ore, gli abbracci consegnati subito e quelli non consegnati dopo 7 giorni. La scheda del tuo amico e i collegamenti restano salvati finché non disattivi la funzione. Per ogni collegamento vengono salvati anche un contatore di serie comune e l'ultimo giorno in comune (calcolati dai giorni in cui entrambi avete fatto qualcosa), cancellati insieme al collegamento. Per il limite di un abbraccio al giorno viene salvata anche l'ora dell'ultimo abbraccio in ciascuna direzione, cancellata insieme al collegamento. La tua identità per questa funzione non viene scritta nel file di backup esportato.</p>
 
 <h2>4. Backup</h2>
 <ul>
@@ -585,6 +674,8 @@ si rivolge a utenti dai 13 anni in su; sull'App Store è classificata per età d
 vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se hai comunque una richiesta, puoi scriverci a
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Se hai attivato la funzione In due, <strong>Disattiva e cancella i miei dati</strong> nella scheda <strong>Amico</strong> cancella subito dal server tutti i dati di questa funzione; anche <strong>Ricomincia da capo</strong> lo fa per prima cosa.</p>
+
 <h2>9. Modifiche</h2>
 <p>Se questa informativa cambia, questa pagina verrà aggiornata e la data di "ultimo aggiornamento" verrà rinnovata.</p>
 
@@ -599,12 +690,13 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <section class="lang" data-lang="ja" data-title="Pixbu — プライバシーポリシー">
 
 <h1 id="ja">Pixbu — プライバシーポリシー</h1>
-<p class="muted">最終更新日: 2026年8月26日 · 開発者: Enes Sevinç · 連絡先: enessevinc25@gmail.com</p>
+<p class="muted">最終更新日: 2026年10月23日 · 開発者: Enes Sevinç · 連絡先: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>要約:</strong> Pixbuにはアカウントがなく、個人データを収集しません。
 あなたの進み具合（ともだち、タスク、連続記録）はすべてあなたの端末の中だけに保存され、私たちに届くことはありません。
 私たちのサーバーに送られるのは、あなたの身元と結びつけることのできない<strong>匿名のクラッシュレポートと匿名の利用統計</strong>だけです（第2項・第3項）。</p>
+<p><strong>任意の「ふたりで」機能：</strong>オンにした場合にかぎり、ともだちの小さなカードがサーバーに送られ、つながった相手だけが見られます（3b項）。</p>
 </div>
 
 <h2>1. 収集するデータ</h2>
@@ -622,6 +714,16 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <p>アプリの改善方法を知るために、匿名のイベント記録を収集しています。これらは私たちに代わって<a href="https://posthog.com">PostHog</a>（欧州連合リージョンでホスト）が処理します。</p>
 <p>収集するイベントの例: 画面の表示・バックグラウンド移行、初期設定の完了、完了したタスク・ルーティン・集中セッションの回数、購入手続きの各段階、初期設定で選んだパーソナライズの選択肢（例: 学生・働いている・家で）。<strong>どのイベントにも自由記述の文章、名前、メモが含まれることはありません。</strong></p>
 <p><strong>送信されないもの:</strong> タスクの文章、ともだちの名前、メモ、リマインダー、あなたの名前、メールアドレス、位置情報、健康データ。これらの記録はアカウントにもあなたの実際の身元にも結びつけられません。</p>
+
+<h2>3b. 「ふたりで」機能（任意）</h2>
+<p><strong>ともだち</strong>タブの<strong>ふたりで</strong>機能は、初期状態では<strong>オフ</strong>です。オンにすると（アプリは先に共有される内容を示し、同意を求めます）、次の情報だけがサーバーに送られ、招待コードでつながった相手だけが見られます：</p>
+<ul>
+<li>ともだちの名前・種類・成長段階</li>
+<li>その日になにかしたかどうか（はい/いいえのみ）</li>
+<li>送ったハグ（だれから・いつ）</li>
+</ul>
+<p>アカウント、メールアドレス、電話番号、位置情報は求めません。アプリはランダムな端末IDと秘密鍵を生成し、サーバーには鍵の一方向ハッシュ（SHA-256）だけが保存されます。タスク、ルーティン、目標、メモは端末に残ります。</p>
+<p>これらのデータは<a href="https://supabase.com">Supabase</a>によりドイツ（EU、フランクフルト）で処理されます。招待コードは48時間後、届いたハグはすぐに、届かなかったハグは7日後に削除されます。ともだちのカードとつながりは、機能をオフにするまで保存されます。 つながりごとに、ふたりとも同じ日になにかした日から計算される「いっしょの連続日数」と最後の共通日も保存され、つながりと一緒に削除されます。1日1回のハグの上限のため、それぞれの向きの最後のハグの時刻も保存され、つながりと一緒に削除されます。この機能のIDは、書き出したバックアップファイルには含まれません。</p>
 
 <h2>4. バックアップ</h2>
 <ul>
@@ -650,6 +752,8 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <p>匿名のクラッシュ記録と利用記録はあなたの身元と結びつけられないため、個別に取り出すことはできません。一定の保存期間の後に自動的に削除されます。それでもご要望がある場合は
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>までご連絡ください。</p>
 
+<p>「ふたりで」機能をオンにしていた場合、<strong>ともだち</strong>タブの<strong>オフにしてデータを削除</strong>で、この機能のデータがサーバーからすぐにすべて削除されます。<strong>最初からやり直す</strong>も先にこれを行います。</p>
+
 <h2>9. 変更</h2>
 <p>本ポリシーが変更された場合、このページを更新し「最終更新日」を新しくします。</p>
 
@@ -664,12 +768,13 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <section class="lang" data-lang="ko" data-title="Pixbu — 개인정보 처리방침">
 
 <h1 id="ko">Pixbu — 개인정보 처리방침</h1>
-<p class="muted">최종 업데이트: 2026년 8월 26일 · 개발자: Enes Sevinç · 연락처: enessevinc25@gmail.com</p>
+<p class="muted">최종 업데이트: 2026년 10월 23일 · 개발자: Enes Sevinç · 연락처: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>요약:</strong> Pixbu에는 계정이 없으며 개인 데이터를 수집하지 않습니다.
 모든 진행 기록(친구, 할 일, 연속 기록)은 오직 당신의 기기에만 저장되며 저희에게 전달되지 않습니다.
 저희 서버로 전송되는 것은 당신의 신원과 연결할 수 없는 <strong>익명의 오류 보고서와 익명의 사용 통계</strong>뿐입니다(제2항, 제3항).</p>
+<p><strong>선택 기능 '둘이서':</strong> 직접 켠 경우에만 내 친구의 작은 카드가 서버로 전송되며, 연결된 사람만 볼 수 있어요(3b항).</p>
 </div>
 
 <h2>1. 수집하는 데이터</h2>
@@ -687,6 +792,16 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <p>앱을 어떻게 개선할지 이해하기 위해 익명의 이벤트 기록을 수집합니다. 이는 저희를 대신하여 <a href="https://posthog.com">PostHog</a>(유럽연합 리전에서 호스팅)가 처리합니다.</p>
 <p>수집되는 이벤트의 예: 화면 열기·백그라운드 전환, 초기 설정 완료, 완료한 할 일·루틴·집중 세션 수, 구매 과정의 단계, 초기 설정 때 선택한 맞춤 옵션(예: 학생·직장인·집). <strong>어떤 이벤트에도 자유 텍스트, 이름, 메모는 포함되지 않습니다.</strong></p>
 <p><strong>절대 전송되지 않는 것:</strong> 할 일의 내용, 친구의 이름, 메모, 알림, 당신의 이름, 이메일, 위치, 건강 데이터. 이러한 기록은 계정이나 당신의 실제 신원과 연결되지 않습니다.</p>
+
+<h2>3b. '둘이서' 기능(선택)</h2>
+<p><strong>친구</strong> 탭의 <strong>둘이서</strong> 기능은 기본적으로 <strong>꺼져</strong> 있어요. 켜면(앱이 먼저 공유될 내용을 보여 주고 동의를 구해요) 아래 정보만 서버로 전송되고, 초대 코드로 연결된 사람만 볼 수 있어요:</p>
+<ul>
+<li>내 친구의 이름, 종류, 단계</li>
+<li>그날 뭔가를 했는지 여부(예/아니요만)</li>
+<li>내가 보낸 포옹(누가, 언제)</li>
+</ul>
+<p>계정, 이메일, 전화번호, 위치 정보는 요청하지 않아요. 앱이 무작위 기기 ID와 비밀 키를 만들고, 서버에는 키의 단방향 해시(SHA-256)만 저장돼요. 할 일, 루틴, 목표, 메모는 기기에 남아요.</p>
+<p>이 데이터는 <a href="https://supabase.com">Supabase</a>가 독일(EU, 프랑크푸르트)에서 처리해요. 초대 코드는 48시간 후, 전달된 포옹은 즉시, 전달되지 않은 포옹은 7일 후 삭제돼요. 친구 카드와 연결은 기능을 끌 때까지 보관돼요. 연결마다 둘 다 같은 날 뭔가를 한 날로 계산한 '함께한 연속 일수'와 마지막 공통 날짜도 함께 보관되며, 연결과 함께 삭제돼요. 하루 한 번 포옹 제한을 위해 방향별 마지막 포옹 시간도 함께 보관되며, 연결과 함께 삭제돼요. 이 기능의 ID는 내보낸 백업 파일에 기록되지 않아요.</p>
 
 <h2>4. 백업</h2>
 <ul>
@@ -715,6 +830,8 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <p>익명의 오류 및 사용 기록은 당신의 신원과 연결할 수 없으므로 개별적으로 조회할 수 없으며, 제한된 보관 기간이 지나면 자동으로 삭제됩니다. 그래도 요청 사항이 있다면
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>으로 연락해 주세요.</p>
 
+<p>'둘이서' 기능을 켰다면 <strong>친구</strong> 탭의 <strong>끄고 내 데이터 삭제</strong>로 이 기능의 데이터가 서버에서 즉시 모두 삭제돼요. <strong>처음부터 다시 시작</strong>도 먼저 이 작업을 해요.</p>
+
 <h2>9. 변경</h2>
 <p>이 방침이 변경되면 이 페이지를 업데이트하고 "최종 업데이트" 날짜를 새로 고칩니다.</p>
 
@@ -728,12 +845,13 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <section class="lang" data-lang="id" data-title="Pixbu — Kebijakan Privasi">
 
 <h1 id="id">Pixbu — Kebijakan Privasi</h1>
-<p class="muted">Terakhir diperbarui: 26 Agustus 2026 · Pengembang: Enes Sevinç · Kontak: enessevinc25@gmail.com</p>
+<p class="muted">Terakhir diperbarui: 23 Oktober 2026 · Pengembang: Enes Sevinç · Kontak: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Versi singkat:</strong> Pixbu tidak memiliki akun dan tidak mengumpulkan data pribadi.
 Semua kemajuanmu (temanmu, tugas, streak) hanya disimpan di perangkatmu sendiri dan tidak pernah sampai ke kami.
 Yang dikirim ke server kami hanyalah <strong>laporan crash anonim dan statistik penggunaan anonim</strong> yang tidak dapat dikaitkan dengan identitasmu (bagian 2 dan 3).</p>
+<p><strong>Fitur opsional "Berdua":</strong> hanya jika kamu menyalakannya, kartu kecil temanmu dikirim ke server kami dan hanya orang yang terhubung denganmu yang bisa melihatnya (bagian 3b).</p>
 </div>
 
 <h2>1. Data yang kami kumpulkan</h2>
@@ -759,6 +877,16 @@ tugas/rutinitas/sesi fokus yang diselesaikan, langkah-langkah alur pembelian, da
 pelajar/pekerja/di rumah). <strong>Tidak ada peristiwa yang pernah berisi teks bebas, nama, atau catatan.</strong></p>
 <p><strong>Tidak pernah dikirim:</strong> teks tugasmu, nama temanmu, catatanmu, pengingatmu, namamu,
 emailmu, lokasimu, atau data kesehatan apa pun. Catatan ini tidak dikaitkan dengan akun atau identitas aslimu.</p>
+
+<h2>3b. Fitur "Berdua" (opsional)</h2>
+<p>Fitur <strong>Berdua</strong> di tab <strong>Teman</strong> <strong>mati</strong> secara bawaan. Jika kamu menyalakannya (aplikasi lebih dulu menunjukkan apa yang akan dibagikan dan meminta persetujuanmu), hanya data berikut yang dikirim ke server kami, dan hanya orang yang terhubung denganmu lewat kode undangan yang bisa melihatnya:</p>
+<ul>
+<li>nama, jenis, dan tahap temanmu;</li>
+<li>apakah kamu melakukan sesuatu hari itu (hanya ya/tidak);</li>
+<li>pelukan yang kamu kirim (dari siapa, kapan).</li>
+</ul>
+<p>Tidak ada akun, email, nomor telepon, atau lokasi yang diminta. Aplikasi membuat ID perangkat acak dan kunci rahasia; server hanya menyimpan hash satu arah (SHA-256) dari kunci itu. Tugas, rutinitas, target, dan catatanmu tetap di perangkatmu.</p>
+<p>Data ini diproses oleh <a href="https://supabase.com">Supabase</a> di Jerman (UE, Frankfurt). Kode undangan dihapus setelah 48 jam, pelukan yang terkirim langsung dihapus, dan yang belum terkirim setelah 7 hari. Kartu temanmu dan hubunganmu disimpan sampai kamu mematikan fitur ini. Untuk setiap hubungan, jumlah runtunan bersama dan hari bersama terakhir (dihitung dari hari ketika kalian berdua melakukan sesuatu) juga disimpan dan dihapus bersama hubungan itu. Untuk batas satu pelukan per hari, waktu pelukan terakhir di setiap arah juga disimpan dan dihapus bersama hubungan itu. Identitasmu untuk fitur ini tidak ditulis ke file cadangan yang diekspor.</p>
 
 <h2>4. Cadangan</h2>
 <ul>
@@ -791,6 +919,8 @@ ditujukan untuk pengguna berusia 13 tahun ke atas; di App Store aplikasi ini dib
 dihapus otomatis setelah masa penyimpanan yang terbatas. Jika kamu tetap memiliki permintaan, kamu dapat menulis kepada kami di
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Jika kamu menyalakan fitur Berdua, <strong>Matikan dan hapus dataku</strong> di tab <strong>Teman</strong> langsung menghapus semua data fitur ini dari server; <strong>Mulai dari awal</strong> juga melakukannya lebih dulu.</p>
+
 <h2>9. Perubahan</h2>
 <p>Jika kebijakan ini berubah, halaman ini akan diperbarui dan tanggal "terakhir diperbarui" akan disegarkan.</p>
 
@@ -804,12 +934,13 @@ dihapus otomatis setelah masa penyimpanan yang terbatas. Jika kamu tetap memilik
 <section class="lang" data-lang="pl" data-title="Pixbu — Polityka prywatności">
 
 <h1 id="pl">Pixbu — Polityka prywatności</h1>
-<p class="muted">Ostatnia aktualizacja: 26 sierpnia 2026 · Twórca: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted">Ostatnia aktualizacja: 23 października 2026 · Twórca: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>W skrócie:</strong> Pixbu nie ma kont i nie zbiera danych osobowych.
 Wszystkie twoje postępy (twój kumpel, zadania, serie) są przechowywane wyłącznie na twoim urządzeniu i nigdy do nas nie trafiają.
 Na nasze serwery wysyłane są jedynie <strong>anonimowe raporty o awariach i anonimowe statystyki użycia</strong>, których nie da się powiązać z twoją tożsamością (punkty 2 i 3).</p>
+<p><strong>Opcjonalna funkcja „We dwoje”:</strong> tylko jeśli ją włączysz, mała karta twojego kumpla trafia na nasz serwer i widzą ją tylko połączone z tobą osoby (punkt 3b).</p>
 </div>
 
 <h2>1. Dane, które zbieramy</h2>
@@ -835,6 +966,16 @@ zadań/rutyn/sesji skupienia, kroki procesu zakupu oraz opcja personalizacji wyb
 uczeń/pracujący/w domu). <strong>Żadne zdarzenie nie zawiera nigdy dowolnego tekstu, imion ani notatek.</strong></p>
 <p><strong>Nigdy nie są wysyłane:</strong> treść twoich zadań, imię kumpla, twoje notatki, przypomnienia, twoje imię,
 e-mail, lokalizacja ani jakiekolwiek dane o zdrowiu. Te zapisy nie są powiązane z kontem ani z twoją prawdziwą tożsamością.</p>
+
+<h2>3b. Funkcja „We dwoje” (opcjonalna)</h2>
+<p>Funkcja <strong>We dwoje</strong> na karcie <strong>Kumpel</strong> jest domyślnie <strong>wyłączona</strong>. Jeśli ją włączysz (aplikacja najpierw pokazuje, co zostanie udostępnione, i prosi o zgodę), na nasz serwer trafia tylko to, co poniżej, i widzą to tylko osoby połączone z tobą kodem zaproszenia:</p>
+<ul>
+<li>imię, gatunek i etap twojego kumpla;</li>
+<li>czy tego dnia udało ci się coś zrobić (tylko tak/nie);</li>
+<li>uściski, które wysyłasz (od kogo, kiedy).</li>
+</ul>
+<p>Nie prosimy o konto, e-mail, numer telefonu ani lokalizację. Aplikacja tworzy losowy identyfikator urządzenia i tajny klucz; serwer przechowuje tylko jednokierunkowy skrót (SHA-256) klucza. Zadania, rutyny, cele i notatki zostają na twoim urządzeniu.</p>
+<p>Dane te przetwarza <a href="https://supabase.com">Supabase</a> w Niemczech (UE, Frankfurt). Kody zaproszeń są usuwane po 48 godzinach, doręczone uściski od razu, a niedoręczone po 7 dniach. Karta twojego kumpla i połączenia są przechowywane, dopóki nie wyłączysz funkcji. Dla każdego połączenia przechowywany jest też licznik wspólnej serii i ostatni wspólny dzień (liczone z dni, w których oboje coś zrobiliście); są usuwane razem z połączeniem. Na potrzeby limitu jednego uścisku dziennie przechowywany jest też czas ostatniego uścisku w każdą stronę; jest usuwany razem z połączeniem. Twój identyfikator tej funkcji nie trafia do eksportowanego pliku kopii zapasowej.</p>
 
 <h2>4. Kopie zapasowe</h2>
 <ul>
@@ -867,6 +1008,8 @@ przeznaczona dla użytkowników w wieku 13 lat i starszych; w App Store ma klasy
 automatycznie usuwane po ograniczonym okresie przechowywania. Jeśli mimo to masz prośbę, napisz do nas na
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
 
+<p>Jeśli włączyłeś(-aś) funkcję We dwoje, <strong>Wyłącz i usuń moje dane</strong> na karcie <strong>Kumpel</strong> od razu usuwa z serwera wszystkie dane tej funkcji; <strong>Zacznij od nowa</strong> też robi to najpierw.</p>
+
 <h2>9. Zmiany</h2>
 <p>Jeśli ta polityka się zmieni, ta strona zostanie zaktualizowana, a data „ostatniej aktualizacji” odświeżona.</p>
 
@@ -880,12 +1023,13 @@ automatycznie usuwane po ograniczonym okresie przechowywania. Jeśli mimo to mas
 <section class="lang" data-lang="vi" data-title="Pixbu — Chính sách quyền riêng tư">
 
 <h1 id="vi">Pixbu — Chính sách quyền riêng tư</h1>
-<p class="muted">Cập nhật lần cuối: 26 tháng 8 năm 2026 · Nhà phát triển: Enes Sevinç · Liên hệ: enessevinc25@gmail.com</p>
+<p class="muted">Cập nhật lần cuối: 23 tháng 10 năm 2026 · Nhà phát triển: Enes Sevinç · Liên hệ: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Tóm tắt:</strong> Pixbu không có tài khoản và không thu thập dữ liệu cá nhân.
 Toàn bộ tiến độ của bạn (bạn nhỏ, việc làm, chuỗi ngày) chỉ được lưu trên thiết bị của chính bạn và không bao giờ đến tay chúng tôi.
 Những gì được gửi đến máy chủ của chúng tôi chỉ là <strong>báo cáo sự cố ẩn danh và thống kê sử dụng ẩn danh</strong>, không thể liên kết với danh tính của bạn (mục 2 và 3).</p>
+<p><strong>Tính năng tùy chọn "Cùng nhau":</strong> chỉ khi bạn bật, một thẻ nhỏ về bạn nhỏ của bạn mới được gửi lên máy chủ và chỉ những người đã kết nối với bạn mới thấy (mục 3b).</p>
 </div>
 
 <h2>1. Dữ liệu chúng tôi thu thập</h2>
@@ -911,6 +1055,16 @@ việc làm/lịch trình/phiên tập trung đã hoàn thành, các bước c�
 học sinh/đi làm/ở nhà). <strong>Không sự kiện nào chứa văn bản tự do, tên hay ghi chú.</strong></p>
 <p><strong>Không bao giờ được gửi:</strong> nội dung việc làm của bạn, tên bạn nhỏ, ghi chú, lời nhắc, tên của bạn,
 email, vị trí hay bất kỳ dữ liệu sức khỏe nào. Các bản ghi này không liên kết với tài khoản hay danh tính thật của bạn.</p>
+
+<h2>3b. Tính năng "Cùng nhau" (tùy chọn)</h2>
+<p>Tính năng <strong>Cùng nhau</strong> trong thẻ <strong>Bạn nhỏ</strong> mặc định <strong>tắt</strong>. Nếu bạn bật (ứng dụng sẽ cho bạn xem trước những gì được chia sẻ và xin bạn đồng ý), chỉ những thông tin sau được gửi lên máy chủ của chúng tôi, và chỉ những người kết nối với bạn qua mã mời mới thấy:</p>
+<ul>
+<li>tên, loài và giai đoạn của bạn nhỏ;</li>
+<li>hôm đó bạn đã làm gì đó chưa (chỉ có/không);</li>
+<li>những cái ôm bạn gửi (từ ai, khi nào).</li>
+</ul>
+<p>Chúng tôi không yêu cầu tài khoản, email, số điện thoại hay vị trí. Ứng dụng tạo một mã thiết bị ngẫu nhiên và một khóa bí mật; máy chủ chỉ lưu giá trị băm một chiều (SHA-256) của khóa. Việc cần làm, thói quen, mục tiêu và ghi chú vẫn ở trên thiết bị của bạn.</p>
+<p>Dữ liệu này được <a href="https://supabase.com">Supabase</a> xử lý tại Đức (EU, Frankfurt). Mã mời bị xóa sau 48 giờ, cái ôm đã gửi tới bị xóa ngay, cái ôm chưa gửi tới bị xóa sau 7 ngày. Thẻ bạn nhỏ và các kết nối được lưu cho đến khi bạn tắt tính năng. Với mỗi kết nối, số ngày chuỗi chung và ngày chung gần nhất (tính từ những ngày cả hai đều làm gì đó) cũng được lưu và bị xóa cùng kết nối. Để giới hạn một cái ôm mỗi ngày, thời điểm cái ôm gần nhất theo mỗi chiều cũng được lưu và bị xóa cùng kết nối. Mã nhận dạng của bạn cho tính năng này không được ghi vào tệp sao lưu xuất ra.</p>
 
 <h2>4. Sao lưu</h2>
 <ul>
@@ -942,6 +1096,8 @@ hướng đến người dùng từ 13 tuổi trở lên; trên App Store, ứng
 <p>Bản ghi sự cố và sử dụng ẩn danh không thể liên kết với danh tính của bạn nên không thể truy xuất riêng lẻ; chúng
 được tự động xóa sau một thời gian lưu trữ giới hạn. Nếu bạn vẫn có yêu cầu, hãy viết cho chúng tôi tại
 <a href="mailto:enessevinc25@gmail.com">enessevinc25@gmail.com</a>.</p>
+
+<p>Nếu bạn đã bật tính năng Cùng nhau, <strong>Tắt và xóa dữ liệu của tôi</strong> trong thẻ <strong>Bạn nhỏ</strong> sẽ xóa ngay toàn bộ dữ liệu của tính năng này khỏi máy chủ; <strong>Bắt đầu lại</strong> cũng làm việc này trước.</p>
 
 <h2>9. Thay đổi</h2>
 <p>Nếu chính sách này thay đổi, trang này sẽ được cập nhật và ngày "cập nhật lần cuối" sẽ được làm mới.</p>
