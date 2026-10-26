@@ -50,7 +50,7 @@
 <section class="lang" data-lang="tr" data-title="Pixbu — Gizlilik Politikası">
 
 <h1>Pixbu — Gizlilik Politikası</h1>
-<p class="muted">Son güncelleme: 23 Ekim 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
+<p class="muted">Son güncelleme: 26 Ekim 2026 · Geliştirici: Enes Sevinç · İletişim: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Kısa özet:</strong> Pixbu hesap açmaz ve kişisel veri toplamaz.
@@ -87,11 +87,13 @@ konumun veya herhangi bir sağlık verisi. Kayıtlar bir hesapla veya gerçek ki
 <p><strong>Dost</strong> sekmesindeki <strong>Arkadaşının dostu</strong> özelliği varsayılan olarak <strong>kapalıdır</strong>. Açarsan (uygulama önce neyin paylaşılacağını gösterip onayını ister) yalnızca şunlar sunucumuza gönderilir ve yalnızca davet koduyla bağlandığın kişiler görür:</p>
 <ul>
 <li>dostunun adı, türü ve evresi;</li>
-<li>o gün bir şey yapıp yapmadığın (yalnızca evet/hayır);</li>
-<li>gönderdiğin sarılmalar (kimden, ne zaman).</li>
+<li>o gün yaptıklarının türü ve sayısı (ör. “2 görev · 1 odak seansı”); <strong>Ayrıntılı</strong> seçersen görev ve rutin adları da; <strong>Kapalı</strong> seçersen yalnızca bir şey yapıp yapmadığın (evet/hayır);</li>
+<li>gönderdiğin sarılmalar, tepkiler ve hazır mesajlar (kimden, kime, ne zaman) — serbest metin yazılamaz;</li>
+<li>bildirimlerin sana ulaşması için cihazının bildirim adresi (anonim bir anahtar) ve saat dilimi farkın; yalnızca bildirim iznin açıkken.</li>
 </ul>
-<p>Hesap, e-posta, telefon numarası ya da konum istenmez. Uygulama rastgele bir cihaz kimliği ve gizli bir anahtar üretir; sunucuda anahtarın yalnızca tek yönlü özeti (SHA-256) saklanır. Görevlerin, rutinlerin, hedeflerin ve notların cihazında kalır.</p>
+<p>Hesap, e-posta, telefon numarası ya da konum istenmez. Uygulama rastgele bir cihaz kimliği ve gizli bir anahtar üretir; sunucuda anahtarın yalnızca tek yönlü özeti (SHA-256) saklanır. Notların, hedef tutarların ve konumun cihazında kalır; görev ve rutin adları yalnızca Ayrıntılı seçersen gönderilir ve uygunsuz kelimeler içeriyorsa hiç gönderilmez.</p>
 <p>Bu veriler <a href="https://supabase.com">Supabase</a> tarafından Almanya (AB, Frankfurt) bölgesinde işlenir. Davet kodları 48 saat sonra, teslim edilen sarılmalar hemen, teslim edilmeyenler 7 gün sonra silinir. Dostunun kartı ve bağların, özelliği kapatana kadar saklanır. Her bağ için, ikinizin de aynı gün bir şey yaptığı günlerden hesaplanan ortak seri sayısı ve son ortak gün de bağla birlikte saklanır ve onunla silinir. Günde bir sarılma sınırı için her bağda iki yönün son sarılma zamanı da saklanır ve bağla birlikte silinir. Arkadaş kimliğin dışa aktarılan yedek dosyasına yazılmaz.</p>
+<p>Bildirimler Android'de Google'ın Firebase Cloud Messaging, iPhone'da Apple'ın Push Notification servisi üzerinden iletilir. Bildirimde cümle değil yalnızca bir metin anahtarı ve gönderenin dost adı yer alır; cümleyi cihazın kendi dilinde kurar. Yaptıkların 2 gün sonra, tepkiler teslim edilince ya da 2 gün sonra, hazır mesajlar teslim edilince ya da 7 gün sonra, bekleyen bildirimler 1 saat içinde, günlük bildirim sınırı için tutulan gönderim zamanları 1 gün sonra silinir. Bildirim adresin, özelliği kapatana ya da bildirim iznini kaldırana kadar saklanır. Ne paylaşılacağını Dost sekmesindeki menüden (<strong>Ne paylaşılsın?</strong>) istediğin an değiştirebilirsin; seviyeyi düşürdüğünde daha önce gönderilen adlar da silinir.</p>
 
 <h2>4. Yedekleme</h2>
 <ul>
@@ -140,7 +142,7 @@ süre saklandıktan sonra otomatik olarak silinir. Yine de bir talebin olursa
 <section class="lang" data-lang="en" data-title="Pixbu — Privacy Policy">
 
 <h1 id="en">Pixbu — Privacy Policy</h1>
-<p class="muted">Last updated: October 23, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
+<p class="muted">Last updated: October 26, 2026 · Developer: Enes Sevinç · Contact: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Short version:</strong> Pixbu has no accounts and collects no personal data.
@@ -177,11 +179,13 @@ your email, your location, or any health data. These records are not linked to a
 <p>The <strong>Your friend's buddy</strong> feature in the <strong>Buddy</strong> tab is <strong>off</strong> by default. If you turn it on (the app first shows what will be shared and asks for your consent), only the following is sent to our server, and only the people you link with through an invite code can see it:</p>
 <ul>
 <li>your buddy's name, species and stage;</li>
-<li>whether you did something that day (yes/no only);</li>
-<li>the hugs you send (from whom, when).</li>
+<li>the type and number of things you did that day (e.g. “2 tasks · 1 focus session”); with <strong>Detailed</strong>, task and routine names too; with <strong>Off</strong>, only whether you did something (yes/no);</li>
+<li>the hugs, reactions and preset messages you send (from whom, to whom, when) — free text can't be written;</li>
+<li>your device's notification address (an anonymous token) and your time zone offset, so notifications can reach you; only while notification permission is on.</li>
 </ul>
-<p>No account, email, phone number or location is requested. The app generates a random device ID and a secret key; the server stores only a one-way hash (SHA-256) of the key. Your tasks, routines, goals and notes stay on your device.</p>
+<p>No account, email, phone number or location is requested. The app generates a random device ID and a secret key; the server stores only a one-way hash (SHA-256) of the key. Your notes, goal amounts and location stay on your device; task and routine names are only sent if you choose Detailed, and never if they contain inappropriate words.</p>
 <p>This data is processed by <a href="https://supabase.com">Supabase</a> in Germany (EU, Frankfurt). Invite codes are deleted after 48 hours, delivered hugs immediately and undelivered ones after 7 days. Your buddy's card and your links are kept until you turn the feature off. For each link, a shared streak count and the last shared day (calculated from the days you both did something) are kept with the link and deleted with it. For the one-hug-a-day limit, the time of the last hug in each direction is also kept with the link and deleted with it. Your identity for this feature is not written to the exported backup file.</p>
+<p>Notifications are delivered through Google's Firebase Cloud Messaging on Android and Apple's Push Notification service on iPhone. A notification carries no sentence, only a text key and the sender's buddy name; your device builds the sentence in its own language. Activities are deleted after 2 days, reactions when delivered or after 2 days, preset messages when delivered or after 7 days, pending notifications within 1 hour, and the send times kept for the daily notification limit after 1 day. Your notification address is kept until you turn the feature off or remove notification permission. You can change what is shared at any time from the menu in the Buddy tab (<strong>What to share</strong>); lowering the level also deletes names already sent.</p>
 
 <h2>4. Backups</h2>
 <ul>
@@ -229,7 +233,7 @@ deleted automatically after a limited retention period. If you still have a requ
 <section class="lang" data-lang="es" data-title="Pixbu — Política de Privacidad">
 
 <h1>Pixbu — Política de Privacidad</h1>
-<p class="muted">Última actualización: 23 de octubre de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
+<p class="muted">Última actualización: 26 de octubre de 2026 · Desarrollador: Enes Sevinç · Contacto: enessevinc25@gmail.com</p>
 <p class="muted"><em>Esta traducción se ofrece a título informativo; en caso de discrepancia prevalece la versión en inglés.</em></p>
 
 <div class="card">
@@ -268,11 +272,13 @@ tu correo, tu ubicación ni ningún dato de salud. Estos registros no se vincula
 <p>La función <strong>De a dos</strong> de la pestaña <strong>Amigo</strong> está <strong>desactivada</strong> por defecto. Si la activas (la app primero muestra qué se compartirá y te pide consentimiento), solo se envía lo siguiente a nuestro servidor, y solo lo ven las personas con las que te conectas mediante un código de invitación:</p>
 <ul>
 <li>el nombre, la especie y la etapa de tu amigo;</li>
-<li>si hiciste algo ese día (solo sí/no);</li>
-<li>los abrazos que envías (de quién y cuándo).</li>
+<li>el tipo y la cantidad de lo que hiciste ese día (p. ej., “2 tareas · 1 sesión de enfoque”); con <strong>Detallado</strong>, también los nombres de tareas y rutinas; con <strong>Desactivado</strong>, solo si hiciste algo (sí/no);</li>
+<li>los abrazos, reacciones y mensajes predefinidos que envías (de quién, a quién y cuándo); no se puede escribir texto libre;</li>
+<li>la dirección de notificaciones de tu dispositivo (un token anónimo) y tu diferencia horaria, para que te lleguen los avisos; solo mientras el permiso de notificaciones esté activado.</li>
 </ul>
-<p>No se pide cuenta, correo, número de teléfono ni ubicación. La app genera un identificador aleatorio del dispositivo y una clave secreta; el servidor solo guarda un hash unidireccional (SHA-256) de la clave. Tus tareas, rutinas, metas y notas se quedan en tu dispositivo.</p>
+<p>No se pide cuenta, correo, número de teléfono ni ubicación. La app genera un identificador aleatorio del dispositivo y una clave secreta; el servidor solo guarda un hash unidireccional (SHA-256) de la clave. Tus notas, los montos de tus metas y tu ubicación se quedan en tu dispositivo; los nombres de tareas y rutinas solo se envían si eliges Detallado, y nunca si contienen palabras inapropiadas.</p>
 <p>Estos datos los trata <a href="https://supabase.com">Supabase</a> en Alemania (UE, Fráncfort). Los códigos de invitación se borran a las 48 horas, los abrazos entregados al instante y los no entregados a los 7 días. La tarjeta de tu amigo y tus conexiones se guardan hasta que desactives la función. Para cada conexión se guarda también un contador de racha compartida y el último día compartido (calculados a partir de los días en que ambos hicieron algo), que se borran junto con la conexión. Para el límite de un abrazo al día, también se guarda la hora del último abrazo en cada sentido, que se borra junto con la conexión. Tu identidad de esta función no se escribe en el archivo de copia de seguridad exportado.</p>
+<p>Las notificaciones se entregan mediante Firebase Cloud Messaging de Google en Android y el servicio de notificaciones push de Apple en iPhone. Una notificación no lleva frases, solo una clave de texto y el nombre del amigo de quien la envía; tu dispositivo arma la frase en su propio idioma. Las actividades se borran a los 2 días, las reacciones al entregarse o a los 2 días, los mensajes predefinidos al entregarse o a los 7 días, las notificaciones pendientes en 1 hora y las horas de envío guardadas para el límite diario de notificaciones al cabo de 1 día. Tu dirección de notificaciones se guarda hasta que desactives la función o quites el permiso de notificaciones. Puedes cambiar lo que se comparte cuando quieras desde el menú de la pestaña Amigo (<strong>¿Qué se comparte?</strong>); al bajar el nivel también se borran los nombres ya enviados.</p>
 
 <h2>4. Copias de seguridad</h2>
 <ul>
@@ -321,7 +327,7 @@ se eliminan automáticamente tras un período de retención limitado. Si aun as�
 <section class="lang" data-lang="pt" data-title="Pixbu — Política de Privacidade">
 
 <h1>Pixbu — Política de Privacidade</h1>
-<p class="muted">Última atualização: 23 de outubro de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
+<p class="muted">Última atualização: 26 de outubro de 2026 · Desenvolvedor: Enes Sevinç · Contato: enessevinc25@gmail.com</p>
 <p class="muted"><em>Esta tradução é fornecida a título informativo; em caso de divergência, prevalece a versão em inglês.</em></p>
 
 <div class="card">
@@ -360,11 +366,13 @@ seu e-mail, sua localização ou qualquer dado de saúde. Esses registros não s
 <p>O recurso <strong>A dois</strong> da aba <strong>Amigo</strong> vem <strong>desativado</strong>. Se você ativar (o app primeiro mostra o que será compartilhado e pede seu consentimento), só o seguinte é enviado ao nosso servidor, e só as pessoas conectadas a você por um código de convite podem ver:</p>
 <ul>
 <li>o nome, a espécie e a fase do seu amigo;</li>
-<li>se você fez algo naquele dia (apenas sim/não);</li>
-<li>os abraços que você envia (de quem e quando).</li>
+<li>o tipo e a quantidade do que você fez naquele dia (ex.: “2 tarefas · 1 sessão de foco”); com <strong>Detalhado</strong>, também os nomes de tarefas e rotinas; com <strong>Desativado</strong>, apenas se você fez algo (sim/não);</li>
+<li>os abraços, reações e mensagens prontas que você envia (de quem, para quem e quando); não é possível escrever texto livre;</li>
+<li>o endereço de notificação do seu aparelho (um token anônimo) e a diferença do seu fuso horário, para que as notificações cheguem até você; só enquanto a permissão de notificações estiver ativada.</li>
 </ul>
-<p>Não pedimos conta, e-mail, número de telefone nem localização. O app gera um identificador aleatório do aparelho e uma chave secreta; o servidor guarda apenas um hash unidirecional (SHA-256) da chave. Suas tarefas, rotinas, metas e notas ficam no seu aparelho.</p>
+<p>Não pedimos conta, e-mail, número de telefone nem localização. O app gera um identificador aleatório do aparelho e uma chave secreta; o servidor guarda apenas um hash unidirecional (SHA-256) da chave. Suas notas, os valores das suas metas e sua localização ficam no seu aparelho; os nomes de tarefas e rotinas só são enviados se você escolher Detalhado, e nunca se contiverem palavras impróprias.</p>
 <p>Esses dados são tratados pela <a href="https://supabase.com">Supabase</a> na Alemanha (UE, Frankfurt). Códigos de convite são apagados após 48 horas, abraços entregues na hora e os não entregues após 7 dias. O cartão do seu amigo e suas conexões ficam guardados até você desativar o recurso. Para cada conexão, também ficam guardados um contador de sequência compartilhada e o último dia em comum (calculados a partir dos dias em que vocês dois fizeram algo), apagados junto com a conexão. Para o limite de um abraço por dia, também fica guardado o horário do último abraço em cada sentido, apagado junto com a conexão. Sua identidade neste recurso não é gravada no arquivo de backup exportado.</p>
+<p>As notificações são entregues pelo Firebase Cloud Messaging do Google no Android e pelo serviço de notificações push da Apple no iPhone. Uma notificação não leva frases, só uma chave de texto e o nome do amigo de quem enviou; o seu aparelho monta a frase no próprio idioma. As atividades são apagadas após 2 dias, as reações ao serem entregues ou após 2 dias, as mensagens prontas ao serem entregues ou após 7 dias, as notificações pendentes em até 1 hora e os horários de envio guardados para o limite diário de notificações após 1 dia. O endereço de notificação fica guardado até você desativar o recurso ou remover a permissão de notificações. Você pode mudar o que é compartilhado a qualquer momento no menu da aba Amigo (<strong>O que compartilhar?</strong>); ao baixar o nível, os nomes já enviados também são apagados.</p>
 
 <h2>4. Backups</h2>
 <ul>
@@ -413,7 +421,7 @@ eles são excluídos automaticamente após um período limitado de retenção. S
 <section class="lang" data-lang="de" data-title="Pixbu — Datenschutzerklärung">
 
 <h1>Pixbu — Datenschutzerklärung</h1>
-<p class="muted">Zuletzt aktualisiert: 23. Oktober 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted">Zuletzt aktualisiert: 26. Oktober 2026 · Entwickler: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
 <p class="muted"><em>Diese Übersetzung dient nur zur Information; bei Abweichungen gilt die englische Fassung.</em></p>
 
 <div class="card">
@@ -453,11 +461,13 @@ deine E-Mail, dein Standort oder irgendwelche Gesundheitsdaten. Diese Daten werd
 <p>Die Funktion <strong>Zu zweit</strong> im Tab <strong>Freund</strong> ist standardmäßig <strong>ausgeschaltet</strong>. Wenn du sie einschaltest (die App zeigt vorher, was geteilt wird, und bittet um deine Zustimmung), wird nur Folgendes an unseren Server gesendet, und nur die Personen, mit denen du dich per Einladungscode verbindest, sehen es:</p>
 <ul>
 <li>Name, Art und Stufe deines Freundes;</li>
-<li>ob du an dem Tag etwas geschafft hast (nur ja/nein);</li>
-<li>die Umarmungen, die du schickst (von wem, wann).</li>
+<li>Art und Anzahl dessen, was du an dem Tag geschafft hast (z. B. „2 Aufgaben · 1 Fokus-Einheit“); mit <strong>Ausführlich</strong> auch die Namen von Aufgaben und Routinen; mit <strong>Aus</strong> nur, ob du etwas geschafft hast (ja/nein);</li>
+<li>die Umarmungen, Reaktionen und vorgefertigten Nachrichten, die du schickst (von wem, an wen, wann) – freier Text ist nicht möglich;</li>
+<li>die Benachrichtigungsadresse deines Geräts (ein anonymes Token) und deine Zeitzonenverschiebung, damit Mitteilungen dich erreichen; nur solange Benachrichtigungen erlaubt sind.</li>
 </ul>
-<p>Es werden weder Konto noch E-Mail, Telefonnummer oder Standort abgefragt. Die App erzeugt eine zufällige Geräte-ID und einen geheimen Schlüssel; der Server speichert nur einen Einweg-Hash (SHA-256) des Schlüssels. Deine Aufgaben, Routinen, Ziele und Notizen bleiben auf deinem Gerät.</p>
+<p>Es werden weder Konto noch E-Mail, Telefonnummer oder Standort abgefragt. Die App erzeugt eine zufällige Geräte-ID und einen geheimen Schlüssel; der Server speichert nur einen Einweg-Hash (SHA-256) des Schlüssels. Deine Notizen, Zielbeträge und dein Standort bleiben auf deinem Gerät; Namen von Aufgaben und Routinen werden nur gesendet, wenn du „Ausführlich“ wählst, und nie, wenn sie unangemessene Wörter enthalten.</p>
 <p>Diese Daten werden von <a href="https://supabase.com">Supabase</a> in Deutschland (EU, Frankfurt) verarbeitet. Einladungscodes werden nach 48 Stunden gelöscht, zugestellte Umarmungen sofort und nicht zugestellte nach 7 Tagen. Die Karte deines Freundes und deine Verbindungen bleiben gespeichert, bis du die Funktion ausschaltest. Zu jeder Verbindung werden außerdem ein gemeinsamer Serienzähler und der letzte gemeinsame Tag gespeichert (berechnet aus den Tagen, an denen ihr beide etwas geschafft habt) und mit der Verbindung gelöscht. Für die Grenze von einer Umarmung pro Tag wird außerdem der Zeitpunkt der letzten Umarmung in jede Richtung gespeichert und mit der Verbindung gelöscht. Deine Kennung für diese Funktion wird nicht in die exportierte Sicherungsdatei geschrieben.</p>
+<p>Mitteilungen werden auf Android über Firebase Cloud Messaging von Google und auf dem iPhone über den Push-Dienst von Apple zugestellt. Eine Mitteilung enthält keinen Satz, sondern nur einen Textschlüssel und den Namen des Freundes der sendenden Person; dein Gerät bildet den Satz in seiner eigenen Sprache. Aktivitäten werden nach 2 Tagen gelöscht, Reaktionen bei Zustellung oder nach 2 Tagen, vorgefertigte Nachrichten bei Zustellung oder nach 7 Tagen, ausstehende Mitteilungen innerhalb von 1 Stunde und die für das tägliche Mitteilungslimit gespeicherten Sendezeiten nach 1 Tag. Deine Benachrichtigungsadresse wird gespeichert, bis du die Funktion ausschaltest oder die Benachrichtigungsberechtigung entziehst. Was geteilt wird, kannst du jederzeit im Menü des Tabs Freund ändern (<strong>Was wird geteilt?</strong>); wenn du die Stufe senkst, werden auch bereits gesendete Namen gelöscht.</p>
 
 <h2>4. Sicherung (Backup)</h2>
 <ul>
@@ -506,7 +516,7 @@ sie werden nach einer begrenzten Aufbewahrungsfrist automatisch gelöscht. Wenn 
 <section class="lang" data-lang="fr" data-title="Pixbu — Politique de Confidentialité">
 
 <h1>Pixbu — Politique de Confidentialité</h1>
-<p class="muted">Dernière mise à jour : 23 octobre 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
+<p class="muted">Dernière mise à jour : 26 octobre 2026 · Développeur : Enes Sevinç · Contact : enessevinc25@gmail.com</p>
 <p class="muted"><em>Cette traduction est fournie à titre informatif ; en cas de divergence, la version anglaise prévaut.</em></p>
 
 <div class="card">
@@ -546,11 +556,13 @@ ton e-mail, ta position ou toute donnée de santé. Ces enregistrements ne sont 
 <p>La fonction <strong>À deux</strong> de l'onglet <strong>Copain</strong> est <strong>désactivée</strong> par défaut. Si tu l'actives (l'app montre d'abord ce qui sera partagé et demande ton consentement), seules les informations suivantes sont envoyées à notre serveur, et seules les personnes reliées à toi par un code d'invitation peuvent les voir :</p>
 <ul>
 <li>le nom, l'espèce et le stade de ton copain ;</li>
-<li>si tu as fait quelque chose ce jour-là (oui/non uniquement) ;</li>
-<li>les câlins que tu envoies (de qui, quand).</li>
+<li>le type et le nombre de choses faites ce jour-là (par ex. « 2 tâches · 1 séance de concentration ») ; avec <strong>Détaillé</strong>, aussi les noms des tâches et des routines ; avec <strong>Désactivé</strong>, seulement si tu as fait quelque chose (oui/non) ;</li>
+<li>les câlins, réactions et messages prédéfinis que tu envoies (de qui, à qui, quand) ; aucun texte libre ne peut être écrit ;</li>
+<li>l'adresse de notification de ton appareil (un jeton anonyme) et ton décalage horaire, pour que les notifications t'arrivent ; uniquement tant que les notifications sont autorisées.</li>
 </ul>
-<p>Aucun compte, e-mail, numéro de téléphone ni localisation n'est demandé. L'app génère un identifiant d'appareil aléatoire et une clé secrète ; le serveur ne conserve qu'une empreinte à sens unique (SHA-256) de la clé. Tes tâches, routines, objectifs et notes restent sur ton appareil.</p>
+<p>Aucun compte, e-mail, numéro de téléphone ni localisation n'est demandé. L'app génère un identifiant d'appareil aléatoire et une clé secrète ; le serveur ne conserve qu'une empreinte à sens unique (SHA-256) de la clé. Tes notes, les montants de tes objectifs et ta localisation restent sur ton appareil ; les noms des tâches et des routines ne sont envoyés que si tu choisis Détaillé, et jamais s'ils contiennent des mots inappropriés.</p>
 <p>Ces données sont traitées par <a href="https://supabase.com">Supabase</a> en Allemagne (UE, Francfort). Les codes d'invitation sont supprimés après 48 heures, les câlins remis immédiatement et ceux non remis après 7 jours. La carte de ton copain et tes liens sont conservés jusqu'à ce que tu désactives la fonction. Pour chaque lien, un compteur de série commune et le dernier jour commun (calculés à partir des jours où vous avez tous les deux fait quelque chose) sont aussi conservés et supprimés avec le lien. Pour la limite d'un câlin par jour, l'heure du dernier câlin dans chaque sens est aussi conservée et supprimée avec le lien. Ton identifiant pour cette fonction n'est pas écrit dans le fichier de sauvegarde exporté.</p>
+<p>Les notifications sont acheminées par Firebase Cloud Messaging de Google sur Android et par le service de notifications push d'Apple sur iPhone. Une notification ne contient pas de phrase, seulement une clé de texte et le nom du copain de l'expéditeur ; ton appareil compose la phrase dans sa propre langue. Les activités sont supprimées après 2 jours, les réactions à leur remise ou après 2 jours, les messages prédéfinis à leur remise ou après 7 jours, les notifications en attente dans l'heure et les heures d'envoi conservées pour la limite quotidienne de notifications après 1 jour. Ton adresse de notification est conservée jusqu'à ce que tu désactives la fonction ou retires l'autorisation des notifications. Tu peux changer ce qui est partagé à tout moment depuis le menu de l'onglet Copain (<strong>Que partager ?</strong>) ; baisser le niveau supprime aussi les noms déjà envoyés.</p>
 
 <h2>4. Sauvegardes</h2>
 <ul>
@@ -600,7 +612,7 @@ ils sont supprimés automatiquement après une période de conservation limitée
 <section class="lang" data-lang="it" data-title="Pixbu — Informativa sulla privacy">
 
 <h1 id="it">Pixbu — Informativa sulla privacy</h1>
-<p class="muted">Ultimo aggiornamento: 23 ottobre 2026 · Sviluppatore: Enes Sevinç · Contatto: enessevinc25@gmail.com</p>
+<p class="muted">Ultimo aggiornamento: 26 ottobre 2026 · Sviluppatore: Enes Sevinç · Contatto: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>In breve:</strong> Pixbu non ha account e non raccoglie dati personali.
@@ -637,11 +649,13 @@ la tua email, la tua posizione o dati sanitari. Queste registrazioni non sono co
 <p>La funzione <strong>In due</strong> nella scheda <strong>Amico</strong> è <strong>disattivata</strong> per impostazione predefinita. Se la attivi (l'app mostra prima cosa verrà condiviso e chiede il tuo consenso), al nostro server viene inviato solo quanto segue, visibile solo alle persone con cui ti colleghi tramite un codice invito:</p>
 <ul>
 <li>nome, specie e stadio del tuo amico;</li>
-<li>se quel giorno hai fatto qualcosa (solo sì/no);</li>
-<li>gli abbracci che mandi (da chi, quando).</li>
+<li>tipo e numero di cose fatte quel giorno (ad es. “2 attività · 1 sessione di concentrazione”); con <strong>Dettagliata</strong> anche i nomi di attività e routine; con <strong>Disattivata</strong> solo se hai fatto qualcosa (sì/no);</li>
+<li>gli abbracci, le reazioni e i messaggi predefiniti che mandi (da chi, a chi, quando); non si può scrivere testo libero;</li>
+<li>l'indirizzo di notifica del tuo dispositivo (un token anonimo) e la differenza del tuo fuso orario, perché le notifiche ti arrivino; solo finché le notifiche sono consentite.</li>
 </ul>
-<p>Non vengono richiesti account, email, numero di telefono né posizione. L'app genera un identificativo casuale del dispositivo e una chiave segreta; il server conserva solo un hash unidirezionale (SHA-256) della chiave. Attività, routine, obiettivi e note restano sul tuo dispositivo.</p>
+<p>Non vengono richiesti account, email, numero di telefono né posizione. L'app genera un identificativo casuale del dispositivo e una chiave segreta; il server conserva solo un hash unidirezionale (SHA-256) della chiave. Note, importi degli obiettivi e posizione restano sul tuo dispositivo; i nomi di attività e routine vengono inviati solo se scegli Dettagliata, e mai se contengono parole inappropriate.</p>
 <p>Questi dati sono trattati da <a href="https://supabase.com">Supabase</a> in Germania (UE, Francoforte). I codici invito vengono cancellati dopo 48 ore, gli abbracci consegnati subito e quelli non consegnati dopo 7 giorni. La scheda del tuo amico e i collegamenti restano salvati finché non disattivi la funzione. Per ogni collegamento vengono salvati anche un contatore di serie comune e l'ultimo giorno in comune (calcolati dai giorni in cui entrambi avete fatto qualcosa), cancellati insieme al collegamento. Per il limite di un abbraccio al giorno viene salvata anche l'ora dell'ultimo abbraccio in ciascuna direzione, cancellata insieme al collegamento. La tua identità per questa funzione non viene scritta nel file di backup esportato.</p>
+<p>Le notifiche vengono consegnate tramite Firebase Cloud Messaging di Google su Android e il servizio di notifiche push di Apple su iPhone. Una notifica non contiene frasi, solo una chiave di testo e il nome dell'amico di chi la invia; il tuo dispositivo compone la frase nella propria lingua. Le attività vengono cancellate dopo 2 giorni, le reazioni alla consegna o dopo 2 giorni, i messaggi predefiniti alla consegna o dopo 7 giorni, le notifiche in attesa entro 1 ora e gli orari di invio conservati per il limite giornaliero di notifiche dopo 1 giorno. L'indirizzo di notifica viene conservato finché non disattivi la funzione o revochi il permesso per le notifiche. Puoi cambiare cosa condividere in qualsiasi momento dal menu della scheda Amico (<strong>Cosa condividere?</strong>); abbassando il livello vengono cancellati anche i nomi già inviati.</p>
 
 <h2>4. Backup</h2>
 <ul>
@@ -690,7 +704,7 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <section class="lang" data-lang="ja" data-title="Pixbu — プライバシーポリシー">
 
 <h1 id="ja">Pixbu — プライバシーポリシー</h1>
-<p class="muted">最終更新日: 2026年10月23日 · 開発者: Enes Sevinç · 連絡先: enessevinc25@gmail.com</p>
+<p class="muted">最終更新日: 2026年10月26日 · 開発者: Enes Sevinç · 連絡先: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>要約:</strong> Pixbuにはアカウントがなく、個人データを収集しません。
@@ -719,11 +733,13 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <p><strong>ともだち</strong>タブの<strong>ふたりで</strong>機能は、初期状態では<strong>オフ</strong>です。オンにすると（アプリは先に共有される内容を示し、同意を求めます）、次の情報だけがサーバーに送られ、招待コードでつながった相手だけが見られます：</p>
 <ul>
 <li>ともだちの名前・種類・成長段階</li>
-<li>その日になにかしたかどうか（はい/いいえのみ）</li>
-<li>送ったハグ（だれから・いつ）</li>
+<li>その日にしたことの種類と数（例：「タスク2件・集中1回」）。<strong>詳細</strong>ならタスクやルーティンの名前も、<strong>オフ</strong>ならなにかしたかどうか（はい/いいえ）だけ</li>
+<li>送ったハグ・リアクション・定型メッセージ（だれから・だれへ・いつ）。自由な文章は書けません</li>
+<li>通知を届けるための端末の通知アドレス（匿名のトークン）とタイムゾーンの時差。通知が許可されているあいだだけ</li>
 </ul>
-<p>アカウント、メールアドレス、電話番号、位置情報は求めません。アプリはランダムな端末IDと秘密鍵を生成し、サーバーには鍵の一方向ハッシュ（SHA-256）だけが保存されます。タスク、ルーティン、目標、メモは端末に残ります。</p>
+<p>アカウント、メールアドレス、電話番号、位置情報は求めません。アプリはランダムな端末IDと秘密鍵を生成し、サーバーには鍵の一方向ハッシュ（SHA-256）だけが保存されます。メモ、目標の金額、位置情報は端末に残ります。タスクやルーティンの名前は「詳細」を選んだときだけ送られ、不適切な言葉を含む場合は送られません。</p>
 <p>これらのデータは<a href="https://supabase.com">Supabase</a>によりドイツ（EU、フランクフルト）で処理されます。招待コードは48時間後、届いたハグはすぐに、届かなかったハグは7日後に削除されます。ともだちのカードとつながりは、機能をオフにするまで保存されます。 つながりごとに、ふたりとも同じ日になにかした日から計算される「いっしょの連続日数」と最後の共通日も保存され、つながりと一緒に削除されます。1日1回のハグの上限のため、それぞれの向きの最後のハグの時刻も保存され、つながりと一緒に削除されます。この機能のIDは、書き出したバックアップファイルには含まれません。</p>
+<p>通知はAndroidではGoogleのFirebase Cloud Messaging、iPhoneではAppleのプッシュ通知サービスを通じて届きます。通知には文章は含まれず、テキストのキーと送り主のともだちの名前だけが入り、文章は端末が自分の言語で組み立てます。したことの記録は2日後、リアクションは届いた時点か2日後、定型メッセージは届いた時点か7日後、未送信の通知は1時間以内、1日の通知上限のための送信時刻は1日後に削除されます。通知アドレスは、機能をオフにするか通知の許可を取り消すまで保存されます。共有する内容は、ともだちタブのメニュー（<strong>何を共有する？</strong>）からいつでも変えられ、レベルを下げると送信済みの名前も削除されます。</p>
 
 <h2>4. バックアップ</h2>
 <ul>
@@ -768,7 +784,7 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <section class="lang" data-lang="ko" data-title="Pixbu — 개인정보 처리방침">
 
 <h1 id="ko">Pixbu — 개인정보 처리방침</h1>
-<p class="muted">최종 업데이트: 2026년 10월 23일 · 개발자: Enes Sevinç · 연락처: enessevinc25@gmail.com</p>
+<p class="muted">최종 업데이트: 2026년 10월 26일 · 개발자: Enes Sevinç · 연락처: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>요약:</strong> Pixbu에는 계정이 없으며 개인 데이터를 수집하지 않습니다.
@@ -797,11 +813,13 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <p><strong>친구</strong> 탭의 <strong>둘이서</strong> 기능은 기본적으로 <strong>꺼져</strong> 있어요. 켜면(앱이 먼저 공유될 내용을 보여 주고 동의를 구해요) 아래 정보만 서버로 전송되고, 초대 코드로 연결된 사람만 볼 수 있어요:</p>
 <ul>
 <li>내 친구의 이름, 종류, 단계</li>
-<li>그날 뭔가를 했는지 여부(예/아니요만)</li>
-<li>내가 보낸 포옹(누가, 언제)</li>
+<li>그날 한 일의 종류와 개수(예: “할 일 2개 · 집중 1회”). <strong>자세히</strong>를 고르면 할 일과 루틴 이름도, <strong>끄기</strong>면 뭔가를 했는지 여부(예/아니요)만</li>
+<li>내가 보낸 포옹, 반응, 준비된 메시지(누가, 누구에게, 언제). 자유로운 글은 쓸 수 없어요</li>
+<li>알림을 받을 수 있도록 기기의 알림 주소(익명 토큰)와 시간대 차이. 알림이 허용된 동안에만</li>
 </ul>
-<p>계정, 이메일, 전화번호, 위치 정보는 요청하지 않아요. 앱이 무작위 기기 ID와 비밀 키를 만들고, 서버에는 키의 단방향 해시(SHA-256)만 저장돼요. 할 일, 루틴, 목표, 메모는 기기에 남아요.</p>
+<p>계정, 이메일, 전화번호, 위치 정보는 요청하지 않아요. 앱이 무작위 기기 ID와 비밀 키를 만들고, 서버에는 키의 단방향 해시(SHA-256)만 저장돼요. 메모, 목표 금액, 위치는 기기에 남아요. 할 일과 루틴 이름은 '자세히'를 골랐을 때만 전송되고, 부적절한 단어가 들어 있으면 전송되지 않아요.</p>
 <p>이 데이터는 <a href="https://supabase.com">Supabase</a>가 독일(EU, 프랑크푸르트)에서 처리해요. 초대 코드는 48시간 후, 전달된 포옹은 즉시, 전달되지 않은 포옹은 7일 후 삭제돼요. 친구 카드와 연결은 기능을 끌 때까지 보관돼요. 연결마다 둘 다 같은 날 뭔가를 한 날로 계산한 '함께한 연속 일수'와 마지막 공통 날짜도 함께 보관되며, 연결과 함께 삭제돼요. 하루 한 번 포옹 제한을 위해 방향별 마지막 포옹 시간도 함께 보관되며, 연결과 함께 삭제돼요. 이 기능의 ID는 내보낸 백업 파일에 기록되지 않아요.</p>
+<p>알림은 Android에서는 Google의 Firebase Cloud Messaging, iPhone에서는 Apple의 푸시 알림 서비스를 통해 전달돼요. 알림에는 문장이 아니라 텍스트 키와 보낸 사람의 친구 이름만 담기고, 문장은 기기가 자기 언어로 만들어요. 한 일 기록은 2일 뒤, 반응은 전달되면 또는 2일 뒤, 준비된 메시지는 전달되면 또는 7일 뒤, 보내지 못한 알림은 1시간 안에, 하루 알림 한도를 위한 전송 시각은 1일 뒤 삭제돼요. 알림 주소는 기능을 끄거나 알림 권한을 거둘 때까지 보관돼요. 공유할 내용은 친구 탭 메뉴(<strong>무엇을 공유할까요?</strong>)에서 언제든 바꿀 수 있고, 수준을 낮추면 이미 보낸 이름도 삭제돼요.</p>
 
 <h2>4. 백업</h2>
 <ul>
@@ -845,7 +863,7 @@ vengono eliminate automaticamente dopo un periodo di conservazione limitato. Se 
 <section class="lang" data-lang="id" data-title="Pixbu — Kebijakan Privasi">
 
 <h1 id="id">Pixbu — Kebijakan Privasi</h1>
-<p class="muted">Terakhir diperbarui: 23 Oktober 2026 · Pengembang: Enes Sevinç · Kontak: enessevinc25@gmail.com</p>
+<p class="muted">Terakhir diperbarui: 26 Oktober 2026 · Pengembang: Enes Sevinç · Kontak: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Versi singkat:</strong> Pixbu tidak memiliki akun dan tidak mengumpulkan data pribadi.
@@ -882,11 +900,13 @@ emailmu, lokasimu, atau data kesehatan apa pun. Catatan ini tidak dikaitkan deng
 <p>Fitur <strong>Berdua</strong> di tab <strong>Teman</strong> <strong>mati</strong> secara bawaan. Jika kamu menyalakannya (aplikasi lebih dulu menunjukkan apa yang akan dibagikan dan meminta persetujuanmu), hanya data berikut yang dikirim ke server kami, dan hanya orang yang terhubung denganmu lewat kode undangan yang bisa melihatnya:</p>
 <ul>
 <li>nama, jenis, dan tahap temanmu;</li>
-<li>apakah kamu melakukan sesuatu hari itu (hanya ya/tidak);</li>
-<li>pelukan yang kamu kirim (dari siapa, kapan).</li>
+<li>jenis dan jumlah yang kamu lakukan hari itu (mis. “2 tugas · 1 sesi fokus”); dengan <strong>Lengkap</strong>, nama tugas dan rutinitas juga; dengan <strong>Mati</strong>, hanya apakah kamu melakukan sesuatu (ya/tidak);</li>
+<li>pelukan, reaksi, dan pesan siap pakai yang kamu kirim (dari siapa, kepada siapa, kapan); teks bebas tidak bisa ditulis;</li>
+<li>alamat notifikasi perangkatmu (token anonim) dan selisih zona waktumu, agar notifikasi bisa sampai; hanya selama izin notifikasi aktif.</li>
 </ul>
-<p>Tidak ada akun, email, nomor telepon, atau lokasi yang diminta. Aplikasi membuat ID perangkat acak dan kunci rahasia; server hanya menyimpan hash satu arah (SHA-256) dari kunci itu. Tugas, rutinitas, target, dan catatanmu tetap di perangkatmu.</p>
+<p>Tidak ada akun, email, nomor telepon, atau lokasi yang diminta. Aplikasi membuat ID perangkat acak dan kunci rahasia; server hanya menyimpan hash satu arah (SHA-256) dari kunci itu. Catatan, nominal target, dan lokasimu tetap di perangkatmu; nama tugas dan rutinitas hanya dikirim jika kamu memilih Lengkap, dan tidak pernah jika berisi kata yang tidak pantas.</p>
 <p>Data ini diproses oleh <a href="https://supabase.com">Supabase</a> di Jerman (UE, Frankfurt). Kode undangan dihapus setelah 48 jam, pelukan yang terkirim langsung dihapus, dan yang belum terkirim setelah 7 hari. Kartu temanmu dan hubunganmu disimpan sampai kamu mematikan fitur ini. Untuk setiap hubungan, jumlah runtunan bersama dan hari bersama terakhir (dihitung dari hari ketika kalian berdua melakukan sesuatu) juga disimpan dan dihapus bersama hubungan itu. Untuk batas satu pelukan per hari, waktu pelukan terakhir di setiap arah juga disimpan dan dihapus bersama hubungan itu. Identitasmu untuk fitur ini tidak ditulis ke file cadangan yang diekspor.</p>
+<p>Notifikasi dikirim melalui Firebase Cloud Messaging milik Google di Android dan layanan notifikasi push Apple di iPhone. Notifikasi tidak berisi kalimat, hanya kunci teks dan nama teman milik pengirim; perangkatmu menyusun kalimatnya dalam bahasanya sendiri. Aktivitas dihapus setelah 2 hari, reaksi saat terkirim atau setelah 2 hari, pesan siap pakai saat terkirim atau setelah 7 hari, notifikasi tertunda dalam 1 jam, dan waktu pengiriman yang disimpan untuk batas notifikasi harian setelah 1 hari. Alamat notifikasimu disimpan sampai kamu mematikan fitur ini atau mencabut izin notifikasi. Kamu bisa mengubah apa yang dibagikan kapan saja dari menu di tab Teman (<strong>Apa yang dibagikan?</strong>); menurunkan tingkat juga menghapus nama yang sudah terkirim.</p>
 
 <h2>4. Cadangan</h2>
 <ul>
@@ -934,7 +954,7 @@ dihapus otomatis setelah masa penyimpanan yang terbatas. Jika kamu tetap memilik
 <section class="lang" data-lang="pl" data-title="Pixbu — Polityka prywatności">
 
 <h1 id="pl">Pixbu — Polityka prywatności</h1>
-<p class="muted">Ostatnia aktualizacja: 23 października 2026 · Twórca: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
+<p class="muted">Ostatnia aktualizacja: 26 października 2026 · Twórca: Enes Sevinç · Kontakt: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>W skrócie:</strong> Pixbu nie ma kont i nie zbiera danych osobowych.
@@ -971,11 +991,13 @@ e-mail, lokalizacja ani jakiekolwiek dane o zdrowiu. Te zapisy nie są powiązan
 <p>Funkcja <strong>We dwoje</strong> na karcie <strong>Kumpel</strong> jest domyślnie <strong>wyłączona</strong>. Jeśli ją włączysz (aplikacja najpierw pokazuje, co zostanie udostępnione, i prosi o zgodę), na nasz serwer trafia tylko to, co poniżej, i widzą to tylko osoby połączone z tobą kodem zaproszenia:</p>
 <ul>
 <li>imię, gatunek i etap twojego kumpla;</li>
-<li>czy tego dnia udało ci się coś zrobić (tylko tak/nie);</li>
-<li>uściski, które wysyłasz (od kogo, kiedy).</li>
+<li>rodzaj i liczba rzeczy zrobionych tego dnia (np. „2 zadania · 1 sesja skupienia”); przy opcji <strong>Szczegółowe</strong> także nazwy zadań i rutyn; przy <strong>Wyłączone</strong> tylko informacja, czy coś zrobiono (tak/nie);</li>
+<li>wysyłane uściski, reakcje i gotowe wiadomości (od kogo, do kogo, kiedy); nie da się wpisać własnego tekstu;</li>
+<li>adres powiadomień twojego urządzenia (anonimowy token) i różnica strefy czasowej, aby powiadomienia do ciebie docierały; tylko dopóki powiadomienia są dozwolone.</li>
 </ul>
-<p>Nie prosimy o konto, e-mail, numer telefonu ani lokalizację. Aplikacja tworzy losowy identyfikator urządzenia i tajny klucz; serwer przechowuje tylko jednokierunkowy skrót (SHA-256) klucza. Zadania, rutyny, cele i notatki zostają na twoim urządzeniu.</p>
+<p>Nie prosimy o konto, e-mail, numer telefonu ani lokalizację. Aplikacja tworzy losowy identyfikator urządzenia i tajny klucz; serwer przechowuje tylko jednokierunkowy skrót (SHA-256) klucza. Notatki, kwoty celów i lokalizacja zostają na twoim urządzeniu; nazwy zadań i rutyn są wysyłane tylko przy opcji Szczegółowe i nigdy, jeśli zawierają niestosowne słowa.</p>
 <p>Dane te przetwarza <a href="https://supabase.com">Supabase</a> w Niemczech (UE, Frankfurt). Kody zaproszeń są usuwane po 48 godzinach, doręczone uściski od razu, a niedoręczone po 7 dniach. Karta twojego kumpla i połączenia są przechowywane, dopóki nie wyłączysz funkcji. Dla każdego połączenia przechowywany jest też licznik wspólnej serii i ostatni wspólny dzień (liczone z dni, w których oboje coś zrobiliście); są usuwane razem z połączeniem. Na potrzeby limitu jednego uścisku dziennie przechowywany jest też czas ostatniego uścisku w każdą stronę; jest usuwany razem z połączeniem. Twój identyfikator tej funkcji nie trafia do eksportowanego pliku kopii zapasowej.</p>
+<p>Powiadomienia są dostarczane przez Firebase Cloud Messaging firmy Google na Androidzie i usługę powiadomień push firmy Apple na iPhonie. Powiadomienie nie zawiera zdania, tylko klucz tekstu i imię kumpla nadawcy; zdanie składa twoje urządzenie we własnym języku. Aktywności są usuwane po 2 dniach, reakcje po doręczeniu lub po 2 dniach, gotowe wiadomości po doręczeniu lub po 7 dniach, oczekujące powiadomienia w ciągu 1 godziny, a godziny wysyłki przechowywane na potrzeby dziennego limitu powiadomień po 1 dniu. Adres powiadomień jest przechowywany, dopóki nie wyłączysz funkcji lub nie odbierzesz uprawnienia do powiadomień. To, co jest udostępniane, możesz zmienić w każdej chwili w menu karty Kumpel (<strong>Co udostępniać?</strong>); obniżenie poziomu usuwa też wysłane już nazwy.</p>
 
 <h2>4. Kopie zapasowe</h2>
 <ul>
@@ -1023,7 +1045,7 @@ automatycznie usuwane po ograniczonym okresie przechowywania. Jeśli mimo to mas
 <section class="lang" data-lang="vi" data-title="Pixbu — Chính sách quyền riêng tư">
 
 <h1 id="vi">Pixbu — Chính sách quyền riêng tư</h1>
-<p class="muted">Cập nhật lần cuối: 23 tháng 10 năm 2026 · Nhà phát triển: Enes Sevinç · Liên hệ: enessevinc25@gmail.com</p>
+<p class="muted">Cập nhật lần cuối: 26 tháng 10 năm 2026 · Nhà phát triển: Enes Sevinç · Liên hệ: enessevinc25@gmail.com</p>
 
 <div class="card">
 <p><strong>Tóm tắt:</strong> Pixbu không có tài khoản và không thu thập dữ liệu cá nhân.
@@ -1060,11 +1082,13 @@ email, vị trí hay bất kỳ dữ liệu sức khỏe nào. Các bản ghi n�
 <p>Tính năng <strong>Cùng nhau</strong> trong thẻ <strong>Bạn nhỏ</strong> mặc định <strong>tắt</strong>. Nếu bạn bật (ứng dụng sẽ cho bạn xem trước những gì được chia sẻ và xin bạn đồng ý), chỉ những thông tin sau được gửi lên máy chủ của chúng tôi, và chỉ những người kết nối với bạn qua mã mời mới thấy:</p>
 <ul>
 <li>tên, loài và giai đoạn của bạn nhỏ;</li>
-<li>hôm đó bạn đã làm gì đó chưa (chỉ có/không);</li>
-<li>những cái ôm bạn gửi (từ ai, khi nào).</li>
+<li>loại và số việc bạn đã làm hôm đó (ví dụ: “2 việc · 1 phiên tập trung”); với <strong>Chi tiết</strong>, có cả tên việc và thói quen; với <strong>Tắt</strong>, chỉ có việc bạn đã làm gì đó hay chưa (có/không);</li>
+<li>những cái ôm, biểu cảm và lời nhắn soạn sẵn bạn gửi (từ ai, đến ai, khi nào); không thể viết văn bản tự do;</li>
+<li>địa chỉ thông báo của thiết bị (một mã ẩn danh) và độ lệch múi giờ của bạn, để thông báo đến được với bạn; chỉ khi quyền thông báo đang bật.</li>
 </ul>
-<p>Chúng tôi không yêu cầu tài khoản, email, số điện thoại hay vị trí. Ứng dụng tạo một mã thiết bị ngẫu nhiên và một khóa bí mật; máy chủ chỉ lưu giá trị băm một chiều (SHA-256) của khóa. Việc cần làm, thói quen, mục tiêu và ghi chú vẫn ở trên thiết bị của bạn.</p>
+<p>Chúng tôi không yêu cầu tài khoản, email, số điện thoại hay vị trí. Ứng dụng tạo một mã thiết bị ngẫu nhiên và một khóa bí mật; máy chủ chỉ lưu giá trị băm một chiều (SHA-256) của khóa. Ghi chú, số tiền mục tiêu và vị trí của bạn vẫn ở trên thiết bị; tên việc và thói quen chỉ được gửi khi bạn chọn Chi tiết, và không bao giờ được gửi nếu chứa từ ngữ không phù hợp.</p>
 <p>Dữ liệu này được <a href="https://supabase.com">Supabase</a> xử lý tại Đức (EU, Frankfurt). Mã mời bị xóa sau 48 giờ, cái ôm đã gửi tới bị xóa ngay, cái ôm chưa gửi tới bị xóa sau 7 ngày. Thẻ bạn nhỏ và các kết nối được lưu cho đến khi bạn tắt tính năng. Với mỗi kết nối, số ngày chuỗi chung và ngày chung gần nhất (tính từ những ngày cả hai đều làm gì đó) cũng được lưu và bị xóa cùng kết nối. Để giới hạn một cái ôm mỗi ngày, thời điểm cái ôm gần nhất theo mỗi chiều cũng được lưu và bị xóa cùng kết nối. Mã nhận dạng của bạn cho tính năng này không được ghi vào tệp sao lưu xuất ra.</p>
+<p>Thông báo được gửi qua Firebase Cloud Messaging của Google trên Android và dịch vụ thông báo đẩy của Apple trên iPhone. Thông báo không chứa câu chữ, chỉ có một khóa văn bản và tên bạn nhỏ của người gửi; thiết bị của bạn tự ghép câu bằng ngôn ngữ của nó. Hoạt động bị xóa sau 2 ngày, biểu cảm khi đã gửi đến hoặc sau 2 ngày, lời nhắn soạn sẵn khi đã gửi đến hoặc sau 7 ngày, thông báo đang chờ trong vòng 1 giờ, và thời điểm gửi được lưu cho giới hạn thông báo hằng ngày sau 1 ngày. Địa chỉ thông báo được lưu cho đến khi bạn tắt tính năng hoặc thu hồi quyền thông báo. Bạn có thể đổi những gì được chia sẻ bất cứ lúc nào trong menu ở thẻ Bạn nhỏ (<strong>Chia sẻ những gì?</strong>); hạ mức chia sẻ cũng xóa các tên đã gửi.</p>
 
 <h2>4. Sao lưu</h2>
 <ul>
