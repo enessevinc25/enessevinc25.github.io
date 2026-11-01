@@ -764,6 +764,11 @@ if(/^[A-Z0-9]{8}$/.test(dv)){
   var dvg=dv.slice(0,4)+'-'+dv.slice(4);
   document.querySelectorAll('.davet-kod').forEach(function(e){e.textContent=dvg;});
   document.querySelectorAll('.davet').forEach(function(e){e.hidden=false;});
+  // 1 Kas 2026: davetle gelen Play kurulumu Console'un edinim raporunda
+  // "UTM" kampanyası olarak ayrı sayılsın (kod etikete GİRMEZ).
+  document.querySelectorAll('a[href^="https://play.google.com/store/apps/details?id=com.pixbu.app"]').forEach(function(a){
+    a.href='https://play.google.com/store/apps/details?id=com.pixbu.app&referrer=utm_source%3Dpixbu_site%26utm_medium%3Dfriend_invite%26utm_campaign%3Ddavet';
+  });
 }
 </script>
 </body></html>
